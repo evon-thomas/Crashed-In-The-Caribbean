@@ -1,16 +1,16 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editor.  
  */
 package CIT260.crashInTheCaribbean.model;
 
-import java.io.Serializable;
+import java.io.Serializable; 
 import java.util.Objects;
 
 /**
  *
- * @author josecovarrubias
+ * @author josecovarrubias    
  */
 public class Player implements Serializable{
     
