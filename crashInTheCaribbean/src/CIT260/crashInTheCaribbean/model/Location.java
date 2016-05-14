@@ -85,6 +85,10 @@ public class Location implements Serializable{
         return true;
     }
 
+    public void setVisited(Location scene) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private static class bolean {
 
         public bolean() {

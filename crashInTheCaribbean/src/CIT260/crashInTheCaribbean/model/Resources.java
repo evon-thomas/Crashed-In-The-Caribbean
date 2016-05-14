@@ -5,6 +5,8 @@
  */
 package CIT260.crashInTheCaribbean.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author josecovarrubias
