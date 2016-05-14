@@ -17,7 +17,6 @@ public class Scene implements Serializable{
     private String description;
     private double travelTime;
     private boolean blockedLocation;
-    private String displaySymbol;
     private double healthLeft;
 
     public Scene() {
@@ -41,20 +40,12 @@ public class Scene implements Serializable{
         this.travelTime = travelTime;
     }
 
-    public boolean getBlockedLocation() {
+    public boolean isBlockedLocation() {
         return blockedLocation;
     }
 
     public void setBlockedLocation(boolean blockedLocation) {
         this.blockedLocation = blockedLocation;
-    }
-
-    public String getDisplaySymbol() {
-        return displaySymbol;
-    }
-
-    public void setDisplaySymbol(String displaySymbol) {
-        this.displaySymbol = displaySymbol;
     }
 
     public double getHealthLeft() {
@@ -68,20 +59,20 @@ public class Scene implements Serializable{
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 67 * hash + Objects.hashCode(this.description);
-        hash = 67 * hash + (int) (Double.doubleToLongBits(this.travelTime) ^ (Double.doubleToLongBits(this.travelTime) >>> 32));
-        hash = 67 * hash + Objects.hashCode(this.blockedLocation);
-        hash = 67 * hash + Objects.hashCode(this.displaySymbol);
-        hash = 67 * hash + (int) (Double.doubleToLongBits(this.healthLeft) ^ (Double.doubleToLongBits(this.healthLeft) >>> 32));
+        hash = 59 * hash + Objects.hashCode(this.description);
+        hash = 59 * hash + (int) (Double.doubleToLongBits(this.travelTime) ^ (Double.doubleToLongBits(this.travelTime) >>> 32));
+        hash = 59 * hash + (this.blockedLocation ? 1 : 0);
+        hash = 59 * hash + (int) (Double.doubleToLongBits(this.healthLeft) ^ (Double.doubleToLongBits(this.healthLeft) >>> 32));
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Scene{" + "description=" + description + ", travelTime=" + travelTime + ", blockedLocation=" + blockedLocation + ", displaySymbol=" + displaySymbol + ", healthLeft=" + healthLeft + '}';
+        return "Scene{" + "description=" + description + ", travelTime=" + travelTime + ", blockedLocation=" + blockedLocation + ", healthLeft=" + healthLeft + '}';
     }
-
     
+    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -97,16 +88,13 @@ public class Scene implements Serializable{
         if (Double.doubleToLongBits(this.travelTime) != Double.doubleToLongBits(other.travelTime)) {
             return false;
         }
+        if (this.blockedLocation != other.blockedLocation) {
+            return false;
+        }
         if (Double.doubleToLongBits(this.healthLeft) != Double.doubleToLongBits(other.healthLeft)) {
             return false;
         }
         if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        if (!Objects.equals(this.blockedLocation, other.blockedLocation)) {
-            return false;
-        }
-        if (!Objects.equals(this.displaySymbol, other.displaySymbol)) {
             return false;
         }
         return true;
@@ -114,5 +102,5 @@ public class Scene implements Serializable{
     
     
     
-    
+
 }
