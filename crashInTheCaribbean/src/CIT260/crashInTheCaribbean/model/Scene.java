@@ -16,7 +16,7 @@ public class Scene implements Serializable{
     
     private String description;
     private double travelTime;
-    private String blockedLocation;
+    private boolean blockedLocation;
     private String displaySymbol;
     private double healthLeft;
 
@@ -41,11 +41,11 @@ public class Scene implements Serializable{
         this.travelTime = travelTime;
     }
 
-    public String getBlockedLocation() {
+    public boolean getBlockedLocation() {
         return blockedLocation;
     }
 
-    public void setBlockedLocation(String blockedLocation) {
+    public void setBlockedLocation(boolean blockedLocation) {
         this.blockedLocation = blockedLocation;
     }
 
