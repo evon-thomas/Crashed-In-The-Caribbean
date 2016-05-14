@@ -85,14 +85,10 @@ public class Location implements Serializable{
         return true;
     }
 
-   
-    
     private static class bolean {
 
         public bolean() {
         }
     }
-    
-    
-    
+ 
 }

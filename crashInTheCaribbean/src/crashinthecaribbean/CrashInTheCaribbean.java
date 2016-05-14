@@ -5,6 +5,7 @@
  */
 package crashinthecaribbean;
 
+import CIT260.crashInTheCaribbean.model.Location;
 import CIT260.crashInTheCaribbean.model.Player;
 
 /**
@@ -16,7 +17,7 @@ public class CrashInTheCaribbean {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void  main(String[] args) {
         Player playerOne = new Player();
         
         playerOne.setName("Jason Born");
@@ -24,8 +25,17 @@ public class CrashInTheCaribbean {
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
+        
+        Location scene = new Location();
+        
+        scene.setRow(1);
+        scene.setColumn(1);
+        scene.setVisited(scene);
+        scene.setAmountRemaning(10);
+        
+        String sceneInfo = scene.toString();
+        System.out.println(sceneInfo);
     }
     
-    public 
     
 }
