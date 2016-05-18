@@ -16,11 +16,13 @@ public class Location implements Serializable{
     // class instnace variables
     private double row;
     private double column;
-    private bolean visited;
+    private boolean visited;
     private double amountRemaning;
 
     public Location() {
     }
+
+    
     
     public double getRow() {
         return row;
@@ -38,11 +40,11 @@ public class Location implements Serializable{
         this.column = column;
     }
 
-    public bolean getVisited() {
+    public boolean isVisited() {
         return visited;
     }
 
-    public void setVisited(bolean visited) {
+    public void setVisited(boolean visited) {
         this.visited = visited;
     }
 
@@ -56,8 +58,11 @@ public class Location implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.row) ^ (Double.doubleToLongBits(this.row) >>> 32));
+        int hash = 5;
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.row) ^ (Double.doubleToLongBits(this.row) >>> 32));
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.column) ^ (Double.doubleToLongBits(this.column) >>> 32));
+        hash = 67 * hash + (this.visited ? 1 : 0);
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.amountRemaning) ^ (Double.doubleToLongBits(this.amountRemaning) >>> 32));
         return hash;
     }
 
@@ -65,8 +70,8 @@ public class Location implements Serializable{
     public String toString() {
         return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + ", amountRemaning=" + amountRemaning + '}';
     }
-    
 
+    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -82,17 +87,15 @@ public class Location implements Serializable{
         if (Double.doubleToLongBits(this.row) != Double.doubleToLongBits(other.row)) {
             return false;
         }
+        if (Double.doubleToLongBits(this.column) != Double.doubleToLongBits(other.column)) {
+            return false;
+        }
+        if (this.visited != other.visited) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.amountRemaning) != Double.doubleToLongBits(other.amountRemaning)) {
+            return false;
+        }
         return true;
     }
-
-    public void setVisited(Location scene) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private static class bolean {
-
-        public bolean() {
-        }
-    }
- 
 }

@@ -46,6 +46,11 @@ public class Game implements Serializable{
     }
 
     @Override
+    public String toString() {
+        return "Game{" + "startGame=" + startGame + ", totalTime=" + totalTime + '}';
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
