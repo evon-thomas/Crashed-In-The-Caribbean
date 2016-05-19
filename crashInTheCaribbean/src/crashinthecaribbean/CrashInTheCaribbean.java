@@ -15,6 +15,9 @@ import CIT260.crashInTheCaribbean.model.Scene;
 import CIT260.crashInTheCaribbean.model.Ship;
 import CIT260.crashInTheCaribbean.model.Tool;
 import CIT260.crashInTheCaribbean.model.Weapons;
+import CIT260.crashInTheCaribbean.model.AvoidBeasts;
+import CIT260.crashInTheCaribbean.model.Character;
+import CIT260.crashInTheCaribbean.model.AvoidTraps;
 
 /**
  *
@@ -48,7 +51,7 @@ public class CrashInTheCaribbean {
         String newMapInfo = newMap.toString();
         System.out.println(newMapInfo);
         
-        //Reseurces
+        //Resources
         Resources newResources = new Resources();
         newResources.setMakeResources(true);
         newResources.setUseResource(false);
@@ -95,13 +98,39 @@ public class CrashInTheCaribbean {
         System.out.println(invType);
         
         //Game
-        Game newGame= new Game();
+        Game newGame = new Game();
         newGame.setStartGame(true);
         newGame.setTotalTime(10.5);
         String gameInfo = newGame.toString();
         System.out.println(gameInfo);
         
-        //
+        //Avoid Beasts
+        AvoidBeasts beast1 = new AvoidBeasts();
+        beast1.setAttack("Weapon");
+        beast1.setShield("Shield");
+        String beastInfo = beast1.toString();
+        System.out.println(beastInfo);
+        
+        // Avoid Traps
+        AvoidTraps trap1 = new AvoidTraps();
+        trap1.setLeft("left");
+        trap1.setRight("right");
+        trap1.setUnder("under");
+        trap1.setAbove("above");
+        trap1.setDodge("dodge");
+        trap1.setUseBucket("use bucket");
+        String trapInfo = trap1.toString();
+        System.out.println(trapInfo);
+        
+        // Character
+        Character newCharacter = new Character();
+        character1.setName("Jason Born");
+        character1.setCoordinates();
+        character1.setDescription();
+        String characterInfo = character1.toString();
+        System.out.println(characterInfo);
+        
+        
         
     }
 }
