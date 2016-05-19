@@ -106,8 +106,8 @@ public class CrashInTheCaribbean {
         
         //Avoid Beasts
         AvoidBeasts beast1 = new AvoidBeasts();
-        beast1.setAttack("Weapon");
-        beast1.setShield("Shield");
+        beast1.setAttack(true);
+        beast1.setShield(true);
         String beastInfo = beast1.toString();
         System.out.println(beastInfo);
         
@@ -118,15 +118,14 @@ public class CrashInTheCaribbean {
         trap1.setUnder("under");
         trap1.setAbove("above");
         trap1.setDodge("dodge");
-        trap1.setUseBucket("use bucket");
         String trapInfo = trap1.toString();
         System.out.println(trapInfo);
         
         // Character
-        Character newCharacter = new Character();
+        Character character1 = new Character();
         character1.setName("Jason Born");
-        character1.setCoordinates();
-        character1.setDescription();
+        character1.setCoordinates(23);
+        character1.setDescription("You woke up not knowing where you are. You ought to find clues and get out of theisland.");
         String characterInfo = character1.toString();
         System.out.println(characterInfo);
         
