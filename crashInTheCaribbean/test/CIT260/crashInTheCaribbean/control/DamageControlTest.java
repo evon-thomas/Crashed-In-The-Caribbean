@@ -77,4 +77,17 @@ public class DamageControlTest {
         double result = instance.damage(beastInt, beastPow);
         assertEquals(expResult, result, 0.0);
     }
+        {
+        /**********************************
+        *   Test case #5
+        **********************************/
+        System.out.println("\tTest case #5");
+        
+        double beastInt = 4.0;
+        double beastPow = 1.0;
+        double expResult = 4.0;
+        DamageControl instance = new DamageControl();
+        double result = instance.damage(beastInt, beastPow);
+        assertEquals(expResult, result, 0.00);
+    }
 }
