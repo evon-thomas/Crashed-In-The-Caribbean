@@ -81,3 +81,4 @@ public class ShipConstructionTimeTest {
         double result = instance.ship(shipLength, shipWidth, shipHeight);
         assertEquals(expResult, result, 0.0); 
     }
+}
