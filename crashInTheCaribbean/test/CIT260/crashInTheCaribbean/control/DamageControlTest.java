@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 public class DamageControlTest {
     
     public DamageControlTest() {
-    }
+}
 
     /**
      * Test of damage method, of class DamageControl.
