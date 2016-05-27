@@ -34,9 +34,47 @@ public class DamageControlTest {
         double expResult = 1024.0;
         DamageControl instance = new DamageControl();
         double result = instance.damage(beastInt, beastPow);
-        assertEquals(expResult, result, 0.0);
-       
-        fail("The test case is a prototype.");
+        assertEquals(expResult, result, 0.0); 
     }
     
+    {
+        /**********************************
+        *   Test case #2
+        **********************************/
+        System.out.println("\tTest case #2");
+        
+        double beastInt = 3.0;
+        double beastPow = 3.0;
+        double expResult = 27.0;
+        DamageControl instance = new DamageControl();
+        double result = instance.damage(beastInt, beastPow);
+        assertEquals(expResult, result, 0.0);  
+    }
+    
+    {
+        /**********************************
+        *   Test case #3
+        **********************************/
+        System.out.println("\tTest case #3");
+        
+        double beastInt = 4.0;
+        double beastPow = 2.0;
+        double expResult = 16.0;
+        DamageControl instance = new DamageControl();
+        double result = instance.damage(beastInt, beastPow);
+        assertEquals(expResult, result, 0.0);
+    }
+    {
+        /**********************************
+        *   Test case #4
+        **********************************/
+        System.out.println("\tTest case #4");
+        
+        double beastInt = 3.0;
+        double beastPow = 5.0;
+        double expResult = 243.0;
+        DamageControl instance = new DamageControl();
+        double result = instance.damage(beastInt, beastPow);
+        assertEquals(expResult, result, 0.0);
+    }
 }
