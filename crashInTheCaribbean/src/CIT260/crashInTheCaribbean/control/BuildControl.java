@@ -10,5 +10,32 @@ package CIT260.crashInTheCaribbean.control;
  * @author josecovarrubias
  */
 public class BuildControl {
-    
+  public double build(double length, double width, double height){
+      
+      if (length <0 || length >15){
+      return -1;
+      }
+      if (width <0 || width >15){
+      return -1;
+      }
+      if(height <0 ||height >5){
+      return -1;
+      }
+      double volumeOfBoat = length * width * height;
+      return volumeOfBoat;
+  }
+  public double trap(double radius, double height){
+      
+      if (radius <1){
+      return -1;
+      }
+      if (height <1 || height > 20){
+      return -1;
+      }
+      double radiusSQRT = Math.sqrt(radius);
+      double radiusNheight = height * radiusSQRT;
+      double PI =3.14;
+      double trapVol = PI * radiusNheight;
+      return trapVol;
+  }
 }
