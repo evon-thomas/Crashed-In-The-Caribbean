@@ -70,15 +70,15 @@ public class BuildControlTest {
     }
     
     
-    // this was an attempt to create another function that belongs to the buildControl Class.
-/*    public void testTrap(){
+//    // this was an attempt to create another function that belongs to the buildControl Class.
+//    public void testTrap(){
 //        System.out.println("\tTest 1 for trap");
 //        double radius = 10.0;
 //        double height = 10.0;
 //        BuildControl instance = new BuildControl();
-//        double expResult = 1000.0;
+//        double expResult = 3141.59;
 //        double result = instance.build(radius, height);
 //        assertEquals(expResult, result, 0.0);
 //    
-    }*/
+//    }
 }

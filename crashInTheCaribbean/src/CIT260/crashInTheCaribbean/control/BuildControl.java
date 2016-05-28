@@ -24,6 +24,8 @@ public class BuildControl {
       double volumeOfBoat = length * width * height;
       return volumeOfBoat;
   }
+ /* //thi is an attempt to create another function that can be used in this class. Jose.
+  
   public double trap(double radius, double height){
       
       if (radius <1){
@@ -34,8 +36,8 @@ public class BuildControl {
       }
       double radiusSQRT = Math.sqrt(radius);
       double radiusNheight = height * radiusSQRT;
-      double PI =3.14;
-      double trapVol = PI * radiusNheight;
+   
+      double trapVol =Math.PI;
       return trapVol;
-  }
+    }*/
 }

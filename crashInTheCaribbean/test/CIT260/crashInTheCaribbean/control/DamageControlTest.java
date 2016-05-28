@@ -21,13 +21,30 @@ public class DamageControlTest {
      * Test of damage method, of class DamageControl.
      */
     @Test
+    
+    
+    /*
+                beastDamage(base, power): double
+            BEGIN
+
+            IF (base <0 || base >4) THEN
+            RETURN -1; 
+
+            IF (power <0 || power >5) THEN 
+            RETURN -1;
+
+            totalDamage = base^power
+            RETURN totalDamage
+
+            END
+    */
     public void testDamage() {
-        System.out.println("damage");
+        System.out.println("damage control test");
         
         /**********************************
         *   Test case #1, the valid result
         **********************************/
-        System.out.println("\tTest case #1 the valid result.");
+        System.out.println("\tDamage Test case #1 the valid result.");
         
         double beastInt = 4.0;
         double beastPow = 5.0;
@@ -41,7 +58,7 @@ public class DamageControlTest {
         /**********************************
         *   Test case #2
         **********************************/
-        System.out.println("\tTest case #2");
+        System.out.println("\tDamage Test case #2");
         
         double beastInt = 3.0;
         double beastPow = 3.0;
@@ -55,7 +72,7 @@ public class DamageControlTest {
         /**********************************
         *   Test case #3
         **********************************/
-        System.out.println("\tTest case #3");
+        System.out.println("\tDamage Test case #3");
         
         double beastInt = 4.0;
         double beastPow = 2.0;
@@ -68,7 +85,7 @@ public class DamageControlTest {
         /**********************************
         *   Test case #4
         **********************************/
-        System.out.println("\tTest case #4");
+        System.out.println("\tDamage Test case #4");
         
         double beastInt = 3.0;
         double beastPow = 5.0;
@@ -81,11 +98,37 @@ public class DamageControlTest {
         /**********************************
         *   Test case #5
         **********************************/
-        System.out.println("\tTest case #5");
+        System.out.println("\tDamage Test case #5");
         
         double beastInt = 4.0;
         double beastPow = 1.0;
         double expResult = 4.0;
+        DamageControl instance = new DamageControl();
+        double result = instance.damage(beastInt, beastPow);
+        assertEquals(expResult, result, 0.00);
+    }
+         {
+        /**********************************
+        *   Test case #6
+        **********************************/
+        System.out.println("\tDamage Test case #6");
+        
+        double beastInt = 1.0;
+        double beastPow = 5.0;
+        double expResult = 1.0;
+        DamageControl instance = new DamageControl();
+        double result = instance.damage(beastInt, beastPow);
+        assertEquals(expResult, result, 0.00);
+    }
+         {
+        /**********************************
+        *   Test case #7
+        **********************************/
+        System.out.println("\tDamage Test case #7");
+        
+        double beastInt = 4.0;
+        double beastPow = 5.0;
+        double expResult = 1024.0;
         DamageControl instance = new DamageControl();
         double result = instance.damage(beastInt, beastPow);
         assertEquals(expResult, result, 0.00);
