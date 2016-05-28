@@ -22,9 +22,9 @@ public class BuildControlTest {
      */
     @Test
     public void testBuild() {
-        System.out.println("build");
+        System.out.println("build Ship ");
         
-        System.out.println("\tTest 1");
+        System.out.println("\tShip Test 1");
         double length = 10.0;
         double width = 10.0;
         double height = 3.0;
@@ -36,7 +36,7 @@ public class BuildControlTest {
     {
     
         
-        System.out.println("\tTest 2");
+        System.out.println("\tShip Test 2");
         double length = 10.0;
         double width = 10.0;
         double height = 5.0;
@@ -48,7 +48,7 @@ public class BuildControlTest {
     {
     
         
-        System.out.println("\tTest 3");
+        System.out.println("\tShip Test 3");
         double length = 12.0;
         double width = 8.0;
         double height = 2.0;
@@ -59,7 +59,7 @@ public class BuildControlTest {
     }
     {
             
-        System.out.println("\tTest 4");
+        System.out.println("\tShip Test 4");
         double length = 8.0;
         double width = 6.0;
         double height = 1.0;
@@ -68,8 +68,40 @@ public class BuildControlTest {
         double result = instance.build(length, width, height);
         assertEquals(expResult, result, 0.0); 
     }
-    
-    
+       {
+            
+        System.out.println("\tShip Test 5");
+        double length = 10.0;
+        double width = 0.0;
+        double height = 0.0;
+        BuildControl instance = new BuildControl();
+        double expResult = 0.0;
+        double result = instance.build(length, width, height);
+        assertEquals(expResult, result, 0.0); 
+    }
+       {
+            
+        System.out.println("\tShip Test 6");
+        double length = 0.0;
+        double width = 10.0;
+        double height = 0.0;
+        BuildControl instance = new BuildControl();
+        double expResult = 0.0;
+        double result = instance.build(length, width, height);
+        assertEquals(expResult, result, 0.0); 
+    }
+       {
+            
+        System.out.println("\tShip Test 7");
+        double length = 0.0;
+        double width = 0.0;
+        double height = 3.0;
+        BuildControl instance = new BuildControl();
+        double expResult = 0.0;
+        double result = instance.build(length, width, height);
+        assertEquals(expResult, result, 0.0); 
+    }
+
 //    // this was an attempt to create another function that belongs to the buildControl Class.
 //    public void testTrap(){
 //        System.out.println("\tTest 1 for trap");
