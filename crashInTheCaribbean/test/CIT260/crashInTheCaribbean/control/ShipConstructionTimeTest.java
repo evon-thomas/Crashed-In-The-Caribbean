@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  */
 public class ShipConstructionTimeTest {
     
-   public ShipConstructionTest() {
+   public ShipConstructionTimeTest() {
 }
 
     /**
