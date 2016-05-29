@@ -8,7 +8,7 @@ package CIT260.crashInTheCaribbean.control;
 // author thomas evon
 
 import static java.lang.Math.PI;
-import static javax.swing.Spring.height;
+
 
 public class inventoryControl {
   
@@ -23,6 +23,6 @@ if (height <0 || height > 12)
 return -1;
 }
 
-totalVolume = PI * (bucketRadius * bucketRadius) * bucketHeight;
+totalVolume = PI * Math.pow(bucketRadius) * bucketHeight;
 
 }
