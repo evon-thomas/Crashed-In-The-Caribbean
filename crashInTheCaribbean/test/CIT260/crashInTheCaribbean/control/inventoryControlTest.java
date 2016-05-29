@@ -54,8 +54,8 @@ public class inventoryControlTest {
     {
         
         System.out.println("volumeOfTrap test 2 ");
-        double bucketRadius = 8;
-        double bucketHeight = 15;
+        double bucketRadius = 8.0;
+        double bucketHeight = 15.0;
         double PI = 3.14;
         inventoryControl instance = new inventoryControl();
         double expResult = 3015.93;
@@ -64,8 +64,8 @@ public class inventoryControlTest {
     }
     {
         System.out.println("volumeOfTrap test 3 ");
-        double bucketRadius = 2;
-        double bucketHeight = 2;
+        double bucketRadius = 2.0;
+        double bucketHeight = 2.0;
         double PI = 3.14;
         inventoryControl instance = new inventoryControl();
         double expResult = 25.13;

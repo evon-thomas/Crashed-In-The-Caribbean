@@ -19,7 +19,7 @@ if (bucketRadius <0 || bucketRadius >5)  {
 return -1; 
 }
 
-if (bucketHeight <0 || bucketHeight > 12) {
+if (bucketHeight <0 || bucketHeight > 20) {
 return -1;
 }
 
