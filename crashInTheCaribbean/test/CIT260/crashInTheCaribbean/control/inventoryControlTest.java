@@ -58,7 +58,7 @@ public class inventoryControlTest {
         double bucketHeight = 15.0;
         double PI = 3.14;
         inventoryControl instance = new inventoryControl();
-        double expResult = 3015.93;
+        double expResult = 3014.4;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
     }
