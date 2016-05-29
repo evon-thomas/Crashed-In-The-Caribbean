@@ -24,5 +24,6 @@ return -1;
 }
 
 double totalVolume = PI * (bucketRadius * bucketRadius) * bucketHeight;
-return double totalVolume;
+return  totalVolume;
+}
 }
