@@ -15,14 +15,14 @@ public class inventoryControl {
 public double volumeOfTrap(bucketRadius, bucketHeight, PI) {
     int bucketRadius = 0;
 
-if (bucketRadius <0 || bucketRadius >5)  
+if (bucketRadius <0 || bucketRadius >5)  {
 return -1; 
 }
 
-if (height <0 || height > 12) 
+if (height <0 || height > 12) {
 return -1;
 }
 
 totalVolume = PI * Math.pow(bucketRadius) * bucketHeight;
-
+return double totalVolume;
 }
