@@ -23,6 +23,6 @@ if (height <0 || height > 12) {
 return -1;
 }
 
-totalVolume = PI * Math.pow(bucketRadius) * bucketHeight;
+double totalVolume = PI * Math.pow(bucketRadius) * bucketHeight;
 return double totalVolume;
 }
