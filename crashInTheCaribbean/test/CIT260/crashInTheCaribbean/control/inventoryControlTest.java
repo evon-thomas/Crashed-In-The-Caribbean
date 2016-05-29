@@ -68,7 +68,7 @@ public class inventoryControlTest {
         double bucketHeight = 2.0;
         double PI = 3.14;
         inventoryControl instance = new inventoryControl();
-        double expResult = 25.13;
+        double expResult = 25.12;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
     }
@@ -78,7 +78,7 @@ public class inventoryControlTest {
         double bucketHeight = 3;
         double PI = 3.14;
         inventoryControl instance = new inventoryControl();
-        double expResult = 84.82;
+        double expResult = 84.78;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
 }
@@ -89,7 +89,7 @@ public class inventoryControlTest {
         double bucketHeight = 4;
         double PI = 3.14;
         inventoryControl instance = new inventoryControl();
-        double expResult = 201.06;
+        double expResult = 200.96;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
 }
@@ -100,7 +100,7 @@ public class inventoryControlTest {
         double bucketHeight = 5;
         double PI = 3.14;
         inventoryControl instance = new inventoryControl();
-        double expResult = 392.7;
+        double expResult = 392.5;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
 
@@ -113,7 +113,7 @@ public class inventoryControlTest {
         double bucketHeight = 6;
         double PI = 3.14;
         inventoryControl instance = new inventoryControl();
-        double expResult = 678.58;
+        double expResult = 678.24;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
 }
