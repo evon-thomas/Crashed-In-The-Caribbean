@@ -7,7 +7,7 @@ package CIT260.crashInTheCaribbean.control;
 
 // author thomas evon
 
-volumeOfTrap(bucketRadius, bucketHeight, PI): double
+double volumeOfTrap(bucketRadius, bucketHeight, PI) {
 BEGIN
 
 
@@ -18,3 +18,5 @@ IF (height <0 || height > 12) THEN
 RETURN -1;
 
 totalVolume = PI * (bucketRadius * bucketRadius) * bucketHeight
+
+}
