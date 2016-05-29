@@ -106,7 +106,7 @@ public class inventoryControlTest {
 
 }
 
-{
+ {
 
         System.out.println("volumeOfTrap test 7 ");
         double bucketRadius = 6;
