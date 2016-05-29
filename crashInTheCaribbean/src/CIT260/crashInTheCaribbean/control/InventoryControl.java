@@ -17,6 +17,6 @@ RETURN -1;
 IF (height <0 || height > 12) THEN
 RETURN -1;
 
-totalVolume = PI * (bucketRadius * bucketRadius) * bucketHeight
+totalVolume = PI * (bucketRadius * bucketRadius) * bucketHeight;
 
 }
