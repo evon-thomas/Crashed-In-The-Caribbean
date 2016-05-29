@@ -6,15 +6,13 @@
 package CIT260.crashInTheCaribbean.control;
 
 // author thomas evon
+public class volumeOfTrap {
+public double volumeOfTrap(bucketRadius, bucketHeight, PI) {
 
-double volumeOfTrap(bucketRadius, bucketHeight, PI) {
-BEGIN
-
-
-IF (bucketRadius <0 || bucketRadius >5) THEN
+if (bucketRadius <0 || bucketRadius >5) THEN
 RETURN -1;
 
-IF (height <0 || height > 12) THEN
+if (height <0 || height > 12) THEN
 RETURN -1;
 
 totalVolume = PI * (bucketRadius * bucketRadius) * bucketHeight;
