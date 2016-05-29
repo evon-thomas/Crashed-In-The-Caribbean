@@ -40,4 +40,8 @@ public class BuildControl {
       double trapVol =Math.PI;
       return trapVol;
     }*/
+
+    double volume(double bucketRadius, double bucketHeight, double PI) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

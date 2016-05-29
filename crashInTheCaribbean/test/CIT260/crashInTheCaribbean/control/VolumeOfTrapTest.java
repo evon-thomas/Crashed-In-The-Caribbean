@@ -86,4 +86,37 @@ public class VolumeOfTrapTest {
         double result = instance.volume(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0); 
     }
+   {
+            
+        System.out.println("\tTest Case #5 Trap Test");
+        double bucketRadius = 10.0;
+        double PI = 3.14;
+        double bucketHeight = 0.0;
+        VolumeControl instance = new VolumeControl();
+        double expResult = 0.0;
+        double result = instance.volume(bucketRadius, bucketHeight, PI);
+        assertEquals(expResult, result, 0.0); 
+    }
+   {
+            
+        System.out.println("\tTest Case #6 Trap Test");
+        double bucketRadius = 0;
+        double PI = 3.14;
+        double bucketHeight = 32;
+        VolumeControl instance = new VolumeControl();
+        double expResult = 0.0;
+        double result = instance.volume(bucketRadius, bucketHeight, PI);
+        assertEquals(expResult, result, 0.0); 
+    }
+   
+   {
+            
+        System.out.println("\tTest Case #7 Trap Test");
+        double bucketRadius = 7;
+        double PI = 3.14;
+        double bucketHeight = 9;
+        VolumeControl instance = new VolumeControl();
+        double expResult = 0.0;
+        double result = instance.volume(bucketRadius, bucketHeight, PI);
+        assertEquals(expResult, result, 0.0); 
     }
