@@ -43,11 +43,11 @@ public class inventoryControlTest {
     @Test
     public void testVolumeOfTrap() {
         System.out.println("volumeOfTrap");
-        double bucketRadius = 5;
-        double bucketHeight = 12;
+        double bucketRadius = 5.0;
+        double bucketHeight = 12.0;
         double PI = 3.14;
         inventoryControl instance = new inventoryControl();
-        double expResult = 942.48;
+        double expResult = 942.00;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
     }
@@ -56,7 +56,7 @@ public class inventoryControlTest {
         System.out.println("volumeOfTrap test 2 ");
         double bucketRadius = 8;
         double bucketHeight = 15;
-        double PI = 3.14159;
+        double PI = 3.14;
         inventoryControl instance = new inventoryControl();
         double expResult = 3015.93;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
@@ -68,7 +68,7 @@ public class inventoryControlTest {
         double bucketHeight = 2;
         double PI = 3.14;
         inventoryControl instance = new inventoryControl();
-        double expResult = 3.14159;
+        double expResult = 3.14;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
     }
@@ -76,7 +76,7 @@ public class inventoryControlTest {
         System.out.println("volumeOfTrap test 4 ");
         double bucketRadius = 3;
         double bucketHeight = 3;
-        double PI = 3.14159;
+        double PI = 3.14;
         inventoryControl instance = new inventoryControl();
         double expResult = 3015.93;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
@@ -87,7 +87,7 @@ public class inventoryControlTest {
         System.out.println("volumeOfTrap test 5 ");
         double bucketRadius = 4;
         double bucketHeight = 4;
-        double PI = 3.14159;
+        double PI = 3.14;
         inventoryControl instance = new inventoryControl();
         double expResult = 3015.93;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
@@ -98,7 +98,7 @@ public class inventoryControlTest {
             System.out.println("volumeOfTrap test 6 ");
         double bucketRadius = 5;
         double bucketHeight = 5;
-        double PI = 3.14159;
+        double PI = 3.14;
         inventoryControl instance = new inventoryControl();
         double expResult = 3015.93;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
@@ -111,7 +111,7 @@ public class inventoryControlTest {
         System.out.println("volumeOfTrap test 7 ");
         double bucketRadius = 6;
         double bucketHeight = 6;
-        double PI = 3.14159;
+        double PI = 3.14;
         inventoryControl instance = new inventoryControl();
         double expResult = 678.58;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
