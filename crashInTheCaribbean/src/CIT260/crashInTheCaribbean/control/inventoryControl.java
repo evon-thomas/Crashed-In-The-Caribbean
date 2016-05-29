@@ -12,7 +12,7 @@ package CIT260.crashInTheCaribbean.control;
 
 public class inventoryControl {
   
-public double volumeOfTrap(bucketRadius, bucketHeight, PI) {
+public double volumeOfTrap (double bucketRadius, double bucketHeight, double PI) {
     int bucketRadius = 0;
 
 if (bucketRadius <0 || bucketRadius >5)  {
