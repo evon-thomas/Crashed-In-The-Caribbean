@@ -15,12 +15,13 @@ public class inventoryControl {
 public double volumeOfTrap(bucketRadius, bucketHeight, PI) {
     int bucketRadius = 0;
 
-if (bucketRadius <0 || bucketRadius >5) THEN {
-return -1}
+if (bucketRadius <0 || bucketRadius >5)  
+return -1; 
+}
 
-if (height <0 || height > 12) THEN
+if (height <0 || height > 12) 
 return -1;
-    double bucketHeight;
+}
 
 totalVolume = PI * (bucketRadius * bucketRadius) * bucketHeight;
 
