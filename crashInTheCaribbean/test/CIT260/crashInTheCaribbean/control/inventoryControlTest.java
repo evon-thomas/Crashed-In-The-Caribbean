@@ -38,7 +38,7 @@ public class inventoryControlTest {
     }
 
     /**
-     * Test of volumeOfTrap method, of class inventoryControl.
+     * Test of volumeOfTrap method, of class InventoryControl.
      */
     @Test
     public void testVolumeOfTrap() {
@@ -46,7 +46,7 @@ public class inventoryControlTest {
         double bucketRadius = 5.0;
         double bucketHeight = 12.0;
         double PI = 3.14;
-        inventoryControl instance = new inventoryControl();
+        InventoryControl instance = new InventoryControl();
         double expResult = 942.00;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
@@ -57,7 +57,7 @@ public class inventoryControlTest {
         double bucketRadius = 8.0;
         double bucketHeight = 15.0;
         double PI = 3.14;
-        inventoryControl instance = new inventoryControl();
+        InventoryControl instance = new InventoryControl();
         double expResult = 3014.4;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
@@ -67,7 +67,7 @@ public class inventoryControlTest {
         double bucketRadius = 2.0;
         double bucketHeight = 2.0;
         double PI = 3.14;
-        inventoryControl instance = new inventoryControl();
+        InventoryControl instance = new InventoryControl();
         double expResult = 25.12;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
@@ -77,7 +77,7 @@ public class inventoryControlTest {
         double bucketRadius = 3;
         double bucketHeight = 3;
         double PI = 3.14;
-        inventoryControl instance = new inventoryControl();
+        InventoryControl instance = new InventoryControl();
         double expResult = 84.78;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
@@ -88,7 +88,7 @@ public class inventoryControlTest {
         double bucketRadius = 4;
         double bucketHeight = 4;
         double PI = 3.14;
-        inventoryControl instance = new inventoryControl();
+        InventoryControl instance = new InventoryControl();
         double expResult = 200.96;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
@@ -99,7 +99,7 @@ public class inventoryControlTest {
         double bucketRadius = 5;
         double bucketHeight = 5;
         double PI = 3.14;
-        inventoryControl instance = new inventoryControl();
+        InventoryControl instance = new InventoryControl();
         double expResult = 392.5;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
@@ -112,7 +112,7 @@ public class inventoryControlTest {
         double bucketRadius = 6;
         double bucketHeight = 6;
         double PI = 3.14;
-        inventoryControl instance = new inventoryControl();
+        InventoryControl instance = new InventoryControl();
         double expResult = 678.24;
         double result = instance.volumeOfTrap(bucketRadius, bucketHeight, PI);
         assertEquals(expResult, result, 0.0);
