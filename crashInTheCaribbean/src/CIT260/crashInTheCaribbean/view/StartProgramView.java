@@ -5,6 +5,8 @@
  */
 package CIT260.crashInTheCaribbean.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author thomas
@@ -76,14 +78,44 @@ public class StartProgramView {
     }
 
     private String getPlayersName() {
-        System.out.println("\n*** getPLayersName()  called ***");
-        return "Joe";
+        /*
+          WHILE valid value has not entered
+            DISPLAY promptMessage
+            GET the value entered from keyboard
+            Trim front and trailing blanks off of the game
+        
+        IF the length of the value is blank THEN
+            DISPLAY "invalid value: The value can not be blank"
+            CONTINUE
+            ENDIF
+        
+            BREAK
+        
+            ENDWHILE
+            RETURN name
+        */
+       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+       String value = ""; //value to be return
+       boolean valid = false; //initialize to not valid
+       
+       while (!valid){ //loop while an invalid value is enter
+           System.out.println("\n" + this.promptMessage);
+           
+           value = keyboard.nextLine(); //get next line typed on keyboard
+           value = value.trim(); //trim off leading and trailing blanks
+           
+           if (value.length() <1){// value is blank
+               System.out.println("\nInvalid value:value can not be blank");
+               continue;
+           }
+           break; //end the loop
+       }
+       return value; // return the value entered
     }
 
     private boolean doAction(String playersName) {
-        System.out.println("\n*** doAction()  called ***");
-        return true;
-    }
+  
+   }
     
     
 }
