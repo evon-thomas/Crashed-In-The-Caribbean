@@ -5,10 +5,28 @@
  */
 package CIT260.crashInTheCaribbean.control;
 
+import CIT260.crashInTheCaribbean.model.Player;
+import crashinthecaribbean.CrashInTheCaribbean;
+
 /**
  *
  * @author josecovarrubias
  */
 public class GameControl {
+
+    public static Player createPlayer(String name) {
+//      System.out.println("\n*** createPlayer() function called ***");
+//      return new Player();
+
+        if(name == null){
+            return null;
+        }
+        Player player = new Player();
+        player.setName(name);
+        CrashInTheCaribbean.setPlayer(player); // save the player
+        
+        return player;
+        
+    }
     
 }
