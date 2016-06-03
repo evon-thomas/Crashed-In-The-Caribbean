@@ -44,7 +44,7 @@ public class MainMenuView {
     public void displayMainMenuView(){
 //    System.out.println("\n*** displayMainMenu() function called ***");
            boolean done = false;  //set flag to not done
-           do{
+           do {
                // prompt for and get players name
               System.out.println(menu);
               String menuOption = this.getMenuOption();
@@ -61,7 +61,7 @@ public class MainMenuView {
        return "N";
     }
 
-    private boolean doAction(String choice) {
+    public boolean doAction(String choice) {
 //        System.out.println("\n*** doAction() called ***");
 //        return true;
   
@@ -72,17 +72,17 @@ public class MainMenuView {
             this.startNewGame();
             break;
         case "G":
-            this.startNewGame();
+            this.startExistingGame();
             break;
         case "H":
-            this.startNewGame();
+            this.displayHelpMenu();
             break;
         case "S":
-            this.startNewGame();
+            this.saveGame();
             break;
         default:
-            System.out.println("\n*** Hey bro, not that letter! Try one more time");
-            break;
+          System.out.println("\n*** Hey bro, not that letter! Try one more time");
+          break;
     
     }
     return false; 

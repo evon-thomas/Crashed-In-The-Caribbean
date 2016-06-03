@@ -28,23 +28,14 @@ public class StartProgramView {
        
         System.out.println(
                 "\n********************************************"
-               + "\n                                            "
-               + "\n Welcome to the jungle. We've got fun and games. *"
-               + "\n                                                  "     
-               + "\n We'eve got everything you want, the only thing  *"
-               + "\n                                                  "          
-               + "\n your know is your name. To get out and reach    *"
-               + "\n                                                  "          
-               + "\n the hall of fame, you must pass the secret traps*"
-               + "\n                                                  "          
-               + "\n and the beasts you must tame. Eventually you    *"
-               + "\n                                                  "          
-               + "\n will come accross and giant Noah's ark.         *"
-               + "\n                                                  "          
-               + "\n Complete the game and build this boat,          *"
-               + "\n                                                  "          
-               + "\n for a land you'll travel afar.                  *"
-               + "\n                                                  "          
+               + "\n Welcome to the jungle. We've got fun and games. *"     
+               + "\n We'eve got everything you want, the only thing  *"         
+               + "\n your know is your name. To get out and reach    *"         
+               + "\n the hall of fame, you must pass the secret traps*"          
+               + "\n and the beasts you must tame. Eventually you    *"         
+               + "\n will come accross and giant Noah's ark.         *"         
+               + "\n Complete the game and build this boat,          *"         
+               + "\n for a land you'll travel afar.                  *"        
                + "\n********************************************");
            
 
