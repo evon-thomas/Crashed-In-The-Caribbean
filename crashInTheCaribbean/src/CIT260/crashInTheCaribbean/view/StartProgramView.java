@@ -141,7 +141,10 @@ public class StartProgramView {
                 + "well, we told you it was going to be rough."
                 + "\n =======================================================");
         
+        // create MainMenuview object
         MainMenuView mainMenuView = new MainMenuView();
+        
+        // display the main menu view
         mainMenuView.displayMainMenuView();
           
     }
