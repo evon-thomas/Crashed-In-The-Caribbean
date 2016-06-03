@@ -126,11 +126,11 @@ public class StartProgramView {
     private void displayNextView(Player player) {
         
         // customized message
-        System.out.println("\n================================================="
-                            + "\n Welcome to the Jungle " + player.getName()
+        System.out.println("\n======================================================="
+               + "\n Welcome to the Jungle " + player.getName()
                + "\n We hope that you can survive, if not, "
-                + "well, we told you it was going to be rough."
-                + "\n =======================================================");
+               + "\n well, we told you it was going to be rough."
+               + "\n=======================================================");
         
         // create MainMenuview object
         MainMenuView mainMenuView = new MainMenuView();
