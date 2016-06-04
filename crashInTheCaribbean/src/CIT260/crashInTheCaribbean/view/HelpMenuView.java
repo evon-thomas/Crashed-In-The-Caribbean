@@ -5,75 +5,61 @@
  */
 package CIT260.crashInTheCaribbean.view;
 
-
-
-import CIT260.crashInTheCaribbean.model.GameMenuView;
 import java.util.Scanner;
 
 /**
  *
  * @author josecovarrubias
  */
-public class MainMenuView {
+public class HelpMenuView {
     
-    private String menu;
+    private String helpMenu;
     
-    private void startNewGame(){
-        // System.out.println("*** startNewGame fun. called ***");
-        
-        //this starts a new game
-
-        
-        //this displays game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+     private void goalOfGame(){
+        System.out.println("*** goalOfGmae fun. called ***");
     }
-    private void startExistingGame(){
-        System.out.println("*** existingGame fun. called ***");
+    private void howToMove(){
+        System.out.println("*** howToMove fun. called ***");
     }
-    private void saveGame(){
-        System.out.println("*** saveGame fun. called ***");
+    private void toolsAvailable(){
+        System.out.println("*** toolsAvailable fun. called ***");
     }
-    private void displayHelpMenu(){
-//        System.out.println("*** displayHelpMenu fun. called ***");
-        HelpMenuView helpMenuView = new HelpMenuView();
-        helpMenuView.displayHelpMenuView();
-
+        private void avoidTnB(){
+        System.out.println("*** avoidTnB fun. called ***");
     }
     
     
-    public MainMenuView(){
+    public HelpMenuView(){
     
-        this.menu = "\n"
+        this.helpMenu = "\n"
                     + "\n------------------------------------------------------"
-                    + "\n |                    Main menu                      |"
+                    + "\n |                    Help menu                      |"
                     + "\n------------------------------------------------------"
-                    + "\nN - Start new game"
-                    + "\nG - Get and start saved game"
-                    + "\nH - Get help on how to play the game"
-                    + "\nS - Save game"
+                    + "\nG - Goal of the game"
+                    + "\nM - How to move"
+                    + "\nT - Tools available to construct"
+                    + "\nA - Avoiding traps and beasts"
                     + "\nQ - quit"
                     + "\n-----------------------------------------------------";
     }
-    
-               
-    public void displayMainMenuView(){
+        public void displayHelpMenuView(){
+
         /* this was done earlier to test the function */
 //    System.out.println("\n*** displayMainMenu() function called ***");
            boolean done = false;  //set flag to not done
            do {
                // prompt for and get players name
 //              System.out.println(menu);
-              String menuOption = this.getMenuOption();
-              if (menuOption.toUpperCase().equals("Q")) // user wants to quit
+              String helpMenuOption = this.getHelpMenuOption();
+              if (helpMenuOption.toUpperCase().equals("Q")) // user wants to quit
                return; /// exit the game
               
               // do the requested action and display the next view
-              done = this.doAction(menuOption);               
+              done = this.doAction(helpMenuOption);               
            } while (!done);
     }
 
-    private String getMenuOption() {
+    private String getHelpMenuOption() {
 //       System.out.println("\n*** getMenuOption() called ***");
 //       return "N";
 
@@ -82,7 +68,7 @@ public class MainMenuView {
        boolean valid = false; //initialize to not valid
        
        while (!valid){ //loop while an invalid value is enter
-           System.out.println("\n" + this.menu);
+           System.out.println("\n" + this.helpMenu);
            
            value = keyboard.nextLine(); //get next line typed on keyboard
            value = value.trim(); //trim off leading and trailing blanks
@@ -103,17 +89,17 @@ public class MainMenuView {
     choice = choice.toUpperCase(); // convert chice to upper case
     
     switch (choice){
-        case "N":
-            this.startNewGame();
+        case "M":
+            this.howToMove();
             break;
         case "G":
-            this.startExistingGame();
+            this.goalOfGame();
             break;
-        case "H":
-            this.displayHelpMenu();
+        case "T":
+            this.toolsAvailable();
             break;
-        case "S":
-            this.saveGame();
+        case "A":
+            this.avoidTnB();
             break;
         default:
           System.out.println("\n*** Hey bro, not that letter! Try one more time");
