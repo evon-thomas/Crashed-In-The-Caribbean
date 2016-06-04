@@ -13,6 +13,11 @@ import crashinthecaribbean.CrashInTheCaribbean;
  * @author josecovarrubias
  */
 public class GameControl {
+    
+    public static void createNewGame(Player player) {
+        
+        System.out.println("\n*** createNewGame stub function called ***");
+    }
 
     public static Player createPlayer(String name) {
 //      System.out.println("\n*** createPlayer() function called ***");

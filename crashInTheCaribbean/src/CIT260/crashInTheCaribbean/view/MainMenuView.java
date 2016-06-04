@@ -5,6 +5,9 @@
  */
 package CIT260.crashInTheCaribbean.view;
 
+
+
+import CIT260.crashInTheCaribbean.model.GameMenuView;
 import java.util.Scanner;
 
 /**
@@ -16,7 +19,14 @@ public class MainMenuView {
     private String menu;
     
     private void startNewGame(){
-        System.out.println("*** startNewGame fun. called ***");
+        // System.out.println("*** startNewGame fun. called ***");
+        
+        //this starts a new game
+
+        
+        //this displays game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
     }
     private void startExistingGame(){
         System.out.println("*** existingGame fun. called ***");
@@ -27,6 +37,7 @@ public class MainMenuView {
     private void displayHelpMenu(){
         System.out.println("*** displayHelpMenu fun. called ***");
     }
+    
     
     public MainMenuView(){
     
