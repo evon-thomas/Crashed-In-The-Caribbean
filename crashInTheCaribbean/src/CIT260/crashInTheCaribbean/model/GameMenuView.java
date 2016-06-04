@@ -10,9 +10,7 @@ package CIT260.crashInTheCaribbean.model;
  * @author thomas
  */
 public class GameMenuView {
-    
-    void displayMenu() {
+            public void displayMenu() {
         System.out.println("\n*** displayMenu stub function called ***");
     }
-    
 }
