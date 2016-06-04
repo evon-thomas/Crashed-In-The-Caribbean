@@ -7,6 +7,7 @@ package CIT260.crashInTheCaribbean.view;
 
 
 
+import CIT260.crashInTheCaribbean.control.GameControl;
 import CIT260.crashInTheCaribbean.model.GameMenuView;
 import java.util.Scanner;
 
@@ -23,7 +24,7 @@ public class MainMenuView {
         
         //this starts a new game
 
-        
+        GameControl.createNewGame(crashInTheCaribbean.getPLayer());
         //this displays game menu
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayMenu();
