@@ -24,8 +24,11 @@ public class HelpMenuView {
     private void toolsAvailable(){
         System.out.println("*** toolsAvailable fun. called ***");
     }
-        private void avoidTnB(){
-        System.out.println("*** avoidTnB fun. called ***");
+    private void avoidTnB(){
+//        System.out.println("*** avoidTnB fun. called ***");
+
+        AvoidTnBMenu avoidTnBMenu = new AvoidTnBMenu();
+        avoidTnBMenu.displayAvoidTnBMenu(); 
     }
     
     
@@ -35,17 +38,17 @@ public class HelpMenuView {
                     + "\n------------------------------------------------------"
                     + "\n |                    Help Menu                      |"
                     + "\n------------------------------------------------------"
-                    + "\nG - Goal of the game"
-                    + "\nM - Move, how to"
-                    + "\nT - Tools available to construct"
-                    + "\nA - Avoiding traps and beasts"
-                    + "\nQ - quit"
-                    + "\n-----------------------------------------------------";
+                    + "\n G - Goal of the game"
+                    + "\n M - How to move"
+                    + "\n T - Tools available to construct"
+                    + "\n A - Avoiding traps and beasts. Press A for more details."
+                    + "\n Q - quit"
+                    + "\n---------------------------------------------------------";
     }
         public void displayHelpMenuView(){
 
         /* this was done earlier to test the function */
-//    System.out.println("\n*** displayMainMenu() function called ***");
+//    System.out.println("\n*** displayHelpMenuView() function called ***");
            boolean done = false;  //set flag to not done
            do {
                // prompt for and get players name

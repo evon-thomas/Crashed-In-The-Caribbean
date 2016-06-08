@@ -20,7 +20,7 @@ public class StartProgramView {
     public StartProgramView() {
         
         this.promptMessage = "\nPlease enter your name: ";
-                // displays this banner when creat
+                // displays this banner when create
                 this.displayBanner();
     }
 
