@@ -33,10 +33,10 @@ public class HelpMenuView {
     
         this.helpMenu = "\n"
                     + "\n------------------------------------------------------"
-                    + "\n |                    Help menu                      |"
+                    + "\n |                    Help Menu                      |"
                     + "\n------------------------------------------------------"
                     + "\nG - Goal of the game"
-                    + "\nM - How to move"
+                    + "\nM - Move, how to"
                     + "\nT - Tools available to construct"
                     + "\nA - Avoiding traps and beasts"
                     + "\nQ - quit"
