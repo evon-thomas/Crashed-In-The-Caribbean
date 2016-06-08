@@ -7,7 +7,7 @@ package CIT260.crashInTheCaribbean.view;
 
 
 
-import CIT260.crashInTheCaribbean.model.GameMenuView;
+import CIT260.crashInTheCaribbean.view.GameMenuView;
 import java.util.Scanner;
 
 /**
@@ -30,6 +30,8 @@ public class MainMenuView {
     }
     private void startExistingGame(){
         System.out.println("*** existingGame fun. called ***");
+          
+
     }
     private void saveGame(){
         System.out.println("*** saveGame fun. called ***");

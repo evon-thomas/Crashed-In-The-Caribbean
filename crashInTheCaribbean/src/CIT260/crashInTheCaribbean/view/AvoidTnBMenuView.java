@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author josecovarrubias
  */
-public class AvoidTnBMenu {
+public class AvoidTnBMenuView {
     
         private String avoidmenu;
         private void dodge(){
@@ -28,10 +28,10 @@ public class AvoidTnBMenu {
                          + "\n a beast by pressing the letter A.");
         }
 
-    public AvoidTnBMenu(){
+    public AvoidTnBMenuView(){
         this.avoidmenu = "\n"
                         + "\n=================================================="
-                        + "\n|    How to avoid traps and beasts options       |"
+                        + "\n|||    How to avoid traps and beasts options   |||"
                         + "\n=================================================="
                         + "\n A - Attack: press A for more detail."
                         + "\n C - Cover: press C for more detail."

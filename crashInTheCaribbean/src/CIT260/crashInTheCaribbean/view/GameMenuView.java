@@ -12,6 +12,6 @@ package CIT260.crashInTheCaribbean.view;
 public class GameMenuView {
     
         public void displayMenu() {
-        System.out.println("\n*** displayMenu stub function called ***");
+        System.out.println("\n*** game menu view from view layer called ***");
     }
 }

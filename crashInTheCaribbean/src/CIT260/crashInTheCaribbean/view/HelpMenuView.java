@@ -27,7 +27,7 @@ public class HelpMenuView {
     private void avoidTnB(){
 //        System.out.println("*** avoidTnB fun. called ***");
 
-        AvoidTnBMenu avoidTnBMenu = new AvoidTnBMenu();
+        AvoidTnBMenuView avoidTnBMenu = new AvoidTnBMenuView();
         avoidTnBMenu.displayAvoidTnBMenu(); 
     }
     
