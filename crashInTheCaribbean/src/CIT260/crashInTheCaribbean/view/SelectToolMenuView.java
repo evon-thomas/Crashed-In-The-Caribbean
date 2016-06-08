@@ -18,6 +18,16 @@ import java.util.Scanner;
 public class SelectToolMenuView {
     
      private String selectToolMenuView;
+     
+     private void usePunch(){
+        System.out.println("*** usePunch fun. called ***");
+    }
+    private void useSword(){
+        System.out.println("*** useSword fun. called ***");
+    }
+    private void useAxe(){
+        System.out.println("*** useAxe fun. called ***");
+    }
    
     public  SelectToolMenuView() {
         
@@ -26,21 +36,19 @@ public class SelectToolMenuView {
                     + "\n------------------------------------------------------"
                     + "\n|                    Tool Menu                       |"
                     + "\n------------------------------------------------------"
-                    + "\n
                     + "\nP - Punch"
                     + "\nS - Sword"
                     + "\nA - Axe"
-                    + "\nQ - quit"
-                    + "\                                                       "
+                    + "\nQ - quit"                                                     
                     + "\n-----------------------------------------------------";
     }
-        
+  
         
         public void displaySelectToolMenuView(){
         
         
 
-        boolean done = false
+        boolean done = false;
         do {
             String toolChoice = this.getToolChoice();
             if (toolChoice.toUpperCase().equals("Q"))
@@ -70,10 +78,11 @@ public class SelectToolMenuView {
            }
            break; //end the loop
        }
+            return value;
         }
 
 
-    private boolean doAction(String toolChoice) {
+    public boolean doAction(String toolChoice) {
     
         toolChoice = toolChoice.toUpperCase(); // convert chice to upper case
     
@@ -95,17 +104,7 @@ public class SelectToolMenuView {
     return false; 
     }
 
-    private void usePunch() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
-    private void useAxe() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void useSword() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 }
 
