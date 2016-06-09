@@ -45,7 +45,7 @@ public class HelpMenuView {
                     + "\n Q - quit"
                     + "\n---------------------------------------------------------";
     }
-        public void displayHelpMenuView(){
+    public void displayHelpMenuView(){
 
         /* this was done earlier to test the function */
 //    System.out.println("\n*** displayHelpMenuView() function called ***");

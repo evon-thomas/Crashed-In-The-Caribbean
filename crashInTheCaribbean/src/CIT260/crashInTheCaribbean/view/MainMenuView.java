@@ -30,14 +30,17 @@ public class MainMenuView {
     }
     private void startExistingGame(){
         System.out.println("*** existingGame fun. called ***");
-          
-
+    }      
+    private void displayDamageControlView(){
+        //this function calls the class where teh power of attack is calculated. Jose.
+        DamageControlView damageView = new DamageControlView();
+        damageView.displayDamageControlView();
     }
     private void saveGame(){
         System.out.println("*** saveGame fun. called ***");
     }
     private void displayHelpMenu(){
-//        System.out.println("*** displayHelpMenu fun. called ***");
+        // System.out.println("*** displayHelpMenu fun. called ***");
         HelpMenuView helpMenuView = new HelpMenuView();
         helpMenuView.displayHelpMenuView();
 
@@ -52,6 +55,7 @@ public class MainMenuView {
                     + "\n------------------------------------------------------"
                     + "\nN - Start new game"
                     + "\nG - Get and start saved game"
+                    + "\nP - Practice your attacks"
                     + "\nH - Get help on how to play the game"
                     + "\nS - Save game"
                     + "\nQ - quit"
@@ -61,11 +65,11 @@ public class MainMenuView {
                
     public void displayMainMenuView(){
         /* this was done earlier to test the function */
-//    System.out.println("\n*** displayMainMenu() function called ***");
+        // System.out.println("\n*** displayMainMenu() function called ***");
            boolean done = false;  //set flag to not done
            do {
                // prompt for and get players name
-//              System.out.println(menu);
+        //   System.out.println(menu);
               String menuOption = this.getMenuOption();
               if (menuOption.toUpperCase().equals("Q")) // user wants to quit
                return; /// exit the game
@@ -76,8 +80,8 @@ public class MainMenuView {
     }
 
     private String getMenuOption() {
-//       System.out.println("\n*** getMenuOption() called ***");
-//       return "N";
+        //  System.out.println("\n*** getMenuOption() called ***");
+        //  return "N";
 
        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
        String value = ""; //value to be return
@@ -99,8 +103,8 @@ public class MainMenuView {
     }
 
     public boolean doAction(String choice) {
-//        System.out.println("\n*** doAction() called ***");
-//        return true;
+        //  System.out.println("\n*** doAction() called ***");
+        //  return true;
   
     choice = choice.toUpperCase(); // convert chice to upper case
     
@@ -116,6 +120,9 @@ public class MainMenuView {
             break;
         case "S":
             this.saveGame();
+            break;
+        case "P":
+            this.displayDamageControlView();
             break;
         default:
           System.out.println("\n*** Hey bro, not that letter! Try one more time");
