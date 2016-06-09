@@ -5,6 +5,8 @@
  */
 package CIT260.crashInTheCaribbean.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author thomas
@@ -26,8 +28,24 @@ public void displayBuildShipView() {
            System.out.println("the display funtion");
     }
 public void getShipMeasurements(){
-           System.out.println("get values function");
-    }
+          //System.out.println("get values function");
+          Scanner keyboard = new Scanner(System.in);
+        Math.round(double) int value = 0;
+        boolean valid = false;
+        
+        while (!valid) { 
+            System.out.println("\n" + this.message);
+            
+            double value = keyboard.nextLine();
+            
+            if (value <1 || >11) {
+                System.out.println("\n Choose a number between 1-10");
+                continue;
+            }
+        }
+    
+}
+
 public void doAction(){
             System.out.println("do action function");
     }
