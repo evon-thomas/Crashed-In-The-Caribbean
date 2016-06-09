@@ -5,6 +5,8 @@
  */
 package CIT260.crashInTheCaribbean.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author josecovarrubias
@@ -23,7 +25,23 @@ public class DamageControlView {
            System.out.println("the display funtion");
     }
     public void getDamageValues(){
-           System.out.println("get values function");
+//           System.out.println("get values function");
+           Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+       double value = 0; //value to be return
+       boolean valid = false; //initialize to not valid
+       
+       while (!valid){ //loop while an invalid value is enter
+           System.out.println("\n" + this.message);
+           
+           double value = keyboard.nextLine(); //get next line typed on keyboard
+           
+           if (value <1 || >5){// value is blank
+               System.out.println("\nStay within the range of 1-5");
+               continue;
+           }
+       
+       }
+       return ; // return the value entered
     }
     public void doAction(){
             System.out.println("do action function");
