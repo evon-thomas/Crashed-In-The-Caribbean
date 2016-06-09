@@ -35,7 +35,7 @@ public void getShipMeasurements(){
         
         while (!valid) { 
             System.out.println("\n" + this.message);
-            
+             
             double value = keyboard.nextLine();
             
             if (value <1 || >11) {
