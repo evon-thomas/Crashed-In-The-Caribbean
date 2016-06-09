@@ -17,8 +17,8 @@ public class DamageControlView {
     private String message;
 
     public DamageControlView(){
-        this.message ="\nIf you reach or pass 1,024 on the power level"
-                + "\nyou will defeat the beast attacking you, but you"
+        this.message ="\nBy entering 2 numbers you get the power level"
+                + "\nyou needd to defeat the beast attacking you, but you"
                 + "\ncan only enter numbers from 1 through 5 in different"
                 + "\ncombinations to reach the beast resistanse number. ";
     }
@@ -33,7 +33,29 @@ public class DamageControlView {
            
            DamageControl damage = new DamageControl();
            double damageLevel = damage.damage(input1, input2);
-           System.out.println("Your attack was "+ damageLevel);
+           System.out.println("Your attack was "+ damageLevel +" strength.");
+//        boolean done = false;
+//           
+//       while(!valid){
+//           System.out.println("You need to attack again, beast is not dead yet.");
+//           if(damageLevel <1500){
+//           System.out.println("Keep fighting");
+//           }
+//       }
+
+//         do {
+          
+            if (damageLevel <1500) // user wants to quit
+//             this.displayDamageControlView(); /// exit this menu
+            System.out.println("You need to attack again, beast is not dead yet.");
+            else if(damageLevel >1500){
+            System.out.println("!!!!!! You have defeated the beast !!!!!!");
+            }
+            return;  
+           // do the requested action and display the next view
+                         
+//        } while (!done);
+         
            
     }
 //    public void getDamageValues(){
