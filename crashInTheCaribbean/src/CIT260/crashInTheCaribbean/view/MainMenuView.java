@@ -45,6 +45,11 @@ public class MainMenuView {
         helpMenuView.displayHelpMenuView();
 
     }
+    private void displaySelectToolMenuView() {
+        SelectToolMenuView selectToolMenuView = new SelectToolMenuView();
+        selectToolMenuView.displaySelectToolMenuView();
+    
+    }
     
     
     public MainMenuView(){
@@ -57,6 +62,7 @@ public class MainMenuView {
                     + "\nG - Get and start saved game"
                     + "\nP - Practice your attacks"
                     + "\nH - Get help on how to play the game"
+                    + "\nT - Tools. Get info on the tools available"
                     + "\nS - Save game"
                     + "\nQ - quit"
                     + "\n-----------------------------------------------------";
@@ -124,10 +130,11 @@ public class MainMenuView {
         case "P":
             this.displayDamageControlView();
             break;
+         case "T":
+            this.displaySelectToolMenuView();
+            break;
         default:
           System.out.println("\n*** Hey bro, not that letter! Try one more time");
-          break;
-    
     }
     return false; 
     }
