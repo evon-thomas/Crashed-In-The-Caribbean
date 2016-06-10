@@ -33,7 +33,7 @@ public class DamageControlView {
            
            DamageControl damage = new DamageControl();
            double damageLevel = damage.damage(input1, input2);
-           System.out.println("Your attack was "+ damageLevel +" strength.");
+//           System.out.println("Your attack was "+ damageLevel +" strength.");
 //        boolean done = false;
 //           
 //       while(!valid){
@@ -47,7 +47,10 @@ public class DamageControlView {
           
             if (damageLevel <1500) // user wants to quit
 //             this.displayDamageControlView(); /// exit this menu
-            System.out.println("You need to attack again, beast is not dead yet.");
+            System.out.println("You need to attack again,"
+                    + "\nYour attack was " + damageLevel + " strength."
+                    + " Beast is not dead yet.");
+            
             else if(damageLevel >1500){
             System.out.println("!!!!!! You have defeated the beast !!!!!!");
             }
