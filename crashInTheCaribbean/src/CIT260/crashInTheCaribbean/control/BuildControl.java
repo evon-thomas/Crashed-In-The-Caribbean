@@ -5,6 +5,8 @@
  */
 package CIT260.crashInTheCaribbean.control;
 
+import CIT260.crashInTheCaribbean.model.Ship;
+
 /**
  *
  * @author josecovarrubias
@@ -42,6 +44,18 @@ public class BuildControl {
     }*/
 
     double volume(double bucketRadius, double bucketHeight, double PI) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public double calVolumeOfPrism(double length, double height, double width) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public double calcMaxSize(double cubicfeet) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void saveShipDesign(Ship designedShip) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
