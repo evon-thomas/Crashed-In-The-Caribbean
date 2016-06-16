@@ -4,10 +4,8 @@
  * and open the template in the editor.
  */
 
-package citbyui.cit260.curiousworkmanship.view;
 
-import citbyui.cit260.curiousworkmanship.control.InventoryControl;
-import citbyui.cit260.curiousworkmanship.model.Barrel;
+
 import java.util.Scanner;
 
 /**
