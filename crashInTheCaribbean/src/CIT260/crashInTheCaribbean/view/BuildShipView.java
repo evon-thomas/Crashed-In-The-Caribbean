@@ -42,7 +42,7 @@ public void getShipMeasurements(){
              
             value = Double.parseDouble(keyboard.nextLine());
             
-            if (value < 1 || > 11) {
+            if (value < 1 || value > 11) {
                 System.out.println("\n Choose a number between 1-10");
                 continue;
             }

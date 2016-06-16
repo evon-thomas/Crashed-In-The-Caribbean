@@ -14,7 +14,7 @@ import java.util.Scanner;
  *
  * @author josecovarrubias
  */
-public class MainMenuView {
+public class MainMenuView extends View {
     
     private String menu;
     
@@ -54,8 +54,9 @@ public class MainMenuView {
     
     public MainMenuView(){
     
-        this.menu = "\n"
-                    + "\n------------------------------------------------------"
+//        this.menu = "\n"
+             super( "\n"
+                     + "\n------------------------------------------------------"
                     + "\n |                    Main menu                      |"
                     + "\n------------------------------------------------------"
                     + "\nN - Start new game"
@@ -65,56 +66,56 @@ public class MainMenuView {
                     + "\nT - Tools. Get info on the tools available"
                     + "\nS - Save game"
                     + "\nQ - quit"
-                    + "\n-----------------------------------------------------";
+                    + "\n-----------------------------------------------------");
     }
     
                
-    public void displayMainMenuView(){
-        /* this was done earlier to test the function */
-        // System.out.println("\n*** displayMainMenu() function called ***");
-           boolean done = false;  //set flag to not done
-           do {
-               // prompt for and get players name
-        //   System.out.println(menu);
-              String menuOption = this.getMenuOption();
-              if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-               return; /// exit the game
-              
-              // do the requested action and display the next view
-              done = this.doAction(menuOption);               
-           } while (!done);
-    }
-
-    private String getMenuOption() {
-        //  System.out.println("\n*** getMenuOption() called ***");
-        //  return "N";
-
-       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-       String value = ""; //value to be return
-       boolean valid = false; //initialize to not valid
-       
-       while (!valid){ //loop while an invalid value is enter
-           System.out.println("\n" + this.menu);
-           
-           value = keyboard.nextLine(); //get next line typed on keyboard
-           value = value.trim(); //trim off leading and trailing blanks
-           
-           if (value.length() <1){// value is blank
-               System.out.println("\nYou must select a letter");
-               continue;
-           }
-           break; //end the loop
-       }
-       return value; // return the value entered
-    }
-
-    public boolean doAction(String choice) {
-        //  System.out.println("\n*** doAction() called ***");
-        //  return true;
+//    public void displayMainMenuView(){
+//        /* this was done earlier to test the function */
+//        // System.out.println("\n*** displayMainMenu() function called ***");
+//           boolean done = false;  //set flag to not done
+//           do {
+//               // prompt for and get players name
+//        //   System.out.println(menu);
+//              String menuOption = this.getMenuOption();
+//              if (menuOption.toUpperCase().equals("Q")) // user wants to quit
+//               return; /// exit the game
+//              
+//              // do the requested action and display the next view
+//              done = this.doAction(menuOption);               
+//           } while (!done);
+//    }
+//
+//    private String getMenuOption() {
+//        //  System.out.println("\n*** getMenuOption() called ***");
+//        //  return "N";
+//
+//       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+//       String value = ""; //value to be return
+//       boolean valid = false; //initialize to not valid
+//       
+//       while (!valid){ //loop while an invalid value is enter
+//           System.out.println("\n" + this.menu);
+//           
+//           value = keyboard.nextLine(); //get next line typed on keyboard
+//           value = value.trim(); //trim off leading and trailing blanks
+//           
+//           if (value.length() <1){// value is blank
+//               System.out.println("\nYou must select a letter");
+//               continue;
+//           }
+//           break; //end the loop
+//       }
+//       return value; // return the value entered
+//    }
+    @Override
+    public boolean doAction(String value) {
+//        //  System.out.println("\n*** doAction() called ***");
+//        //  return true;
   
-    choice = choice.toUpperCase(); // convert chice to upper case
+    value = value.toUpperCase(); // convert chice to upper case
     
-    switch (choice){
+    switch (value){
         case "N":
             this.startNewGame();
             break;
@@ -140,3 +141,5 @@ public class MainMenuView {
     }
 
 }
+
+
