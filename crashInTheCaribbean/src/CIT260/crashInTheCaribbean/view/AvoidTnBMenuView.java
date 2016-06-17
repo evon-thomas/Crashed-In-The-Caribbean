@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author josecovarrubias
+ * @author josecovarrubias 
  */
 public class AvoidTnBMenuView extends View {
     
