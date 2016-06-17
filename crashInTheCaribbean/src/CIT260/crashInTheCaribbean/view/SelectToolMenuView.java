@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 
 
-public class SelectToolMenuView {
+public class SelectToolMenuView extends View{
     
      private String selectToolMenuView;
      
@@ -32,7 +32,8 @@ public class SelectToolMenuView {
     public  SelectToolMenuView() {
         
        
-        this.selectToolMenuView = "\n"
+//        this.selectToolMenuView = "\n"
+               super ("\n"
                     + "\n------------------------------------------------------"
                     + "\n|                    Tool Menu                       |"
                     + "\n------------------------------------------------------"
@@ -40,48 +41,48 @@ public class SelectToolMenuView {
                     + "\nS - Sword"
                     + "\nA - Axe"
                     + "\nQ - quit"                                                     
-                    + "\n-----------------------------------------------------";
+                    + "\n-----------------------------------------------------");
     }
-  
-        
-        public void displaySelectToolMenuView(){
-        
-        
+//  
+//        
+//        public void displaySelectToolMenuView(){
+//        
+//        
+//
+//        boolean done = false;
+//        do {
+//            String toolChoice = this.getToolChoice();
+//            if (toolChoice.toUpperCase().equals("Q"))
+//                return;
+//            
+//            done = this.doAction(toolChoice);
+//        }  while(!done);
+//    }
+//        
+//        private String getToolChoice() {
+////       System.out.println("\n*** getMenuOption() called ***");
+////       return "N";
+//
+//       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+//       String value = ""; //value to be return
+//       boolean valid = false; //initialize to not valid
+//       
+//       while (!valid){ //loop while an invalid value is enter
+//           System.out.println("\n" + this.selectToolMenuView);
+//           
+//           value = keyboard.nextLine(); //get next line typed on keyboard
+//           value = value.trim(); //trim off leading and trailing blanks
+//           
+//           if (value.length() <1){// value is blank
+//               System.out.println("\nYou must type P, S, A, or Q");
+//               continue;
+//           }
+//           break; //end the loop
+//       }
+//            return value;
+//        }
 
-        boolean done = false;
-        do {
-            String toolChoice = this.getToolChoice();
-            if (toolChoice.toUpperCase().equals("Q"))
-                return;
-            
-            done = this.doAction(toolChoice);
-        }  while(!done);
-    }
-        
-        private String getToolChoice() {
-//       System.out.println("\n*** getMenuOption() called ***");
-//       return "N";
-
-       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-       String value = ""; //value to be return
-       boolean valid = false; //initialize to not valid
-       
-       while (!valid){ //loop while an invalid value is enter
-           System.out.println("\n" + this.selectToolMenuView);
-           
-           value = keyboard.nextLine(); //get next line typed on keyboard
-           value = value.trim(); //trim off leading and trailing blanks
-           
-           if (value.length() <1){// value is blank
-               System.out.println("\nYou must type P, S, A, or Q");
-               continue;
-           }
-           break; //end the loop
-       }
-            return value;
-        }
-
-
+    @Override
     public boolean doAction(String toolChoice) {
     
         toolChoice = toolChoice.toUpperCase(); // convert chice to upper case
