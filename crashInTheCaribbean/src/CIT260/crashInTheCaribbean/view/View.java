@@ -20,7 +20,7 @@ public abstract class View implements ViewInterface {
         this.displayMessage = message;
     }
     
-    @Override
+    @Override  
         public void display() {
         
         boolean done = false; // set flag to not done
