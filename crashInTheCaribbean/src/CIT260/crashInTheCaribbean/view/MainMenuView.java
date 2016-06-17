@@ -47,7 +47,7 @@ public class MainMenuView extends View {
     }
     private void displaySelectToolMenuView() {
         SelectToolMenuView selectToolMenuView = new SelectToolMenuView();
-        selectToolMenuView.displaySelectToolMenuView();
+        selectToolMenuView.display();
     
     }
     
