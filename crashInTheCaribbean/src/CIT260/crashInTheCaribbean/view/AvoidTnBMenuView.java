@@ -9,11 +9,11 @@ import java.util.Scanner;
 
 /**
  *
- * @author josecovarrubias
+ * @author josecovarrubias 
  */
 public class AvoidTnBMenuView extends View {
     
-        private String avoidmenu;
+        private String avoidMenu;
         private void dodge(){
         System.out.println(" When facing a trap that sends projectiles you can Press"
                          + "\n the lettler D to dodge the spears or arrows coming at you.");
