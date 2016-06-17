@@ -9,6 +9,9 @@ package CIT260.crashInTheCaribbean.view;
  *
  * @author josecovarrubias
  */
+
+// testing to see if I was attached to the main git master
+
 public interface ViewInterface {
     
     public void display();
