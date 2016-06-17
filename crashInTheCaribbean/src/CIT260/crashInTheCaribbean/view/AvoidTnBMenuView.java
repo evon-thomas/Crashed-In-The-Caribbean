@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author josecovarrubias
  */
-public class AvoidTnBMenuView {
+public class AvoidTnBMenuView extends View {
     
         private String avoidmenu;
         private void dodge(){
@@ -29,7 +29,8 @@ public class AvoidTnBMenuView {
         }
 
     public AvoidTnBMenuView(){
-        this.avoidmenu = "\n"
+//            this.menu = "\n"
+                   super ("\n"
                         + "\n=================================================="
                         + "\n|||    How to avoid traps and beasts options   |||"
                         + "\n=================================================="
@@ -37,46 +38,46 @@ public class AvoidTnBMenuView {
                         + "\n C - Cover: press C for more detail."
                         + "\n D - Dodge: press D for more detail."
                         + "\n Q - Quit."
-                        + "\n--------------------------------------------------";
+                        + "\n--------------------------------------------------");
     }
     
-    public void displayAvoidTnBMenu() {
-//     System.out.println("\n   ***testing the avoidtnb menu");
-         boolean done = false;  //set flag to not done
-         do {
-//          System.out.println(menu);
-            String avoidMenuOption = this.getAvoidMenuOption();
-            if (avoidMenuOption.toUpperCase().equals("Q")) // user wants to quit
-            return; /// exit this menu
-              
-           // do the requested action and display the next view
-            done = this.doAction(avoidMenuOption);               
-        } while (!done);
-    }
-    
-    private String getAvoidMenuOption() {
-//       System.out.println("\n*** getMenuOption() called ***");
-//       return "N";
-
-       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-       String value = ""; //value to be return
-       boolean valid = false; //initialize to not valid
-       
-       while (!valid){ //loop while an invalid value is enter
-           System.out.println("\n" + this.avoidmenu);
-           
-           value = keyboard.nextLine(); //get next line typed on keyboard
-           value = value.trim(); //trim off leading and trailing blanks
-           
-           if (value.length() <1){// value is blank
-               System.out.println("\nYou must select a letter");
-               continue;
-           }
-           break; //end the loop
-       }
-       return value; // return the value entered
-    }
-
+//    public void displayAvoidTnBMenu() {
+////     System.out.println("\n   ***testing the avoidtnb menu");
+//         boolean done = false;  //set flag to not done
+//         do {
+////          System.out.println(menu);
+//            String avoidMenuOption = this.getAvoidMenuOption();
+//            if (avoidMenuOption.toUpperCase().equals("Q")) // user wants to quit
+//            return; /// exit this menu
+//              
+//           // do the requested action and display the next view
+//            done = this.doAction(avoidMenuOption);               
+//        } while (!done);
+//    }
+//    
+//    private String getAvoidMenuOption() {
+////       System.out.println("\n*** getMenuOption() called ***");
+////       return "N";
+//
+//       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+//       String value = ""; //value to be return
+//       boolean valid = false; //initialize to not valid
+//       
+//       while (!valid){ //loop while an invalid value is enter
+//           System.out.println("\n" + this.avoidmenu);
+//           
+//           value = keyboard.nextLine(); //get next line typed on keyboard
+//           value = value.trim(); //trim off leading and trailing blanks
+//           
+//           if (value.length() <1){// value is blank
+//               System.out.println("\nYou must select a letter");
+//               continue;
+//           }
+//           break; //end the loop
+//       }
+//       return value; // return the value entered
+//    }
+    @Override
     public boolean doAction(String choice) {
 //        System.out.println("\n*** doAction() called ***");
 //        return true;

@@ -42,12 +42,12 @@ public class MainMenuView extends View {
     private void displayHelpMenu(){
         // System.out.println("*** displayHelpMenu fun. called ***");
         HelpMenuView helpMenuView = new HelpMenuView();
-        helpMenuView.displayHelpMenuView();
+        helpMenuView.display();
 
     }
     private void displaySelectToolMenuView() {
         SelectToolMenuView selectToolMenuView = new SelectToolMenuView();
-        selectToolMenuView.displaySelectToolMenuView();
+        selectToolMenuView.display();
     
     }
     
