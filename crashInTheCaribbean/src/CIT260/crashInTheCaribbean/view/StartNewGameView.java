@@ -50,12 +50,15 @@ public class StartNewGameView extends View{
        switch (menuOption){
            case "C": //confused
                this.confused();
+               break;
                
            case "A": //angry
                this.angry();
+               break;
                
            case "W": // worried
                this.worried();
+               break;
             
            case "H": //happy
                this.happy();
