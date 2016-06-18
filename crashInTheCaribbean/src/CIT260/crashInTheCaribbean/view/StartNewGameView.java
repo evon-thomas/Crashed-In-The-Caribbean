@@ -40,6 +40,7 @@ public class StartNewGameView extends View{
                 + "\nA - Angry"
                 + "\nW - Worried"
                 + "\nH - Happy"
+                + "\nQ - Quit"
                 + "\n----------------------------------");
     
 }
