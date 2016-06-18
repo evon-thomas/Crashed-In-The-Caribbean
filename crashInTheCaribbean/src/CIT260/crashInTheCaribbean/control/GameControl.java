@@ -6,6 +6,7 @@
 package CIT260.crashInTheCaribbean.control;
 
 import CIT260.crashInTheCaribbean.model.Player;
+import CIT260.crashInTheCaribbean.view.StartNewGameView;
 import crashinthecaribbean.CrashInTheCaribbean;
 
 /**
@@ -14,10 +15,11 @@ import crashinthecaribbean.CrashInTheCaribbean;
  */
 public class GameControl {
     
-    public static void createNewGame(Player player) {
-        
-        System.out.println("\n*** createNewGame stub function called ***");
-    }
+//public static void createNewGame(Player player) {
+//        
+//        StartNewGameView startNewGameView = new StartNewGameView();
+//        startNewGameView.displayStartNewGameView();
+//}
 
     public static Player createPlayer(String name) {
 //      System.out.println("\n*** createPlayer() function called ***");
@@ -33,5 +35,12 @@ public class GameControl {
         return player;
         
     }
+
+//    public void display() {
+//        StartNewGameView startNewGameView = new StartNewGameView();
+//        startNewGameView.display();
+//    }
+
+   
     
 }
