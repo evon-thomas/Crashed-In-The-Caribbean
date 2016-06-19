@@ -10,19 +10,11 @@ package CIT260.crashInTheCaribbean.control;
  * @author josecovarrubias
  */
 public class MoveControl {
-    
-    private final static int BOOST=2;
-    private final static int L=2;
-    private final static int R = 2;
-    private final static int J = 2;
-    
-    public MoveControl(){
+ 
+     
+    public int controlMove(int letter, int Boost){
 
-    
-    }
-
-    public void display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+    double calMove = Math.pow(letter, Boost);
+    return (int) calMove;
+    }  
 }
