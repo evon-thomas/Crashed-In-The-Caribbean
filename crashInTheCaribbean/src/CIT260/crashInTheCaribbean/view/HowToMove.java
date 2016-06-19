@@ -13,30 +13,37 @@ import CIT260.crashInTheCaribbean.control.MoveControl;
  */
 public class HowToMove extends View{
 
-    
+    int moves[] = {2, 2};
+    int boost=moves[1];
+    int L=moves[0];
+    int R=moves[0];
+    int J=moves[0];
     private void jump(){
+ 
             MoveControl controlMove = new MoveControl();
-            controlMove.display();
-       
+            int movPlayer = controlMove.controlMove(J, boost);
+       System.out.println("You jumped was level " + movPlayer);
     } 
     private void left(){
-    
+                MoveControl controlMove = new MoveControl();
+            int movPlayer = controlMove.controlMove(L, boost);
+            System.out.println("You moved to the left " + movPlayer + "places");
     }
     private void right(){
-    
+                MoveControl controlMove = new MoveControl();
+            int movPlayer = controlMove.controlMove(R, boost);
+            System.out.println("You moved to the right " + movPlayer + " places");
     }
-    private void boost(){
-    
-    }
+
     
     
     public HowToMove(){
-                    super ("\n"
+                   super ("\n"
                         + "\n=================================================="
                         + "\n J - Jump."
                         + "\n R - Right."
                         + "\n L - Left." 
-                        + "\n B - Boost."     
+//                        + "\n B - Boost."     
                         + "\n Q - Quit."
                         + "\n--------------------------------------------------");
     }
@@ -56,9 +63,9 @@ public class HowToMove extends View{
             case "L":
                 this.left();
                 break;
-            case "B":
-                this.boost();
-                break;
+//            case "B":
+//                this.boost();
+//                break;
             default:
                 System.out.println("\n??? Select one of the letters. ???");
                 break;
