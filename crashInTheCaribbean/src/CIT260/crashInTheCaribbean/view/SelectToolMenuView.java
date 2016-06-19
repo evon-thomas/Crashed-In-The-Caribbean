@@ -29,7 +29,9 @@ public class SelectToolMenuView extends View{
         System.out.println("*** useAxe fun. called ***");
     }
     private void useBarrel(){
-        System.out.println("*** useBarrel fun. called ***");
+        //System.out.println("*** useBarrel fun. called ***");
+        UseBarrelView useBarrelView = new UseBarrelView();
+            useBarrelView.display();
     }
    
     public  SelectToolMenuView() {
