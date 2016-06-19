@@ -5,6 +5,8 @@
  */
 package CIT260.crashInTheCaribbean.control;
 
+import CIT260.crashInTheCaribbean.model.Barrel;
+
 /**
  *
  * @author thomas
@@ -31,6 +33,10 @@ public class BarrelControl {
     }
 
     public double calcMaxWeight(double volume) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void saveBarrelDesign(Barrel designedBarrel) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
