@@ -19,7 +19,10 @@ public class HelpMenuView extends View {
         System.out.println("*** goalOfGmae fun. called ***");
     }
     private void howToMove(){
-        System.out.println("*** howToMove fun. called ***");
+//        System.out.println("*** howToMove fun. called ***");
+
+          HowToMove move = new HowToMove();
+          move.display();
     }
     private void toolsAvailable(){
         System.out.println("*** toolsAvailable fun. called ***");
