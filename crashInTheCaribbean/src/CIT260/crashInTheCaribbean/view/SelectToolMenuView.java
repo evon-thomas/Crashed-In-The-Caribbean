@@ -28,6 +28,9 @@ public class SelectToolMenuView extends View{
     private void useAxe(){
         System.out.println("*** useAxe fun. called ***");
     }
+    private void useBarrel(){
+        System.out.println("*** useBarrel fun. called ***");
+    }
    
     public  SelectToolMenuView() {
         
@@ -40,7 +43,8 @@ public class SelectToolMenuView extends View{
                     + "\nP - Punch"
                     + "\nS - Sword"
                     + "\nA - Axe"
-                    + "\nQ - quit"                                                     
+                    + "\nB - Barrel"    
+                    + "\nQ - Quit" 
                     + "\n-----------------------------------------------------");
     }
 //  
@@ -97,6 +101,8 @@ public class SelectToolMenuView extends View{
         case "S":
             this.useSword();
             break;
+        case "B":
+            this.useBarrel();
         default:
           System.out.println("\n*** Hey bro, not that letter! Try P, A, or S");
           break;

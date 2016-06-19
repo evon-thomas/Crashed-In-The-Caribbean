@@ -53,11 +53,6 @@ public void getShipMeasurements(){
 
 public boolean doAction(double length, double height, double width){
             System.out.println("do action function");
-    
-
-
-
-        //prompt for the dimensions for the barrel
 
         BuildControl buildControl = new BuildControl();
 
@@ -93,7 +88,7 @@ public boolean doAction(double length, double height, double width){
         boolean valid = false;
         String selection = null;
 
-        // while a valid name has not been retrieved
+        
         while (!valid) {
 
             // get the value entered from the keyboard
@@ -131,7 +126,7 @@ public boolean doAction(double length, double height, double width){
             System.out.println("\nPlease enter the width of the Ship");
             width = Double.parseDouble(getInput());    
            
-            done = this.doAction(length, height, width); // do action based on selection        
+            done = this.doAction(length, height, width); // do action based on decision        
         } while (!done);
     }
 }
