@@ -5,22 +5,19 @@
  */
 package CIT260.crashInTheCaribbean.view;
 import CIT260.crashInTheCaribbean.control.BarrelControl;
+import CIT260.crashInTheCaribbean.control.MoveControl;
 /**
  *
  * @author thomas
  */
-public class UseBarrelView {
-
-
-
 
 
 public class UseBarrelView extends View{
 
     
     private void fill(){
-            UseBarrelView useBarrelView = new UseBarrelView();
-            controlBarrelControl.display();
+           BarrelControl controlBarrel = new BarrelControl();
+            controlBarrel.display();
        
     } 
     private void empty(){
@@ -64,5 +61,4 @@ public class UseBarrelView extends View{
         return false;
     }
     
-}
 }
