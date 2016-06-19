@@ -104,7 +104,7 @@ public class SelectToolMenuView extends View{
         case "B":
             this.useBarrel();
         default:
-          System.out.println("\n*** Hey bro, not that letter! Try P, A, or S");
+          System.out.println("\n*** Hey bro, not that letter! Try P, A, B, or S");
           break;
     
     }
