@@ -36,7 +36,7 @@ public class AvoidTnBMenuView extends View {
                         + "\n=================================================="
                         + "\n A - Attack: press A for more detail."
                         + "\n C - Cover: press C for more detail."
-                        + "\n D - Dodge: press D for more detail."
+                        + "\n D - Dodge: press D for more detail."  
                         + "\n Q - Quit."
                         + "\n--------------------------------------------------");
     }
