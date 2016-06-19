@@ -15,16 +15,19 @@ import CIT260.crashInTheCaribbean.control.MoveControl;
 public class UseBarrelView extends View{
 
     
-    private void fill(){
+    private void FillBucket(){
            BarrelControl controlBarrel = new BarrelControl();
             controlBarrel.display();
        
     } 
+    private void fill(){
+        System.out.println("*** fill the bucket function called***");
+    }
     private void empty(){
-    
+    System.out.println("*** empty the bucket function called***");
     }
     private void drink(){
-    
+    System.out.println("***drink the bucket function called***");
     }
 
     
