@@ -24,7 +24,7 @@ public class DesignBarrelsView  {
             + "\n---------------------------------------------------------------");
     }
 
-    public boolean doAction(double height, double radius, double pi) {
+    public double doAction(double height, double radius, double pi) {
         
         //prompt for the dimensions for the barrel
 
@@ -50,38 +50,35 @@ public class DesignBarrelsView  {
                 designedBarrel.setVolume(pi);                
 
                 barrelControl.saveBarrelDesign(designedBarrel);
-                return true;     
+                
             }
         }
-        return false;  
-    }
 
-     public String getInput() {
+    
 
-        Scanner keyboard = new Scanner(System.in);
+     public getInput() {
+          //System.out.println("get values function");
+          Scanner keyboard = new Scanner(System.in);
+        double value = 0.0;
+        
         boolean valid = false;
-        String selection = null;
-
-        // while a valid name has not been retrieved
-        while (!valid) {
-
-            // get the value entered from the keyboard
-            selection = keyboard.nextLine();
-            selection = selection.trim();
-
-            if (selection.length() < 1) { // blank value entered
-                System.out.println("\n*** Invalid selection *** Try again");
+        
+        while (!valid) { 
+            System.out.println("\n" + this.message);
+             
+            value = Double.parseDouble(keyboard.nextLine());
+            
+            if (value < 1 || value > 13) {
+                System.out.println("\n Choose a number between 1-13");
                 continue;
             }
-            
-            break;
+            return value;
         }
-
-        return selection; // return the name        
-    }
+    
+}
      
       public void display() {
-        String value;
+        double value;
         boolean done = false;
         
         do { 
@@ -91,18 +88,15 @@ public class DesignBarrelsView  {
             double diameter = 0.0;
             
             System.out.println("\nPlease enter the height of the barrel");
-            height = Double.parseDouble(getInput());                                                                     
+             double height = Double.parseDouble(getInput());                                                                     
 
             System.out.println("\nPlease enter the diameter of the barrel");
-            double radius = Double.parseDouble(getInput());  
+             double radius = Double.parseDouble(getInput());  
             
             System.out.println("\nPlease enter the value of pi ( hint 3.14)");
-            double pi = Double.parseDouble(getInput());
-            done = this.doAction(height, diameter);       
+             double pi = Double.parseDouble(getInput());
+            done = this.doAction(height, radius, pi);       
         } while (!done);
         }
-
-    private boolean doAction(double height, double diameter) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-        }
+ 
+}

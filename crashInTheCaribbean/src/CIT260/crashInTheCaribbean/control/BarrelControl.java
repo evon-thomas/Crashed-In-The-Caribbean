@@ -15,7 +15,7 @@ public class BarrelControl {
     
 
 
-    public double barrel(double radiusAmt,double heightAmt){
+    public double barrel(double radiusAmt,double heightAmt, double pi){
         
         if (radiusAmt <0 || radiusAmt >5){//Int too high
         return -1;
@@ -23,8 +23,11 @@ public class BarrelControl {
         if (heightAmt <0 || heightAmt >12.75){//Pow too high
         return -1;
         }
-         double totalDam = Math.pow(radiusAmt, 2) * heightAmt * Math.PI;
-         return totalDam;
+        if (pi <0 || heightAmt >3.15){//Pow too high
+        return -1;
+        }
+         double volume = Math.pow(radiusAmt, 2) * heightAmt * pi;
+         return volume;
     
     } 
 
