@@ -12,7 +12,16 @@ import CIT260.crashInTheCaribbean.control.MoveControl;
  * @author josecovarrubias
  */
 public class HowToMove extends View{
-
+  
+    
+    /*
+    ==========================================================================
+    this ithe part where I wanted to add the option to the user to enter
+    either 1 or 2 values, so that way he can call for the boost, but 
+    I didn't know how to so it. 
+    I thought about it with the array, but this is as far as i went, 
+    ===========================================================================
+    */
     int moves[] = {2, 2};
     int boost=moves[1];
     int L=moves[0];
@@ -27,7 +36,7 @@ public class HowToMove extends View{
     private void left(){
                 MoveControl controlMove = new MoveControl();
             int movPlayer = controlMove.controlMove(L, boost);
-            System.out.println("You moved to the left " + movPlayer + "places");
+            System.out.println("You moved to the left " + movPlayer + " places");
     }
     private void right(){
                 MoveControl controlMove = new MoveControl();
