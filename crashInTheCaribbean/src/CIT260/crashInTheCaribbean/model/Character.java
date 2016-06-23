@@ -12,82 +12,131 @@ import java.util.Objects;
  *
  * @author josecovarrubias
  */
-public class Character implements Serializable{
+public enum Character implements Serializable{
+        
+    // our enum array 
+    Rambo("This player is the most tough of all the players, but has one weakness, he moves slow."),
+    Neo("This player can visualize dimentional enviroments, but is soley imaginable."),
+    Kung_Fu_Panda("the most fun player to play with");
+    
+    
+    
+    
+    
     
     // class instance variable
-    private String name;
-    private String description;
-    private double coordinates;
+//    private String name;
+    private final String description;
+    private final Location coordinates;
 
-    public Character() {
+     Character(String description) {
+          this.description = description;
+          coordinates = new Location();
+
     }
 
     
     
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public String getName() {
+//        return name;
+//    }
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+//    public void setDescription(String description) {
+//        this.description = description;
+//    }
 
-    public double getCoordinates() {
+    public Location getCoordinates() {
         return coordinates;
     }
 
-    public void setCoordinates(double coordinates) {
-        this.coordinates = coordinates;
-    }
+//    public void setCoordinates(double coordinates) {
+//        this.coordinates = coordinates;
+//    }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 37 * hash + Objects.hashCode(this.name);
-        hash = 37 * hash + Objects.hashCode(this.description);
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.coordinates) ^ (Double.doubleToLongBits(this.coordinates) >>> 32));
-        return hash;
-    }
+//    @Override
+//    public int hashCode() {
+//        int hash = 5;
+//        hash = 37 * hash + Objects.hashCode(this.name);
+//        hash = 37 * hash + Objects.hashCode(this.description);
+//        hash = 37 * hash + (int) (Double.doubleToLongBits(this.coordinates) ^ (Double.doubleToLongBits(this.coordinates) >>> 32));
+//        return hash;
+//    }
 
-    @Override
-    public String toString() {
-        return "Character{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Character{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + '}';
+//    }
 
+} 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (this == obj) {
+//            return true;
+//        }
+//        if (obj == null) {
+//            return false;
+//        }
+//        if (getClass() != obj.getClass()) {
+//            return false;
+//        }
+//        final Character other = (Character) obj;
+//        if (Double.doubleToLongBits(this.coordinates) != Double.doubleToLongBits(other.coordinates)) {
+//            return false;
+//        }
+//        if (!Objects.equals(this.name, other.name)) {
+//            return false;
+//        }
+//        if (!Objects.equals(this.description, other.description)) {
+//            return false;
+//        }
+//        return true;
+//    }
     
     
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Character other = (Character) obj;
-        if (Double.doubleToLongBits(this.coordinates) != Double.doubleToLongBits(other.coordinates)) {
-            return false;
-        }
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        return true;
-    }
     
-    
-    
-}
+
