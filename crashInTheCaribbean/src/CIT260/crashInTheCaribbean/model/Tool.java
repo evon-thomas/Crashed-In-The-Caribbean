@@ -22,7 +22,9 @@ public enum Tool implements Serializable{
     private final String description;
     private final InventoryType useTool;
 
-    Tool(String Description) {
+ 
+    
+    Tool(String description) {
         this.description = description;
         useTool = new InventoryType();
     }
@@ -37,9 +39,9 @@ public enum Tool implements Serializable{
 //        this.makeTool = makeTool;
     }
 
-    public InventoryType getUseTool() {
-        return useTool;
-    }
+//    public InventoryType getUseTool() {
+//        return useTool;
+//    }
 
 //    public void setUseTool(boolean useTool) {
 //        this.useTool = useTool;
