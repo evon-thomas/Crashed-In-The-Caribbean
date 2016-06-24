@@ -6,72 +6,81 @@
 package CIT260.crashInTheCaribbean.model;
 
 import java.io.Serializable;
-
+import java.util.Objects;
 /**
  *
  * @author thomas
  */
-public class Tool implements Serializable{
+public enum Tool implements Serializable{
     
-    private boolean makeTool;
-    private boolean useTool;
+    // our enum array
+    SawZaw("Use this automatic wood cutter to cut the wood"),
+    Hammer("Use this tool to hammer nails"),
+    NailsGlue("Use nails and glue to seam the boat");
+    
+    
+    private final String description;
+    private final InventoryType useTool;
 
-    public Tool() {
+    Tool(String Description) {
+        this.description = description;
+        useTool = new InventoryType();
     }
     
     
 
-    public boolean isMakeTool() {
-        return makeTool;
+    public String getDescription() {
+        return description;
     }
 
-    public void setMakeTool(boolean makeTool) {
-        this.makeTool = makeTool;
+//    public void setMakeTool(boolean makeTool) {
+//        this.makeTool = makeTool;
     }
 
-    public boolean isUseTool() {
+    public InventoryType getUseTool() {
         return useTool;
     }
 
-    public void setUseTool(boolean useTool) {
-        this.useTool = useTool;
-    }
+//    public void setUseTool(boolean useTool) {
+//        this.useTool = useTool;
+//    }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 89 * hash + (this.makeTool ? 1 : 0);
-        hash = 89 * hash + (this.useTool ? 1 : 0);
-        return hash;
-    }
-
-    @Override
-    public String toString() {
-        return "Tool{" + "makeTool=" + makeTool + ", useTool=" + useTool + '}';
-    }
+//    @Override
+//    public int hashCode() {
+//        int hash = 7;
+//        hash = 89 * hash + (this.makeTool ? 1 : 0);
+//        hash = 89 * hash + (this.useTool ? 1 : 0);
+//        return hash;
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "Tool{" + "makeTool=" + makeTool + ", useTool=" + useTool + '}';
+//    }
     
     
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Tool other = (Tool) obj;
-        if (this.makeTool != other.makeTool) {
-            return false;
-        }
-        if (this.useTool != other.useTool) {
-            return false;
-        }
-        return true;
-    }
-    
-    
-}
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (this == obj) {
+//            return true;
+//        }
+//        if (obj == null) {
+//            return false;
+//        }
+//        if (getClass() != obj.getClass()) {
+//            return false;
+//        }
+//        final Tool other = (Tool) obj;
+//        if (this.makeTool != other.makeTool) {
+//            return false;
+//        }
+//        if (this.useTool != other.useTool) {
+//            return false;
+//        }
+//        return true;
+//    }
+//    
+//    
+//
+
