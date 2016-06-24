@@ -29,7 +29,7 @@ public enum Location implements Serializable{
       private final boolean visited;
       private final double amountRemaning;
 //
-      Location() {
+      Location() { 
       }
         
     
