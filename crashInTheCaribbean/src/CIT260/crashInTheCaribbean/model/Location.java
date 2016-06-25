@@ -30,6 +30,8 @@ public enum Location implements Serializable{
       private final double amountRemaning;
 //
       Location() { 
+          this.description = description;
+          amountRemaining = new Row();
       }
         
     
