@@ -14,25 +14,24 @@ import java.util.Objects;
  */
 public enum Scene implements Serializable{
     
-    overLook_of_Location("This is the starting scene for any location."),
-    face_trap("This scene shows the trap to the user."),
-    face_beast("This scene shows the beast to the user."),
-    find_tool("This scene is used when a new tool is found."),
-    find_weapon("This scene is used when a new weapon is found.");
+    overLook("This is the starting scene for any location."),
+    facetrap("This scene shows the trap to the user."),
+    facebeast("This scene shows the beast to the user."),
+    findtool("This scene is used when a new tool is found."),
+    findweapon("This scene is used when a new weapon is found.");
     
     
     private final String description;
     private final double travelTime;
-    private final boolean blockedLocation;
+    private final Location viewScene;
     private final double healthLeft;
     
     private Location location;
 
-    Scene(String description) {
+    Scene(String description){
         this.description = description;
-        useWeapon = new AvoidBeasts()
+        viewScene = new Location();
     }
-    
     
 
     public String getDescription() {

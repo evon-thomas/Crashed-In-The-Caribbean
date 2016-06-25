@@ -20,6 +20,10 @@ public class Map implements Serializable{
     public Map() {
     }
 
+    public Map(int i, int i0) {
+      System.out.println("are we there yet");
+    }
+
     
     public double getRowCount() {
         return rowCount;
