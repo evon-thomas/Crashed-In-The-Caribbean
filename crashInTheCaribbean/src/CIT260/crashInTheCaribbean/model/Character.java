@@ -29,9 +29,9 @@ public enum Character implements Serializable{
     private final String description;
     private final Location coordinates;
 
-     Character(String description) {
-          this.description = description;
-          coordinates = new Location();
+    Character(String description) {
+        this.description = description;
+        coordinates = new Location();
 
     }
 
