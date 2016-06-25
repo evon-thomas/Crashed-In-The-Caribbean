@@ -5,8 +5,9 @@
  */
 package CIT260.crashInTheCaribbean.control;
 
+import CIT260.crashInTheCaribbean.model.Game;
 import CIT260.crashInTheCaribbean.model.Player;
-import CIT260.crashInTheCaribbean.view.StartNewGameView;
+import CIT260.crashInTheCaribbean.view.StartNewGame;
 import crashinthecaribbean.CrashInTheCaribbean;
 
 /**
@@ -41,6 +42,14 @@ public class GameControl {
 //        startNewGameView.display();
 //    }
 
-   
+   public static void createNewGame(Player player){
+//         Game game = new Game();
+//         CrashInTheCaribbean.setCurrentGame(game);
+////         
+//         game.setPlayer(player);
+//           System.out.print(player);
+
+System.out.println("create a new game please.");
+   }
     
 }

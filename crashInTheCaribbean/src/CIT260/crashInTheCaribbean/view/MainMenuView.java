@@ -20,15 +20,17 @@ public class MainMenuView extends View {
     
     private String menu;
     
-    private void StartNewGameView(){
-        StartNewGameView startNewGameView = new StartNewGameView();
-        startNewGameView.display();
+    private void StartNewGame(){
+        GameControl.createNewGame(CrashInTheCaribbean.getPlayer());
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
     private void startExistingGame(){
         System.out.println("*** existingGame fun. called ***");
     }      
     private void displayDamageControlView(){
-        //this function calls the class where teh power of attack is calculated. Jose.
+        //this function calls the class where the power of attack is calculated. Jose.
         DamageControlView damageView = new DamageControlView();
         damageView.displayDamageControlView();
     }
@@ -119,7 +121,7 @@ public class MainMenuView extends View {
     
     switch (value){
         case "N":
-            this.StartNewGameView();
+            this.StartNewGame();
             break;
         case "G":
             this.startExistingGame();
