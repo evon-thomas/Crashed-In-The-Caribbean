@@ -68,20 +68,20 @@ public class GameControl {
 
         InventoryType[] inventory = new InventoryType[17];
         
-        InventoryType axe = new InventoryType();
-        axe.setInventoryType("Axe");
-        axe.setAmountAvailable(0);
-        inventory[0] = axe;
+        InventoryType traparea = new InventoryType();
+        traparea.setInventoryType("traparea");
+        traparea.setAmountAvailable(0);
+        inventory[0] = traparea;
         
-        InventoryType axe = new InventoryType();
-        axe.setInventoryType("Axe");
-        axe.setAmountAvailable(0);
-        inventory[0] = axe;
+        InventoryType buildShipShore = new InventoryType();
+        buildShipShore.setInventoryType("BuildShipShore");
+        buildShipShore.setAmountAvailable(0);
+        inventory[0] = buildShipShore;
         
-        InventoryType axe = new InventoryType();
-        axe.setInventoryType("Axe");
-        axe.setAmountAvailable(0);
-        inventory[0] = axe;
+        InventoryType startingPoint = new InventoryType();
+        startingPoint.setInventoryType("StartingPoint");
+        startingPoint.setAmountAvailable(0);
+        inventory[0] = startingPoint;
         
         InventoryType bow = new InventoryType();
         bow.setInventoryType("Bow and Arrow");
