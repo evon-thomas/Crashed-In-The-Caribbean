@@ -13,10 +13,21 @@ public class GameMenuView extends View{
     
 //        public void displayMenu() {
 //        System.out.println("\n*** game menu view from view layer called ***");
-    private void ViewMap(){}
-    private void ViewInventory(){}
-    private void moveLocation(){}
-    private void playerCharacters(){}
+    private void ViewMap(){
+        System.out.println("map func");
+    }
+    private void ViewInventory(){
+        System.out.println("inven func");
+    }
+    private void moveLocation(){
+        System.out.println("locat func");
+    }
+    private void playerCharacters(){
+        System.out.println("charc func");
+    }
+    private void createNewGame(){
+        System.out.println("createNewGame func");
+    }
         
     public GameMenuView(){
     
@@ -25,6 +36,7 @@ public class GameMenuView extends View{
                      + "\n------------------------------------------------------"
                     + "\n |                    Game menu                      |"
                     + "\n------------------------------------------------------"
+                    + "\n N - Create new game."
                     + "\n M - View map."
                     + "\n I - View inventory."
                     + "\n L - Move location."
@@ -38,6 +50,10 @@ public class GameMenuView extends View{
                menuOption = menuOption.toUpperCase(); //converts to upper case
        
        switch (menuOption){
+           case "N":// create new game
+               this.createNewGame();
+               break;
+           
            case "M": //
                this.ViewMap();
                break;

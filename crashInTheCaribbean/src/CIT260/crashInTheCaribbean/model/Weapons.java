@@ -16,7 +16,7 @@ public enum Weapons implements Serializable{
     
         // our enum array
     Axe("Use this weapon also for chopping wood."),
-    Bow_and_Arrow("These two will help you avoid beasts and fight back."),
+    Bow("These two will help you avoid beasts and fight back."),
     bazooka("This weapon will fry your dinner.");
     
     private final String description;

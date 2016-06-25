@@ -14,8 +14,8 @@ import java.io.Serializable;
 public enum Location implements Serializable{
     
     
-    starting_point(),
-    build_ship_shore(),
+    startingPoint(),
+    buildShipShore(),
     get_spears();
     
     

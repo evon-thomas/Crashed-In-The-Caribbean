@@ -17,7 +17,7 @@ public enum Character implements Serializable{
     // our enum array 
     Rambo("This player is the most tough of all the players, but has one weakness, he moves slow."),
     Neo("This player can visualize dimentional enviroments, but is soley imaginable."),
-    Kung_Fu_Panda("the most fun player to play with");
+    KungFuPanda("the most fun player to play with");
     
     
     
