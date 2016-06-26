@@ -15,10 +15,10 @@ import java.util.Objects;
 public enum Scene implements Serializable{
     
     overLook("This is the starting scene for any location."),
-    facetrap("This scene shows the trap to the user."),
-    facebeast("This scene shows the beast to the user."),
-    findtool("This scene is used when a new tool is found."),
-    findweapon("This scene is used when a new weapon is found.");
+    faceTrap("This scene shows the trap to the user."),
+    faceBeast("This scene shows the beast to the user."),
+    findTool("This scene is used when a new tool is found."),
+    findWeapon("This scene is used when a new weapon is found.");
     
   //  private  SceneType sceneType;
     private final String description;
