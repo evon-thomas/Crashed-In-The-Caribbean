@@ -17,7 +17,7 @@ public enum Location implements Serializable{
     
     startingPoint(),
     buildShipShore(),
-    traparea();
+    trapArea();
     
     
     
