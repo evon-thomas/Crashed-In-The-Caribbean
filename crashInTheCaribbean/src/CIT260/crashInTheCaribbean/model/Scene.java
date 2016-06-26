@@ -20,7 +20,7 @@ public class Scene implements Serializable{
 //    findTool("This scene is used when a new tool is found."),
 //    findWeapon("This scene is used when a new weapon is found.");
     
-  //  private  SceneType sceneType;
+    private  SceneType scenes;
     private  String description;
     private  double travelTime;
     private  Location viewScene;
@@ -29,13 +29,30 @@ public class Scene implements Serializable{
     private Location location;
     
     Scene(){
-        
+        this.description = description;
+        scenes = new SceneType();
     }
 
-//    Scene(String description){
-//        this.description = description;
-//        viewScene = new Location();
-//    }
+    public SceneType getScene() {
+        return scenes;
+    }
+
+    public void setScene(SceneType scene) {
+        this.scenes = scene;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    Scene(String description){
+        this.description = description;
+        viewScene = new Location();
+    }
     
 
     public String getDescription() {

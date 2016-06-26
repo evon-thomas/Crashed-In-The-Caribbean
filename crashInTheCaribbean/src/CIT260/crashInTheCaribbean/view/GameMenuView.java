@@ -5,6 +5,9 @@
  */
 package CIT260.crashInTheCaribbean.view;
 
+import CIT260.crashInTheCaribbean.control.GameControl;
+import crashinthecaribbean.CrashInTheCaribbean;
+
 /**
  *
  * @author thomas
@@ -26,7 +29,7 @@ public class GameMenuView extends View{
         System.out.println("charc func");
     }
     private void createNewGame(){
-        System.out.println("createNewGame func");
+        GameControl.createNewGame(CrashInTheCaribbean.getPlayer());
     }
         
     public GameMenuView(){

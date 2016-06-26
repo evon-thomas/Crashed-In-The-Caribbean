@@ -159,7 +159,7 @@ public class GameControl {
     }
 
     static void assignScenesToLocations(Map map, Scene[] scenes) {
-            System.out.println("print the map or location");
+            System.out.println("\n print the map or location, find me on GameControl.");
     }
     
 }
