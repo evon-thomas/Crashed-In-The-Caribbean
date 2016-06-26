@@ -12,47 +12,47 @@ import java.util.Objects;
  *
  * @author thomas
  */
-public enum Scene implements Serializable{
+public class Scene implements Serializable{
     
-    overLook("This is the starting scene for any location."),
-    faceTrap("This scene shows the trap to the user."),
-    faceBeast("This scene shows the beast to the user."),
-    findTool("This scene is used when a new tool is found."),
-    findWeapon("This scene is used when a new weapon is found.");
+//    overLook("This is the starting scene for any location."),
+//    faceTrap("This scene shows the trap to the user."),
+//    faceBeast("This scene shows the beast to the user."),
+//    findTool("This scene is used when a new tool is found."),
+//    findWeapon("This scene is used when a new weapon is found.");
     
   //  private  SceneType sceneType;
-    private final String description;
-    private final double travelTime;
-    private final Location viewScene;
-    private final double healthLeft;
+    private  String description;
+    private  double travelTime;
+    private  Location viewScene;
+    private  double healthLeft;
     
     private Location location;
     
-//    Scene(){
-//        
-//    }
-
-    Scene(String description){
-        this.description = description;
-        viewScene = new Location();
+    Scene(){
+        
     }
+
+//    Scene(String description){
+//        this.description = description;
+//        viewScene = new Location();
+//    }
     
 
     public String getDescription() {
         return description;
     }
 
-//    public void setDescription(String description) {
-//        this.description = description;
-//    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public double getTravelTime() {
         return travelTime;
     }
 
-//    public void setTravelTime(double travelTime) {
-//        this.travelTime = travelTime;
-//    }
+    public void setTravelTime(double travelTime) {
+        this.travelTime = travelTime;
+    }
 
 //    public boolean isBlockedLocation() {
 //        return blockedLocation;
@@ -65,6 +65,15 @@ public enum Scene implements Serializable{
       public Location getViewScene() {
         return viewScene;
     }
+
+    public void setViewScene(Location viewScene) {
+        this.viewScene = viewScene;
+    }
+
+    public void setHealthLeft(double healthLeft) {
+        this.healthLeft = healthLeft;
+    }
+      
         public double getHealthLeft() {
         return healthLeft;
     }

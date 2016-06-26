@@ -7,6 +7,7 @@ package CIT260.crashInTheCaribbean.control;
 
 import CIT260.crashInTheCaribbean.model.Map;
 import CIT260.crashInTheCaribbean.model.Scene;
+import CIT260.crashInTheCaribbean.model.SceneType;
 
 /**
  *
@@ -23,8 +24,8 @@ public class MapControl {
 
     private static Scene[] createScenes() {
         System.out.print("the create scene function");
-        Scene[] createScenes = null;
-        return createScenes;
+        Scene[] scenes = new Scene[SceneType.values().length];
+        return scenes;
     }
 
     private static void assignScenesToLocations(Map map, Scene[] scenes) {
