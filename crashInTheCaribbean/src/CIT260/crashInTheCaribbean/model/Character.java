@@ -28,11 +28,14 @@ public enum Character implements Serializable{
 //    private String name;
     private final String description;
     private final Location coordinates;
-
+//    private final Location row;
+//    private final Location column;
+    
     Character(String description) {
         this.description = description;
-        coordinates = new Location();
-
+      coordinates = new Location();
+//      this.row =  row;
+//      this.column = column;
     }
 
     

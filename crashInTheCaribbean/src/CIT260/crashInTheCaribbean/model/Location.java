@@ -12,66 +12,72 @@ import java.util.ArrayList;
  *
  * @author josecovarrubias
  */
-public enum Location implements Serializable{
+public class Location implements Serializable{
     
     
-    startingPoint(),
-    buildShipShore(),
-    trapArea();
-    
+//    startingPoint(),
+//    buildShipShore(),
+//    trapArea();
+//    
     
     
     
     
     // class instnace variables
     // private final double coordinates;
-      private final double row;
-      private final double column;
-      private final boolean visited;
+     private LocationType type;
+      private double row;
+      private double column;
+      private boolean visited;
       private Scene scene;
       private ArrayList<Character> character;
-      private final double amountRemaning;
+      private double amountRemaning;
 //
       Location() { 
-          this.row = new row();
-      }
+      }  
         
+      public LocationType getType() {
+        return type;
+    }
+
+    public void setType(LocationType type) {
+        this.type = type;
+    }
     
-//
-//    
-//    
      public double getRow() {
         return row;
       }
-//
-//    public void setRow(double row) {
-//        this.row = row;
-//    }
-//
+
+    public void setRow(double row) {
+        this.row = row;
+    }
+
      public double getColumn() {
        return column;
         }
-//
-//    public void setColumn(double column) {
-//        this.column = column;
-//    }
-//
+
+    public void setColumn(double column) {
+        this.column = column;
+    }
+
    public boolean isVisited() {
         return visited;
        }
 
-//    public void setVisited(boolean visited) {
-//        this.visited = visited;
-//    }
-//
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
     public double getAmountRemaning() {
        return amountRemaning;
      }
-//
-//    public void setAmountRemaning(double amountRemaning) {
-//        this.amountRemaning = amountRemaning;
-//    }
-//
+
+    public void setAmountRemaning(double amountRemaning) {
+        this.amountRemaning = amountRemaning;
+    }
+
+  
+
 //    @Override
 //    public int hashCode() {
 //        int hash = 5;
@@ -113,5 +119,21 @@ public enum Location implements Serializable{
 //            return false;
 //        }
 //        return true;
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
+    public ArrayList<Character> getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(ArrayList<Character> character) {
+        this.character = character;
+    }
        }
  
