@@ -20,7 +20,7 @@ public enum Scene implements Serializable{
     findtool("This scene is used when a new tool is found."),
     findweapon("This scene is used when a new weapon is found.");
     
-  //  private  ScenceType sceneType;
+  //  private  SceneType sceneType;
     private final String description;
     private final double travelTime;
     private final Location viewScene;
