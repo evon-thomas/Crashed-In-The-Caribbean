@@ -6,6 +6,8 @@
 package CIT260.crashInTheCaribbean.view;
 
 import CIT260.crashInTheCaribbean.control.GameControl;
+import CIT260.crashInTheCaribbean.model.Game;
+import CIT260.crashInTheCaribbean.model.InventoryType;
 import crashinthecaribbean.CrashInTheCaribbean;
 
 /**
@@ -20,7 +22,30 @@ public class GameMenuView extends View{
         System.out.println("map func");
     }
     private void ViewInventory(){
-        System.out.println("inven func");
+//        System.out.println("inven func");
+            StringBuilder line;
+            
+            Game game = CrashInTheCaribbean.getCurrentGame();
+            InventoryType[] inventory = game.getInventory();
+            
+            System.out.println("\n                  LIST OF INVENTORY ITEMS  ");
+            line = new StringBuilder("                                         ");
+            line.insert(0, "DESCRIPTION");
+            line.insert(20, "REQUIRED");
+            line.insert(30, "IN STOCK");
+            System.out.println(line.toString());
+            
+            
+            for (InventoryType item : inventory){
+                 line = new StringBuilder("                                   ");
+                 line.insert(0, item.getDescription());
+                 line.insert(23, item.getAmountAvailable());
+                 line.insert(33, item.getInventoryType());
+                 
+                 System.out.println(line.toString());
+                 
+            }
+            
     }
     private void moveLocation(){
         System.out.println("locat func");

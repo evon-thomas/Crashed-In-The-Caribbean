@@ -18,7 +18,7 @@ public class InventoryType implements Serializable{
     // class instance variables
     private double amountAvailable;
     private String inventoryType;
-    
+    private String description;
     
 
     public double getAmountAvailable() {
@@ -35,6 +35,14 @@ public class InventoryType implements Serializable{
 
     public void setInventoryType(String inventoryType) {
         this.inventoryType = inventoryType;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
