@@ -14,14 +14,33 @@ import java.io.Serializable;
 public class Map implements Serializable{
     
     //class instance variables
-    private double rowCount;
-    private double columnCount; 
-
+    private int rowCount;
+    private int columnCount; 
+    private Location[][] locations;
     public Map() {
     }
 
-    public Map(int i, int i0) {
-      System.out.println("are we there yet");
+    public Map(int rowCount, int columnCount) {
+        if(rowCount < 1 || columnCount < 1){
+          System.out.println("function counting the rows and cols.");
+          return;
+        }
+      this.rowCount = rowCount;
+      this.columnCount = columnCount;
+      
+      this.locations = new Location[rowCount][columnCount];
+      
+      for (int row = 0; row <rowCount; row++){
+          for (int column = 0; column <columnCount; column++){
+              Location location = new Location();
+              location.setColumn(column);
+              location.setRow(row);
+              location.setVisited(false);
+              
+              locations[row][column] = location;
+              
+          }
+      }
     }
 
     
@@ -40,6 +59,15 @@ public class Map implements Serializable{
     public void setColumnCount(double columnCount) {
         this.columnCount = columnCount;
     }
+
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
+    
 
     @Override
     public int hashCode() {

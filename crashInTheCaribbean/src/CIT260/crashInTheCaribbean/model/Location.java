@@ -6,6 +6,7 @@
 package CIT260.crashInTheCaribbean.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -27,11 +28,12 @@ public enum Location implements Serializable{
       private final double row;
       private final double column;
       private final boolean visited;
+      private Scene scene;
+      private ArrayList<Character> character;
       private final double amountRemaning;
 //
       Location() { 
-          this.description = description;
-          amountRemaining = new Row();
+          this.row = new row();
       }
         
     

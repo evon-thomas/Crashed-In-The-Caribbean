@@ -21,6 +21,12 @@ public class Ship implements Serializable{
     private double sqFtOfSail;
 
     public Ship() {
+        this.description = "\n here is where you will build your ship"
+                         + "so that you can escpae this remote island.";
+        
+        this.width= 0;
+        this.length= 0;
+        this.sqFtOfSail= 0;
     }
 
     

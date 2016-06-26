@@ -9,6 +9,7 @@ import CIT260.crashInTheCaribbean.model.Game;
 import CIT260.crashInTheCaribbean.model.InventoryType;
 import CIT260.crashInTheCaribbean.model.Map;
 import CIT260.crashInTheCaribbean.model.Player;
+import CIT260.crashInTheCaribbean.model.Scene;
 import CIT260.crashInTheCaribbean.model.Ship;
 import CIT260.crashInTheCaribbean.view.StartNewGameView;
 import crashinthecaribbean.CrashInTheCaribbean;
@@ -155,6 +156,10 @@ public class GameControl {
         
         
        return null;
+    }
+
+    static void assignScenesToLocations(Map map, Scene[] scenes) {
+            System.out.println("print the map or location");
     }
     
 }
