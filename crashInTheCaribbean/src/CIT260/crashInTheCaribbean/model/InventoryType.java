@@ -19,8 +19,17 @@ public class InventoryType implements Serializable{
     private double amountAvailable;
     private String inventoryType;
     private String description;
-    
+    private double youHave;
 
+    public InventoryType(){
+    
+    }
+    public InventoryType(String description, double amountAvailable, double youHave){
+            this.description = description;
+            this.amountAvailable = amountAvailable;
+            this.youHave = youHave;
+    }
+    
     public double getAmountAvailable() {
         return amountAvailable;
     }
@@ -43,6 +52,14 @@ public class InventoryType implements Serializable{
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public double getYouHave() {
+        return youHave;
+    }
+
+    public void setYouHave(double youHave) {
+        this.youHave = youHave;
     }
 
     @Override

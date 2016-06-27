@@ -13,6 +13,7 @@ import CIT260.crashInTheCaribbean.model.Scene;
 import CIT260.crashInTheCaribbean.model.Ship;
 import CIT260.crashInTheCaribbean.view.StartNewGameView;
 import crashinthecaribbean.CrashInTheCaribbean;
+import enums.CaribbeanItem;
 
 /**
  *
@@ -70,96 +71,144 @@ public class GameControl {
         InventoryType[] inventory = new InventoryType[17];
         
         InventoryType traparea = new InventoryType();
-        traparea.setInventoryType("traparea");
+        traparea.setDescription("traparea");
         traparea.setAmountAvailable(0);
-        inventory[0] = traparea;
+        traparea.setYouHave(0);
+        inventory[CaribbeanItem.traparea.ordinal()] = traparea;
         
         InventoryType buildShipShore = new InventoryType();
-        buildShipShore.setInventoryType("BuildShipShore");
+        buildShipShore.setDescription("BuildShipShore");
         buildShipShore.setAmountAvailable(0);
-        inventory[0] = buildShipShore;
+        buildShipShore.setYouHave(0);
+        inventory[CaribbeanItem.buildShipShore.ordinal()] = buildShipShore;
         
         InventoryType startingPoint = new InventoryType();
-        startingPoint.setInventoryType("StartingPoint");
+        startingPoint.setDescription("StartingPoint");
         startingPoint.setAmountAvailable(0);
-        inventory[0] = startingPoint;
+        startingPoint.setYouHave(0);
+        inventory[CaribbeanItem.startingPoint.ordinal()] = startingPoint;
         
         InventoryType bow = new InventoryType();
-        bow.setInventoryType("Bow and Arrow");
-        bow.setAmountAvailable(0);
-        inventory[0] = bow;
+        bow.setDescription("Bow and Arrow");
+        bow.setAmountAvailable(2);
+        bow.setYouHave(0);
+        inventory[CaribbeanItem.bow.ordinal()] = bow;
         
         InventoryType bazooka = new InventoryType();
-        bazooka.setInventoryType("bazooka");
-        bazooka.setAmountAvailable(0);
-        inventory[0] = bazooka;
+        bazooka.setDescription("bazooka");
+        bazooka.setAmountAvailable(2);
+        bazooka.setYouHave(0);
+        inventory[CaribbeanItem.bazooka.ordinal()] = bazooka;
         
         InventoryType SawZaw = new InventoryType();
-        SawZaw.setInventoryType("SawZaw");
-        SawZaw.setAmountAvailable(0);
-        inventory[0] = SawZaw;
+        SawZaw.setDescription("SawZaw");
+        SawZaw.setAmountAvailable(1);
+        SawZaw.setYouHave(0);
+        inventory[CaribbeanItem.SawZaw.ordinal()] = SawZaw;
         
         InventoryType Hammer = new InventoryType();
-        Hammer.setInventoryType("Hammer");
-        Hammer.setAmountAvailable(0);
-        inventory[0] = Hammer;
+        Hammer.setDescription("Hammer");
+        Hammer.setAmountAvailable(1);
+        Hammer.setYouHave(0);
+        inventory[CaribbeanItem.Hammer.ordinal()] = Hammer;
         
         InventoryType NailsGlue = new InventoryType();
-        NailsGlue.setInventoryType("NailsGlue");
-        NailsGlue.setAmountAvailable(0);
-        inventory[0] = NailsGlue;
+        NailsGlue.setDescription("NailsGlue");
+        NailsGlue.setAmountAvailable(1);
+        NailsGlue.setYouHave(0);
+        inventory[CaribbeanItem.NailsGlue.ordinal()] = NailsGlue;
         
         InventoryType overLook = new InventoryType();
-        overLook.setInventoryType("overLook");
+        overLook.setDescription("overLook");
         overLook.setAmountAvailable(0);
-        inventory[0] = overLook;
+        overLook.setYouHave(0);
+        inventory[CaribbeanItem.overLook.ordinal()] = overLook;
         
         InventoryType facetrap = new InventoryType();
-        facetrap.setInventoryType("facetrap");
+        facetrap.setDescription("facetrap");
         facetrap.setAmountAvailable(0);
-        inventory[0] = facetrap;
+        facetrap.setYouHave(0);
+        inventory[CaribbeanItem.facetrap.ordinal()] = facetrap;
         
         InventoryType facebeast = new InventoryType();
-        facebeast.setInventoryType("facebeast");
+        facebeast.setDescription("facebeast");
         facebeast.setAmountAvailable(0);
-        inventory[0] = facebeast;
+        facebeast.setYouHave(0);
+        inventory[CaribbeanItem.facebeast.ordinal()] = facebeast;
         
         InventoryType findweapon = new InventoryType();
-        findweapon.setInventoryType("findweapon");
+        findweapon.setDescription("findweapon");
         findweapon.setAmountAvailable(0);
-        inventory[0] = findweapon;
+        findweapon.setYouHave(0);
+        inventory[CaribbeanItem.findweapon.ordinal()] = findweapon;
         
         InventoryType findtool = new InventoryType();
-        findtool.setInventoryType("findtool");
+        findtool.setDescription("findtool");
         findtool.setAmountAvailable(0);
-        inventory[0] = findtool;
+        findtool.setYouHave(0);
+        inventory[CaribbeanItem.findtool.ordinal()] = findtool;
         
         InventoryType Rambo = new InventoryType();
-        Rambo.setInventoryType("Rambo");
+        Rambo.setDescription("Rambo");
         Rambo.setAmountAvailable(0);
-        inventory[0] = Rambo;
+        Rambo.setYouHave(0);
+        inventory[CaribbeanItem.Rambo.ordinal()] = Rambo;
         
         InventoryType Neo = new InventoryType();
-        Neo.setInventoryType("Neo");
+        Neo.setDescription("Neo");
         Neo.setAmountAvailable(0);
-        inventory[0] = Neo;
+        Neo.setYouHave(0);
+        inventory[CaribbeanItem.Neo.ordinal()] = Neo;
         
         InventoryType KungFuPanda = new InventoryType();
-        KungFuPanda.setInventoryType("KungFuPanda");
+        KungFuPanda.setDescription("KungFuPanda");
         KungFuPanda.setAmountAvailable(0);
-        inventory[0] = KungFuPanda;
+        KungFuPanda.setYouHave(0);
+        inventory[CaribbeanItem.KungFuPanda.ordinal()] = KungFuPanda;
         
         InventoryType axe = new InventoryType();
-        axe.setInventoryType("Axe");
-        axe.setAmountAvailable(0);
-        inventory[0] = axe;
+        axe.setDescription("Axe");
+        axe.setAmountAvailable(1);
+        axe.setYouHave(0);
+        inventory[CaribbeanItem.axe.ordinal()] = axe;
         
+//        InventoryItem lumber = new InventoryItem();
+//        lumber.setDescription("Lumber");
+//        lumber.setQuantityInStock(0);
+//        lumber.setRequiredAmount(0);
+//        inventory[Item.lumber.ordinal()] = lumber;
+//        
         
-       return null;
+       return inventory;
     }
 
     static void assignScenesToLocations(Map map, Scene[] scenes) {
             System.out.println("\n print the map or location, find me on GameControl.");
+    }
+    
+        public static InventoryType[] getSortedInventoryList() {
+        
+        // get inventory list for the current game
+        InventoryType[] originalInventoryList = 
+                CrashInTheCaribbean.getCurrentGame().getInventory();
+        
+        // clone (make a copy) orignalList
+        InventoryType[] inventoryList = originalInventoryList.clone();
+        
+       // using a BubbleSort to sort the list of inventoryList by name
+        InventoryType tempInventoryItem;
+        for (int i = 0; i < inventoryList.length-1; i++) {
+            for (int j = 0; j < inventoryList.length-1-i; j++) {
+                if (inventoryList[j].getDescription().
+                        compareToIgnoreCase(inventoryList[j + 1].getDescription()) > 0) {
+                    tempInventoryItem = inventoryList[j];
+                    inventoryList[j] = inventoryList[j+1];
+                    inventoryList[j+1] = tempInventoryItem;
+                }
+            }
+        }
+        
+        return inventoryList;
     }
     
 }
