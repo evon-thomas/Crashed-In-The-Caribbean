@@ -33,6 +33,11 @@ public class SelectToolMenuView extends View{
         UseBarrelView useBarrelView = new UseBarrelView();
             useBarrelView.display();
     }
+    private void useTool(){
+        SelectToolMenuView selectToolMenuView = new SelectToolMenuView();
+            selectToolMenuView.display();
+    }
+    
    
     public  SelectToolMenuView() {
         
@@ -47,6 +52,7 @@ public class SelectToolMenuView extends View{
                     + "\nA - Axe"
                     + "\nB - Barrel"    
                     + "\nQ - Quit" 
+                    + "\nT - Available Tools"
                     + "\n-----------------------------------------------------");
     }
 //  
@@ -105,6 +111,8 @@ public class SelectToolMenuView extends View{
             break;
         case "B":
             this.useBarrel();
+        case "T":
+            this.useTool();
         default:
           System.out.println("\n*** Hey bro, not that letter! Try P, A, B, or S");
           break;
