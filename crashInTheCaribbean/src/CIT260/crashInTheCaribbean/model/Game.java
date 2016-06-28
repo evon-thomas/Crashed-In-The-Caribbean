@@ -5,6 +5,7 @@
  */
 package CIT260.crashInTheCaribbean.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 
 /**
@@ -20,9 +21,10 @@ public class Game implements Serializable{
     private InventoryType[] inventory;
     private Player player;
     private Map map;
-    
+    private String characterLocation;
     
     public Game() {
+        this.totalTime = 0;
     }
 
     
@@ -73,7 +75,13 @@ public class Game implements Serializable{
     public void setMap(Map map) {
         this.map = map;
     }
-    
+     public String getCharactersLocation() {
+        return characterLocation;
+    }
+    public String setCharactersLocation(Point[] charactersLocation) {
+        return characterLocation;
+    }
+     
     
 
     @Override
@@ -108,8 +116,5 @@ public class Game implements Serializable{
             return false;
         }
         return true;
-    }
-    
-    
-    
+    }  
 }

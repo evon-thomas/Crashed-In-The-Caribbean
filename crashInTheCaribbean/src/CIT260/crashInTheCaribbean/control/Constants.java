@@ -16,4 +16,7 @@ public class Constants {
    public final static int FIND_WEAPON = 2;
    public final static int FACE_BEAST = 3;
    public final static int FACE_TRAP = 4;
+   public final static int startingPoint =3;
+   public final static int buildShipShore= 4;
+   public final static int trapArea = 2;
 }

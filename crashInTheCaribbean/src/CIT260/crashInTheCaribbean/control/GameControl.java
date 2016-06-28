@@ -64,7 +64,7 @@ public GameControl(){
        Map map = MapControl.createMap();
        game.setMap(map);
        
-       MapControl.moveCharacterToStatingLocation(map);
+       MapControl.createMap();
    }
 
     private static InventoryType[] createInventoryList() {

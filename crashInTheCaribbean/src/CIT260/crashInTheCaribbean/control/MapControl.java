@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MapControl {
 
     public static Map createMap()  {
-        Map map = new Map(5, 5);
+        Map map = new Map(20, 20);
         Scene[] scenes = createScenes();
         assignScenesToLocations(map, scenes);
         return map;
@@ -86,9 +86,9 @@ public class MapControl {
         
         HashMap<String, ArrayList<Point>> sceneLocations =  
                new HashMap<String, ArrayList<Point>>();
-
-
-       // create list of scenes to be assigned to locations
+//
+//
+//       // create list of scenes to be assigned to locations
        ArrayList<Point> overLookCoordinates = new ArrayList<Point>();
        overLookCoordinates.add(new Point(1,8));
        overLookCoordinates.add(new Point(2,8));
@@ -129,13 +129,26 @@ public class MapControl {
        }
        findWeaponCoordinates.add(new Point(13,19));
        for (Point point : findWeaponCoordinates) {
-           locations[point.x][point.y].setScene(scenes[Constants.OVER_LOOK]);   
+           locations[point.x][point.y].setScene(scenes[Constants.startingPoint]);   
        }
-
+        locations[1][8].setScene(scenes[SceneType.overLook.ordinal()]);
+        locations[1][9].setScene(scenes[SceneType.overLook.ordinal()]);
+        locations[2][8].setScene(scenes[SceneType.overLook.ordinal()]);
    }
 
-    static void moveCharacterToStatingLocation(Map map) {
+    public static void moveCharacterToStatingLocation(Map map, Character[] characters) {
       System.out.println("one more step, find me on the mapControl");
-    }
-    
+//        Game game = CrashInTheCaribbean.getCurrentGame();
+//        for (Character character : characters){
+//            Point position = new Point(0, 2);
+//            game.getCharactersLocation()[character.ordinal()]= new Point();
+//            MapControl.moveCharacterToLocation(game, character, position);
+        }
+
+//    }
+
+//    static void moveCharacterToStatingLocation(Map map) {
+//        System.out.println("Hoping to make this game work, find me on MapControl");
+//    }
+//    
 }
