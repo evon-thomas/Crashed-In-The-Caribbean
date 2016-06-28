@@ -18,20 +18,55 @@ import static CIT260.crashInTheCaribbean.model.SceneType.overLook;
 public class MapControl {
 
     public static Map createMap() {
-        Map map = new Map(20, 20);
+        Map map = new Map(5, 5);
         Scene[] scenes = createScenes();
-        GameControl.assignScenesToLocations(map, scenes);
+        assignScenesToLocations(map, scenes);
         return map;
     }
 
     private static Scene[] createScenes() {
-        System.out.print(" create scene function, find me on the MapControl");
+//        System.out.print(" create scene function, find me on the MapControl");
 //
 //
-//        Scene[] scenes = new Scene[SceneType.values().length];
-////        Scene overLook = new Scene();
-//        overLook.setDescription("This is where the scene list shold appear. ");
-        return null;
+        Scene[] scenes = new Scene[SceneType.values().length];
+        
+        
+        Scene overLook = new Scene();
+        overLook.setDescription("Pause for a moment and think on teh ourney you are about to start.");
+        overLook.setMapSymbol("OL");
+        overLook.setTravelTime(20);
+        overLook.setBlocked(false);
+        scenes[SceneType.overLook.ordinal()] = overLook;
+        
+         Scene findTool = new Scene();
+        findTool.setDescription("Pause for a moment and think on teh ourney you are about to start.");
+        findTool.setMapSymbol("FT");
+        findTool.setTravelTime(10);
+        findTool.setBlocked(false);
+        scenes[SceneType.findTool.ordinal()] = findTool;
+        
+         Scene findWeapon = new Scene();
+        findWeapon.setDescription("Pause for a moment and think on teh ourney you are about to start.");
+        findWeapon.setMapSymbol("FW");
+        findWeapon.setTravelTime(20);
+        findWeapon.setBlocked(true);
+        scenes[SceneType.findWeapon.ordinal()] = findWeapon;
+        
+         Scene faceBeast = new Scene();
+        faceBeast.setDescription("Pause for a moment and think on teh ourney you are about to start.");
+        faceBeast.setMapSymbol("FB");
+        faceBeast.setTravelTime(20);
+        faceBeast.setBlocked(false);
+        scenes[SceneType.faceBeast.ordinal()] = faceBeast;
+        
+         Scene faceTrap = new Scene();
+        faceTrap.setDescription("Pause for a moment and think on teh ourney you are about to start.");
+        faceTrap.setMapSymbol("FTP");
+        faceTrap.setTravelTime(10);
+        faceTrap.setBlocked(false);
+        scenes[SceneType.faceTrap.ordinal()] = faceTrap;
+        
+        return scenes;
     }
 
     private static void assignScenesToLocations(Map map, Scene[] scenes) {
@@ -45,7 +80,7 @@ public class MapControl {
     }
 
     static void moveCharacterToStatingLocation(Map map) {
-      System.out.println("one more step, find me on teh mapControl");
+      System.out.println("one more step, find me on the mapControl");
     }
     
 }

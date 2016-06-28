@@ -8,7 +8,12 @@ package CIT260.crashInTheCaribbean.view;
 import CIT260.crashInTheCaribbean.control.GameControl;
 import CIT260.crashInTheCaribbean.model.Game;
 import CIT260.crashInTheCaribbean.model.InventoryType;
+import CIT260.crashInTheCaribbean.model.Location;
+import CIT260.crashInTheCaribbean.model.Scene;
 import crashinthecaribbean.CrashInTheCaribbean;
+import java.io.PrintWriter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  *
@@ -23,10 +28,9 @@ public class GameMenuView extends View{
     
 //        this.menu = "\n"
              super( "\n"
-                     + "\n------------------------------------------------------"
+                    + "\n------------------------------------------------------"
                     + "\n |                    Game menu                      |"
                     + "\n------------------------------------------------------"
-                    + "\n N - Create new game."
                     + "\n M - View map."
                     + "\n I - View inventory."
                     + "\n L - Move location."
@@ -40,12 +44,8 @@ public class GameMenuView extends View{
                menuOption = menuOption.toUpperCase(); //converts to upper case
        
        switch (menuOption){
-           case "N":// create new game
-               this.createNewGame();
-               break;
-           
            case "M": //
-               this.ViewMap();
+               this.displayMap();
                break;
                
            case "I": //
@@ -66,9 +66,52 @@ public class GameMenuView extends View{
        }
        return false;
   }
+    public void displayMap(){
+        this.ViewMap(CrashInTheCaribbean.getOutFile());
+    }
     
-    private void ViewMap(){
-        System.out.println("map func");
+    public void ViewMap(PrintWriter out){
+//        System.out.println("map func");
+
+        int lineLength = 0;
+        
+        // get the map for the game
+        Location[][] locations = GameControl.getMapLocations();
+        int noColumns = locations[0].length; // get number columns in row
+        
+        this.printTitle(out, noColumns, "CRASH IN TEH ");
+        this.printColumnHeaders(out, noColumns);
+        
+        for (int i = 0; i < locations.length; i++) {    
+            Location[] rowLocations = locations[i];
+            this.printRowDivider(out, noColumns);
+            out.println(); // move down one i
+            if (i < 9)
+                out.print(" " + (i+1));
+            else 
+                out.print(i+1);
+            
+            // for every column in the row
+            for (int column = 0; column < noColumns; column++) {
+                out.print("|"); // print column divider
+                Location location = rowLocations[column];
+                if (location != null && location.isVisited()) { // if location is visited 
+                    
+                    Scene scene = location.getScene();
+                    if (scene != null)
+                        out.print(scene.getMapSymbol());
+                    else
+                        out.print("    ");
+                }
+                else {
+                    out.print(" ?? ");
+                }      
+            }
+            
+            out.print("|"); // print column divider
+        }
+        
+        this.printRowDivider(out, noColumns);
     }
     
         private void ViewInventory(){
@@ -103,8 +146,103 @@ public class GameMenuView extends View{
     private void playerCharacters(){
         System.out.println("charc func");
     }
-    private void createNewGame(){
-        GameControl.createNewGame(CrashInTheCaribbean.getPlayer());
+//    private void createNewGame(){
+//        GameControl.createNewGame(CrashInTheCaribbean.getPlayer());
+//    }
+    
+        private void printColumnHeaders(PrintWriter out, int noOfColumns) {
+        for (int i = 1; i < noOfColumns+1; i++) {
+            if (i < 10) {
+                out.print("   " + i + " ");
+            }
+            else {
+                out.print("  " + i + " ");
+            }
+        }
+    }
+
+    private void printRowDivider(PrintWriter out, int noColumns) {
+        out.println();
+        out.print("  ");
+        for (int i = 0; i < noColumns; i++) { // print row divider
+                out.print("-----");
+        }
+        out.print("-");
+    }
+
+    private void printTitle(PrintWriter out, int columnCount, String title) {
+        
+        int titleLength = title.length();
+        int lineLength = columnCount * 5 + 3;
+        int startPosition = (lineLength / 2) - (titleLength / 2);
+        out.println("\n");
+        for (int i = 0; i < startPosition; i++) {
+            out.print(" ");  
+        }
+        out.print(title);
+        out.println("\n");
+        
+    }
+    
+    
+    
+     public void printReport() {
+        // get the filepath and name of the file
+//        this.console.println("\nEnter the file path where the report is to be saved");
+        
+        String filePath = this.getInput();
+        if (filePath == null) {
+            return;
+        }
+        
+        // Create a new printwriter
+        try (PrintWriter reportFile = new PrintWriter(filePath)) {
+            
+            
+            LocalDateTime currentTime = LocalDateTime.now();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+            String dateTime = formatter.format(currentTime);
+            
+            reportFile.println("Report printed: " + dateTime);
+            
+            this.viewMap(reportFile);
+            
+            reportFile.println();
+            this.viewInventory(reportFile);
+
+            reportFile.println();
+            this.viewCharacter(reportFile); 
+            
+            CrashInTheCaribbean.getOutFile().println(
+                    "\n*** Report printed to file: " + filePath + " ***");
+            
+        } catch (Exception ex) {
+            ErrorView.display("GameMenuView", "Error writing to game report file. "
+                    + "\n\t" + ex.getMessage());
+        }
+
+    }
+
+    private void viewCharacter(PrintWriter reportFile) {
+        this.viewCharacter(reportFile);
+    }
+
+    private void viewMap(PrintWriter reportFile) {
+        this.ViewMap(reportFile);
+    }
+
+    private void viewInventory(PrintWriter reportFile) {
+       this.viewInventory(reportFile);
+    }
+
+    private static class ErrorView {
+
+        private static void display(String gameMenuView, String string) {
+            
+        }
+
+        public ErrorView() {
+        }
     }
 }
     

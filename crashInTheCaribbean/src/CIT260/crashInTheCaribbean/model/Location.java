@@ -75,51 +75,6 @@ public class Location implements Serializable{
     public void setAmountRemaning(double amountRemaning) {
         this.amountRemaning = amountRemaning;
     }
-
-  
-
-//    @Override
-//    public int hashCode() {
-//        int hash = 5;
-//        hash = 67 * hash + (int) (Double.doubleToLongBits(this.row) ^ (Double.doubleToLongBits(this.row) >>> 32));
-//        hash = 67 * hash + (int) (Double.doubleToLongBits(this.column) ^ (Double.doubleToLongBits(this.column) >>> 32));
-//        hash = 67 * hash + (this.visited ? 1 : 0);
-//        hash = 67 * hash + (int) (Double.doubleToLongBits(this.amountRemaning) ^ (Double.doubleToLongBits(this.amountRemaning) >>> 32));
-//        return hash;
-//    }
-//
-//    @Override
-//    public String toString() {
-//        return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + ", amountRemaning=" + amountRemaning + '}';
-//    }
-//
-//    
-//    @Override
-//    public boolean equals(Object obj) {
-//        if (this == obj) {
-//            return true;
-//        }
-//        if (obj == null) {
-//            return false;
-//        }
-//        if (getClass() != obj.getClass()) {
-//            return false;
-//        }
-//        final Location other = (Location) obj;
-//        if (Double.doubleToLongBits(this.row) != Double.doubleToLongBits(other.row)) {
-//            return false;
-//        }
-//        if (Double.doubleToLongBits(this.column) != Double.doubleToLongBits(other.column)) {
-//            return false;
-//        }
-//        if (this.visited != other.visited) {
-//            return false;
-//        }
-//        if (Double.doubleToLongBits(this.amountRemaning) != Double.doubleToLongBits(other.amountRemaning)) {
-//            return false;
-//        }
-//        return true;
-
     public Scene getScene() {
         return scene;
     }
@@ -135,5 +90,51 @@ public class Location implements Serializable{
     public void setCharacter(ArrayList<Character> character) {
         this.character = character;
     }
-       }
+  
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.row) ^ (Double.doubleToLongBits(this.row) >>> 32));
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.column) ^ (Double.doubleToLongBits(this.column) >>> 32));
+        hash = 67 * hash + (this.visited ? 1 : 0);
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.amountRemaning) ^ (Double.doubleToLongBits(this.amountRemaning) >>> 32));
+        return hash;
+    }
+
+    @Override
+    public String toString() {
+        return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + ", amountRemaning=" + amountRemaning + '}';
+    }
+
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Location other = (Location) obj;
+        if (Double.doubleToLongBits(this.row) != Double.doubleToLongBits(other.row)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.column) != Double.doubleToLongBits(other.column)) {
+            return false;
+        }
+        if (this.visited != other.visited) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.amountRemaning) != Double.doubleToLongBits(other.amountRemaning)) {
+            return false;
+        }
+        return true;
+
+
+     }
+}
  

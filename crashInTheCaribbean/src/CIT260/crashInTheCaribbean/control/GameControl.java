@@ -7,6 +7,7 @@ package CIT260.crashInTheCaribbean.control;
 
 import CIT260.crashInTheCaribbean.model.Game;
 import CIT260.crashInTheCaribbean.model.InventoryType;
+import CIT260.crashInTheCaribbean.model.Location;
 import CIT260.crashInTheCaribbean.model.Map;
 import CIT260.crashInTheCaribbean.model.Player;
 import CIT260.crashInTheCaribbean.model.Scene;
@@ -211,4 +212,7 @@ public class GameControl {
         return inventoryList;
     }
     
+        public static Location[][] getMapLocations(){
+            return CrashInTheCaribbean.getCurrentGame().getMap().getLocations();
+        }
 }

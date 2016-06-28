@@ -19,6 +19,8 @@ import CIT260.crashInTheCaribbean.model.AvoidBeasts;
 import CIT260.crashInTheCaribbean.model.Character;
 import CIT260.crashInTheCaribbean.model.AvoidTraps;
 import CIT260.crashInTheCaribbean.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 
 /**
  *
@@ -28,6 +30,10 @@ public class CrashInTheCaribbean {
     
     private static Game currentGame = null;
     private static Player player = null;
+    
+    private static PrintWriter outFile = null;
+    private static PrintWriter logFile = null;
+    private static BufferedReader inFile= null;
 
         /**
          * @param args the command line arguments
@@ -160,5 +166,25 @@ public class CrashInTheCaribbean {
         public static void setPlayer(Player player) {
             CrashInTheCaribbean.player = player;
         }
+
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        CrashInTheCaribbean.logFile = logFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        CrashInTheCaribbean.inFile = inFile;
+    }
         
 }
