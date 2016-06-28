@@ -10,9 +10,9 @@ package enums;
  * @author josecovarrubias
  */
 public enum WeaponPower {
-    Axe(2),
+    bazooka(5),
     Bow(3),
-    bazooka(5);
+    Axe(2);
     
     private final int Wpower;
     

@@ -77,8 +77,10 @@ public class GameMenuView extends View{
  ////////////////////////////////////////////////////////////////////////////////  
         // Indiviual assignment Lesson 9. Jose. 
         // private function to display the weapons
-        private void viewWeapons(){
-            
+        public void viewWeapons(){
+            WeaponPower[] weapons = WeaponPower.values();
+//              System.out.println(GameMenuView.fixOrder(weapons));
+
             // trhis line calls the WeaponPower enum array, and stores the value
             // in the variable weaponAval. 
             WeaponPower[] weaponAval = WeaponPower.values();
@@ -91,8 +93,25 @@ public class GameMenuView extends View{
                 
             //this is to get the value of the items, see WeaponPower class
                 System.out.println(crazyNameHere + ":      \t" + crazyNameHere.getWpower());
+                
             }
+           
         }
+    public static int[] fixOrder(int[] weapons){ 
+            for (int i=0; i <weapons.length; i++){
+                int index = i;
+                for (int j=i+1; j <weapons.length; j++)
+                    if (weapons[j] < weapons[index])
+                        index = j;
+                    int smallerNum = weapons[index];
+                    weapons[index] = weapons[i];
+                    weapons[i] = smallerNum;
+                System.out.println(i);
+            }
+            System.out.println(GameMenuView.fixOrder(weapons));
+            return weapons;
+        }
+        
 ////////////////////////////////////////////////////////////////////////////////   
 ////////////////////////////////////////////////////////////////////////////////  
  ////////////////////////////////////////////////////////////////////////////////  
