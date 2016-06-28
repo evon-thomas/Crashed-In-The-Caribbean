@@ -25,12 +25,37 @@ public class Scene implements Serializable{
     private  double travelTime;
     private  Location viewScene;
     private  double healthLeft;
+    private String mapSymbol;
+    private boolean blocked;
     
     private Location location;
     
-    Scene(){
+    public Scene(){
+    }
+    
+    public Scene(String description, Location ViewScene, double traveltime, double healthLeft, SceneType scenes){
         this.description = description;
-        scenes = new SceneType();
+        this.scenes = scenes;
+        this.travelTime = travelTime;
+        this.viewScene = ViewScene;
+        this.healthLeft = healthLeft;
+        
+    }
+
+    public boolean isBlocked() {
+        return blocked;
+    }
+
+    public void setBlocked(boolean blocked) {
+        this.blocked = blocked;
+    }
+
+    public String getMapSymbol() {
+        return mapSymbol;
+    }
+
+    public void setMapSymbol(String mapSymbol) {
+        this.mapSymbol = mapSymbol;
     }
 
     public SceneType getScene() {
