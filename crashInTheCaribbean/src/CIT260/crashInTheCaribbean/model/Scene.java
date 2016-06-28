@@ -29,8 +29,8 @@ public class Scene implements Serializable{
     private Location location;
     
     Scene(){
-        this.description = description;
-        scenes = new SceneType();
+//        this.description = description;
+//        scenes = new SceneType();
     }
 
     public SceneType getScene() {
