@@ -20,6 +20,8 @@ import CIT260.crashInTheCaribbean.model.Character;
 import CIT260.crashInTheCaribbean.model.AvoidTraps;
 import CIT260.crashInTheCaribbean.view.StartProgramView;
 import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 /**
@@ -43,6 +45,50 @@ public class CrashInTheCaribbean {
         // create StartProgramViewOrig and display the start prgm view
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
+        
+        
+         try {
+            
+            // open charcter stream files for end user input and output
+            CrashInTheCaribbean.inFile = 
+                    new BufferedReader(new InputStreamReader(System.in));
+            
+            CrashInTheCaribbean.outFile = new PrintWriter(System.out, true);
+        
+            // open log file
+            String filePath = "log.txt";
+            CrashInTheCaribbean.logFile = new PrintWriter(filePath);
+
+
+//            // create StartProgramView and start the program
+//            StartProgramView startProgramView = new StartProgramView();
+//            startProgramView.display();
+            return; 
+
+        } catch (Throwable e) {
+              
+                System.out.println("Exception: " + e.toString() + 
+                                   "\nCause: " + e.getCause() + 
+                                   "\nMessage: " + e.getMessage());
+
+                e.printStackTrace();;
+        }
+
+        finally {
+            try {
+                if (CrashInTheCaribbean.inFile != null)
+                    CrashInTheCaribbean.inFile.close();
+                
+                if (CrashInTheCaribbean.outFile != null)
+                    CrashInTheCaribbean.outFile.close();
+                
+                if (CrashInTheCaribbean.logFile != null)
+                    CrashInTheCaribbean.logFile.close();
+            } catch (IOException ex) {
+                System.out.println("Error closing files");
+                return;
+            }   
+        }
         
         
         
@@ -169,6 +215,9 @@ public class CrashInTheCaribbean {
 
     public static PrintWriter getOutFile() {
         return outFile;
+    }
+    public static void setOutFile(PrintWriter outFile){
+    CrashInTheCaribbean.outFile = outFile;
     }
 
     public static PrintWriter getLogFile() {

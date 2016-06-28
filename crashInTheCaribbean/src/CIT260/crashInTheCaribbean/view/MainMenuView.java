@@ -49,9 +49,9 @@ public class MainMenuView extends View {
     
     }
     private void displayDesignBarrelsView(){
-        // System.out.println("*** displayHelpMenu fun. called ***");
-        DesignBarrelsView designBarrelsView = new DesignBarrelsView();
-        designBarrelsView.display();
+         System.out.println("*** displayHelpMenu fun. called ***");
+//        DesignBarrelsView designBarrelsView = new DesignBarrelsView();
+//        designBarrelsView.display();
     }
     
     

@@ -10,7 +10,9 @@ import CIT260.crashInTheCaribbean.model.Game;
 import CIT260.crashInTheCaribbean.model.InventoryType;
 import CIT260.crashInTheCaribbean.model.Location;
 import CIT260.crashInTheCaribbean.model.Scene;
+import CIT260.crashInTheCaribbean.model.Weapons;
 import crashinthecaribbean.CrashInTheCaribbean;
+import enums.WeaponPower;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -32,6 +34,7 @@ public class GameMenuView extends View{
                     + "\n |                    Game menu                      |"
                     + "\n------------------------------------------------------"
                     + "\n M - View map."
+                    + "\n W - View weapons."
                     + "\n I - View inventory."
                     + "\n L - Move location."
                     + "\n C - View player characters."
@@ -46,6 +49,9 @@ public class GameMenuView extends View{
        switch (menuOption){
            case "M": //
                this.displayMap();
+               break;
+           case "W": //
+               this.viewWeapons();
                break;
                
            case "I": //
@@ -66,53 +72,84 @@ public class GameMenuView extends View{
        }
        return false;
   }
+ ///////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////  
+ ////////////////////////////////////////////////////////////////////////////////  
+        // Indiviual assignment Lesson 9. Jose. 
+        // private function to display the weapons
+        private void viewWeapons(){
+            
+            // trhis line calls the WeaponPower enum array, and stores the value
+            // in the variable weaponAval. 
+            WeaponPower[] weaponAval = WeaponPower.values();
+            
+            // this is a for-each loop to show all of the items, the 1st word is the
+            // array, 2nd word can be anything you want, it becomes a new variable
+            // the 3rd word is the array variable declared avobe. the \t adds a tab space. 
+            System.out.println("WEAPON"+"\t       POWER");
+            for(WeaponPower crazyNameHere : weaponAval){
+                
+            //this is to get the value of the items, see WeaponPower class
+                System.out.println(crazyNameHere + ":      \t" + crazyNameHere.getWpower());
+            }
+        }
+////////////////////////////////////////////////////////////////////////////////   
+////////////////////////////////////////////////////////////////////////////////  
+ ////////////////////////////////////////////////////////////////////////////////  
     public void displayMap(){
         this.ViewMap(CrashInTheCaribbean.getOutFile());
     }
     
     public void ViewMap(PrintWriter out){
-//        System.out.println("map func");
+        System.out.println("map func");
 
-        int lineLength = 0;
-        
-        // get the map for the game
-        Location[][] locations = GameControl.getMapLocations();
-        int noColumns = locations[0].length; // get number columns in row
-        
-        this.printTitle(out, noColumns, "CRASH IN THE CARRIBEAN ");
-        this.printColumnHeaders(out, noColumns);
-        
-        for (int i = 0; i < locations.length; i++) {    
-            Location[] rowLocations = locations[i];
-            this.printRowDivider(out, noColumns);
-            out.println(); // move down one i
-            if (i < 9)
-                out.print(" " + (i+1));
-            else 
-                out.print(i+1);
-            
-            // for every column in the row
-            for (int column = 0; column < noColumns; column++) {
-                out.print("|"); // print column divider
-                Location location = rowLocations[column];
-                if (location != null && location.isVisited()) { // if location is visited 
-                    
-                    Scene scene = location.getScene();
-                    if (scene != null)
-                        out.print(scene.getMapSymbol());
-                    else
-                        out.print("    ");
-                }
-                else {
-                    out.print(" ?? ");
-                }      
-            }
-            
-            out.print("|"); // print column divider
-        }
-        
-        this.printRowDivider(out, noColumns);
+////////////////////////////////////////////////////////////////////////////////
+//                 THIS WAS OUR ATTEMP TO GET THE MAP TO DISPLAY
+//          you can umcomment it out to see the code color references
+////////////////////////////////////////////////////////////////////////////////
+//        int lineLength = 0;
+//        
+//        // get the map for the game
+//        Location[][] locations = GameControl.getMapLocations();
+//        int noColumns = locations[0].length; // get number columns in row
+//        
+//        this.printTitle(out, noColumns, "CRASH IN THE CARRIBEAN ");
+//        this.printColumnHeaders(out, noColumns);
+//        
+//        for (int i = 0; i < locations.length; i++) {    
+//            Location[] rowLocations = locations[i];
+//            this.printRowDivider(out, noColumns);
+//            out.println(); // move down one i
+//            if (i < 9)
+//                out.print(" " + (i+1));
+//            else 
+//                out.print(i+1);
+//            
+//            // for every column in the row
+//            for (int column = 0; column < noColumns; column++) {
+//                out.print("|"); // print column divider
+//                Location location = rowLocations[column];
+//                if (location != null && location.isVisited()) { // if location is visited 
+//                    
+//                    Scene scene = location.getScene();
+//                    if (scene != null)
+//                        out.print(scene.getMapSymbol());
+//                    else
+//                        out.print("    ");
+//                }
+//                else {
+//                    out.print(" ?? ");
+//                }      
+//            }
+//            
+//            out.print("|"); // print column divider
+//        }
+//        
+//        this.printRowDivider(out, noColumns);
     }
+    
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
     
         private void ViewInventory(){
 //        System.out.println("inven func");
@@ -150,7 +187,7 @@ public class GameMenuView extends View{
 //        GameControl.createNewGame(CrashInTheCaribbean.getPlayer());
 //    }
     
-        private void printColumnHeaders(PrintWriter out, int columnCount) {
+    private void printColumnHeaders(PrintWriter out, int columnCount) {
         for (int i = 1; i < columnCount+1; i++) {
             if (i < 10) {
                 out.print("   " + i + " ");

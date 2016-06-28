@@ -24,8 +24,11 @@ public class MapControl {
 
     public static Map createMap()  {
         Map map = new Map(20, 20);
+        
         Scene[] scenes = createScenes();
+        
         assignScenesToLocations(map, scenes);
+        
         return map;
     }
 
@@ -150,5 +153,8 @@ public class MapControl {
 //    static void moveCharacterToStatingLocation(Map map) {
 //        System.out.println("Hoping to make this game work, find me on MapControl");
 //    }
-//    
+    
+    public static Location getLocation(Point coordinates){
+        return CrashInTheCaribbean.getCurrentGame().getMap().getLocations()[coordinates.x-1][coordinates.y-1];
+    }  
 }

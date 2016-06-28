@@ -17,6 +17,7 @@ public class Map implements Serializable{
     private int rowCount;
     private int columnCount; 
     private Location[][] locations;
+    
     public Map() {
     }
 
@@ -85,9 +86,7 @@ public class Map implements Serializable{
     
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
+
         if (obj == null) {
             return false;
         }
@@ -95,10 +94,10 @@ public class Map implements Serializable{
             return false;
         }
         final Map other = (Map) obj;
-        if (Double.doubleToLongBits(this.rowCount) != Double.doubleToLongBits(other.rowCount)) {
+        if (this.rowCount != other.rowCount) {
             return false;
         }
-        if (Double.doubleToLongBits(this.columnCount) != Double.doubleToLongBits(other.columnCount)) {
+        if (this.columnCount != other.columnCount) {
             return false;
         }
         return true;

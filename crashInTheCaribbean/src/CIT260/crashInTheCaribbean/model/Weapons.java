@@ -20,11 +20,11 @@ public enum Weapons implements Serializable{
     bazooka("This weapon will fry your dinner.");
     
     private final String description;
-    private final AvoidBeasts useWeapon;
+//    private final Boolean useWeapon;
 
      Weapons(String description) {
         this.description = description;
-        useWeapon = new AvoidBeasts();
+//        useWeapon = false;
     }
     
     
@@ -37,9 +37,9 @@ public enum Weapons implements Serializable{
 //        this.buildWeapon = buildWeapon;
 //    }
 
-    public AvoidBeasts getUseWeapon() {
-        return useWeapon;
-    }
+//    public Boolean getUseWeapon() {
+//        return useWeapon;
+//    }
 
 //    public void setUseWeapon(String useWeapon) {
 //        this.useWeapon = useWeapon;

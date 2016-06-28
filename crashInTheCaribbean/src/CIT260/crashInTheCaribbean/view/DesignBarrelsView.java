@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 /**
  *
- * thomas evon
+ * @Thomas Evon. 
  */
 public class DesignBarrelsView  {
    
@@ -50,53 +50,59 @@ public class DesignBarrelsView  {
                 designedBarrel.setVolume(pi);                
 
                 barrelControl.saveBarrelDesign(designedBarrel);
-                
+    /////////////////  /////////////////  /////////////////  /////////////////  ///////////////// 
+    /////////I added these to make the class free of erros            
             }
+            return -1;
         }
+        return -1;
+    }
+}
+ //////////////////////////////////    /////////////////  /////////////////  ///////////////// 
+// and commented this out
 
-    
-
-     public getInput() {
+ /////////////////  /////////////////  /////////////////  /////////////////  ///////////////// 
+//     public getInput() {
           //System.out.println("get values function");
-          Scanner keyboard = new Scanner(System.in);
-        double value = 0.0;
-        
-        boolean valid = false;
-        
-        while (!valid) { 
-            System.out.println("\n" + this.message);
-             
-            value = Double.parseDouble(keyboard.nextLine());
-            
-            if (value < 1 || value > 13) {
-                System.out.println("\n Choose a number between 1-13");
-                continue;
-            }
-            return value;
-        }
+//          Scanner keyboard = new Scanner(System.in);
+//        double value = 0.0;
+//        
+//        boolean valid = false;
+//        
+//        while (!valid) { 
+//            System.out.println("\n" + this.message);
+//             
+//            value = Double.parseDouble(keyboard.nextLine());
+//            
+//            if (value < 1 || value > 13) {
+//                System.out.println("\n Choose a number between 1-13");
+//                continue;
+//            }
+//            return value;
+//        }
     
-}
+//}
      
-      public void display() {
-        double value;
-        boolean done = false;
-        
-        do { 
-            System.out.println(this.message); // display the prompt message
-            
-            double height = 0.0;
-            double diameter = 0.0;
-            
-            System.out.println("\nPlease enter the height of the barrel");
-             double height = Double.parseDouble(getInput());                                                                     
-
-            System.out.println("\nPlease enter the diameter of the barrel");
-             double radius = Double.parseDouble(getInput());  
-            
-            System.out.println("\nPlease enter the value of pi ( hint 3.14)");
-             double pi = Double.parseDouble(getInput());
-            done = this.doAction(height, radius, pi);       
-        } while (!done);
-        }
- 
-}
+//      public void display() {
+//        double value;
+//        boolean done = false;
+//        
+//        do { 
+//            System.out.println(this.message); // display the prompt message
+//            
+//            double height = 0.0;
+//            double diameter = 0.0;
+//            
+//            System.out.println("\nPlease enter the height of the barrel");
+//             double height = Double.parseDouble(getInput());                                                                     
+//
+//            System.out.println("\nPlease enter the diameter of the barrel");
+//             double radius = Double.parseDouble(getInput());  
+//            
+//            System.out.println("\nPlease enter the value of pi ( hint 3.14)");
+//             double pi = Double.parseDouble(getInput());
+//            done = this.doAction(height, radius, pi);       
+//        } while (!done);
+//        }
+// 
+//}
