@@ -12,6 +12,9 @@ import CIT260.crashInTheCaribbean.model.Scene;
 import CIT260.crashInTheCaribbean.model.SceneType;
 import static CIT260.crashInTheCaribbean.model.SceneType.overLook;
 import crashinthecaribbean.CrashInTheCaribbean;
+import java.awt.Point;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -74,13 +77,62 @@ public class MapControl {
 
     private static void assignScenesToLocations(Map map, Scene[] scenes) {
         Location[][] locations = map.getLocations();
+        
         locations[0][0].setScene(scenes[SceneType.overLook.ordinal()]);
         locations[0][1].setScene(scenes[SceneType.findTool.ordinal()]);
         locations[0][2].setScene(scenes[SceneType.findWeapon.ordinal()]);
         locations[0][3].setScene(scenes[SceneType.faceBeast.ordinal()]);
         locations[0][4].setScene(scenes[SceneType.faceTrap.ordinal()]);
         
-    }
+        HashMap<String, ArrayList<Point>> sceneLocations =  
+               new HashMap<String, ArrayList<Point>>();
+
+
+       // create list of scenes to be assigned to locations
+       ArrayList<Point> overLookCoordinates = new ArrayList<Point>();
+       overLookCoordinates.add(new Point(1,8));
+       overLookCoordinates.add(new Point(2,8));
+       overLookCoordinates.add(new Point(1,9));
+      
+       sceneLocations.put("overLook", overLookCoordinates);
+
+
+       ArrayList<Point> findToolCoordinates = new ArrayList<Point>();
+       for (int row = 0; row < 20; row++) {
+           findToolCoordinates.add(new Point(row,0));
+       }
+       for (int row = 0; row < 4; row++) {
+           findToolCoordinates.add(new Point(row,1));
+       }
+       for (int row = 17; row < 20; row++) {
+           findToolCoordinates.add(new Point(row,1));
+       }
+       
+        ArrayList<Point> findWeaponCoordinates = new ArrayList<Point>();
+       for (int col = 3; col < 11; col++) {
+           findWeaponCoordinates.add(new Point(0,col));
+       }
+       for (int col = 13; col < 20; col++) {
+          findWeaponCoordinates.add(new Point(0,col));
+       }
+       for (int col = 13; col < 20; col++) {
+           findWeaponCoordinates.add(new Point(1,col));
+       }
+       
+       findWeaponCoordinates.add(new Point(7,19));
+     findWeaponCoordinates.add(new Point(10,19));
+       for (int col = 18; col < 20; col++) {
+           findWeaponCoordinates.add(new Point(11,col));
+       }
+       for (int col = 18; col < 20; col++) {
+           findWeaponCoordinates.add(new Point(12,col));
+       }
+       findWeaponCoordinates.add(new Point(13,19));
+       for (Point point : findWeaponCoordinates) {
+           locations[point.x][point.y].setScene(scenes[Constants.OVER_LOOK]);   
+       }
+
+   }
 
     static void moveCharacterToStatingLocation(Map map) {
       System.out.println("one more step, find me on the mapControl");
