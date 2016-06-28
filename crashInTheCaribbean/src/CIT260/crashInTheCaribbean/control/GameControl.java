@@ -27,7 +27,8 @@ public class GameControl {
 //        StartNewGameView startNewGameView = new StartNewGameView();
 //        startNewGameView.displayStartNewGameView();
 //}
-
+public GameControl(){
+}
     public static Player createPlayer(String name) {
 //      System.out.println("\n*** createPlayer() function called ***");
 //      return new Player();
@@ -183,9 +184,9 @@ public class GameControl {
        return inventory;
     }
 
-    static void assignScenesToLocations(Map map, Scene[] scenes) {
-            System.out.println("\n print the map or location, find me on GameControl.");
-    }
+//    static void assignScenesToLocations(Map map, Scene[] scenes) {
+//            System.out.println("\n print the map or location, find me on GameControl.");
+//    }
     
         public static InventoryType[] getSortedInventoryList() {
         
@@ -214,5 +215,15 @@ public class GameControl {
     
         public static Location[][] getMapLocations(){
             return CrashInTheCaribbean.getCurrentGame().getMap().getLocations();
+        }
+        
+        public static InventoryType[] getInventory(){
+            return CrashInTheCaribbean.getCurrentGame().getInventory();
+        }
+        public static void saveGame(Game game, String filepath){
+        
+        }
+        public static void getSavedGame(String filepath){
+        
         }
 }

@@ -79,7 +79,7 @@ public class GameMenuView extends View{
         Location[][] locations = GameControl.getMapLocations();
         int noColumns = locations[0].length; // get number columns in row
         
-        this.printTitle(out, noColumns, "CRASH IN TEH ");
+        this.printTitle(out, noColumns, "CRASH IN THE CARRIBEAN ");
         this.printColumnHeaders(out, noColumns);
         
         for (int i = 0; i < locations.length; i++) {    
@@ -150,8 +150,8 @@ public class GameMenuView extends View{
 //        GameControl.createNewGame(CrashInTheCaribbean.getPlayer());
 //    }
     
-        private void printColumnHeaders(PrintWriter out, int noOfColumns) {
-        for (int i = 1; i < noOfColumns+1; i++) {
+        private void printColumnHeaders(PrintWriter out, int columnCount) {
+        for (int i = 1; i < columnCount+1; i++) {
             if (i < 10) {
                 out.print("   " + i + " ");
             }

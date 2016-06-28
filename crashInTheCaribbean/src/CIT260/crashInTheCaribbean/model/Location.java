@@ -18,23 +18,31 @@ public class Location implements Serializable{
 //    startingPoint(),
 //    buildShipShore(),
 //    trapArea();
-//    
-    
-    
-    
-    
     // class instnace variables
-    // private final double coordinates;
+    
      private LocationType type;
-      private double row;
-      private double column;
+      private int row;
+      private int column;
       private boolean visited;
       private Scene scene;
       private ArrayList<Character> character;
       private double amountRemaning;
 //
-      Location() { 
+      public Location(int row, int column, Scene scene, ArrayList<Character> character) { 
+          this.row = row;
+          this.column = column;
+          this.visited = false;
+          this.scene = scene;
+          this.character = character;
       }  
+      public Location(){
+          this.character = new ArrayList<Character>();
+      }
+      
+      public Location(int row, int column){
+          this.row = row;
+          this.column = column;
+      }
         
       public LocationType getType() {
         return type;
@@ -48,7 +56,7 @@ public class Location implements Serializable{
         return row;
       }
 
-    public void setRow(double row) {
+    public void setRow(int row) {
         this.row = row;
     }
 
@@ -56,7 +64,7 @@ public class Location implements Serializable{
        return column;
         }
 
-    public void setColumn(double column) {
+    public void setColumn(int column) {
         this.column = column;
     }
 

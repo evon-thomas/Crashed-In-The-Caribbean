@@ -5,11 +5,13 @@
  */
 package CIT260.crashInTheCaribbean.control;
 
+import CIT260.crashInTheCaribbean.model.Game;
 import CIT260.crashInTheCaribbean.model.Location;
 import CIT260.crashInTheCaribbean.model.Map;
 import CIT260.crashInTheCaribbean.model.Scene;
 import CIT260.crashInTheCaribbean.model.SceneType;
 import static CIT260.crashInTheCaribbean.model.SceneType.overLook;
+import crashinthecaribbean.CrashInTheCaribbean;
 
 /**
  *
@@ -17,7 +19,7 @@ import static CIT260.crashInTheCaribbean.model.SceneType.overLook;
  */
 public class MapControl {
 
-    public static Map createMap() {
+    public static Map createMap()  {
         Map map = new Map(5, 5);
         Scene[] scenes = createScenes();
         assignScenesToLocations(map, scenes);
@@ -26,8 +28,9 @@ public class MapControl {
 
     private static Scene[] createScenes() {
 //        System.out.print(" create scene function, find me on the MapControl");
-//
-//
+
+        Game game = CrashInTheCaribbean.getCurrentGame();
+        
         Scene[] scenes = new Scene[SceneType.values().length];
         
         
