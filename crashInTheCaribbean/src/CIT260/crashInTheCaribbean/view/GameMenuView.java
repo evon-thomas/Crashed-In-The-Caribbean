@@ -120,8 +120,9 @@ public class GameMenuView extends View{
         
     // individual assigment lesson9 Karla
     public void viewSceneType(){
-        SceneType[] scenes = SceneType.values();
-        
+        SceneType [] sceneType = SceneType.values();
+                
+  
         SceneType[] scenesAval = SceneType.values();
         
         System.out.println("Scene" + "\t       available");
@@ -130,9 +131,15 @@ public class GameMenuView extends View{
             
             System.out.println( sceneName + ":     \t" + sceneName.getClass());
         }
-        
+       }
+
+    public void iterateUsingForIndex(enum <SceneType> scenes){
+        for (int i = 0; SceneType.length -1)
+            if (SceneType[i] == value)
+                return i;
         
     }
+  
 ////////////////////////////////////////////////////////////////////////////////   
 ////////////////////////////////////////////////////////////////////////////////  
  ////////////////////////////////////////////////////////////////////////////////  
