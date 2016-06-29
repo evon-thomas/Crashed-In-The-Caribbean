@@ -133,11 +133,21 @@ public class GameMenuView extends View{
         }
        }
 
-    public void iterateUsingForIndex(enum <SceneType> scenes){
+    public void searchListForValue(enum <SceneType> scenes){
         for (int i = 0; SceneType.length -1)
             if (SceneType[i] == value)
                 return i;
-        
+        if 
+        //BEGIN
+//this is the algorytm
+ //FOR index = 0 TO list.length-1
+// IF ( list[index] = = value)
+// THEN
+    // RETURN index
+//    ENDIF
+//   ENDFOR
+// RETURN -1
+//END
     }
   
 ////////////////////////////////////////////////////////////////////////////////   
