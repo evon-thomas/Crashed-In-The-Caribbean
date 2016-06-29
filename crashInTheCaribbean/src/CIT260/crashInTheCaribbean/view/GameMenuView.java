@@ -10,6 +10,7 @@ import CIT260.crashInTheCaribbean.model.Game;
 import CIT260.crashInTheCaribbean.model.InventoryType;
 import CIT260.crashInTheCaribbean.model.Location;
 import CIT260.crashInTheCaribbean.model.Scene;
+import CIT260.crashInTheCaribbean.model.SceneType;
 import CIT260.crashInTheCaribbean.model.Weapons;
 import crashinthecaribbean.CrashInTheCaribbean;
 import enums.WeaponPower;
@@ -38,6 +39,7 @@ public class GameMenuView extends View{
                     + "\n I - View inventory."
                     + "\n L - Move location."
                     + "\n C - View player characters."
+                    + "\n S - View Scene Type"
                     + "\n Q - Quit"
                     + "\n-----------------------------------------------------");
     }
@@ -64,6 +66,10 @@ public class GameMenuView extends View{
             
            case "C": //
                this.playerCharacters();
+               break;
+            
+            case "S": //
+               this.viewSceneType();
                break;
        
            default:
@@ -112,6 +118,21 @@ public class GameMenuView extends View{
             return weapons;
         }
         
+    // individual assigment lesson9 Karla
+    public void viewSceneType(){
+        SceneType[] scenes = SceneType.values();
+        
+        SceneType[] scenesAval = SceneType.values();
+        
+        System.out.println("Scene" + "\t       available");
+        
+        for(SceneType sceneName : scenesAval){
+            
+            System.out.println( sceneName + ":     \t" + sceneName.getClass());
+        }
+        
+        
+    }
 ////////////////////////////////////////////////////////////////////////////////   
 ////////////////////////////////////////////////////////////////////////////////  
  ////////////////////////////////////////////////////////////////////////////////  
