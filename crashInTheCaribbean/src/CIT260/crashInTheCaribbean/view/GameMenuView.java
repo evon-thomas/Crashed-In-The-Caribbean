@@ -6,6 +6,8 @@
 package CIT260.crashInTheCaribbean.view;
 
 import CIT260.crashInTheCaribbean.control.GameControl;
+import CIT260.crashInTheCaribbean.control.SceneControl;
+
 import CIT260.crashInTheCaribbean.model.Game;
 import CIT260.crashInTheCaribbean.model.InventoryType;
 import CIT260.crashInTheCaribbean.model.Location;
@@ -39,7 +41,8 @@ public class GameMenuView extends View{
                     + "\n I - View inventory."
                     + "\n L - Move location."
                     + "\n C - View player characters."
-                    + "\n S - View Scene Type"
+                    + "\n T - View Scene Type"
+                    + "\n S - Sort Scene Type"
                     + "\n Q - Quit"
                     + "\n-----------------------------------------------------");
     }
@@ -68,8 +71,12 @@ public class GameMenuView extends View{
                this.playerCharacters();
                break;
             
-            case "S": //
+            case "T": //
                this.viewSceneType();
+               break;
+               
+            case "S": //
+               this.SceneTypeSort();
                break;
        
            default:
@@ -120,36 +127,35 @@ public class GameMenuView extends View{
         
     // individual assigment lesson9 Karla
     public void viewSceneType(){
-        SceneType [] sceneType = SceneType.values();
+        
+//        SceneType sceneType = new SceneType () {
+//         
+//        sceneType.display();
+//    }
+        SceneType sceneType[] = SceneType.values();
                 
   
         SceneType[] scenesAval = SceneType.values();
         
-        System.out.println("Scene" + "\t       available");
+        System.out.println("Scene" );
         
         for(SceneType sceneName : scenesAval){
             
             System.out.println( sceneName + ":     \t" + sceneName.getClass());
         }
        }
+    
+     private void SceneTypeSort() {
+   //get sorted list of scenetype */*/*/THIS ONE IS WORKING/*/*
+        //SceneType[] type = GameControl.getSortedSceneList();
+        
+    }
 
-//    public void searchListForValue(enum <SceneType> scenes){
-//        for (int i = 0; SceneType.length -1)
-//            if (SceneType[i] == value)
-//                return i;
-//        if 
-      
-//*****this is the algorytm****
-  //BEGIN
- //FOR index = 0 TO list.length-1
-// IF ( list[index] = = value)
-// THEN
-    // RETURN index
-//    ENDIF
-//   ENDFOR
-// RETURN -1
-//END
-   // }
+// */*/this display function was suppoed to call the sort function
+    
+//            SceneTypeSortControl quickSort = SceneTypeSortContro();
+//            quickSort.display();
+
   
 ////////////////////////////////////////////////////////////////////////////////   
 ////////////////////////////////////////////////////////////////////////////////  
@@ -330,6 +336,7 @@ public class GameMenuView extends View{
        this.viewInventory(reportFile);
     }
 
+   
     private static class ErrorView {
 
         private static void display(String gameMenuView, String string) {

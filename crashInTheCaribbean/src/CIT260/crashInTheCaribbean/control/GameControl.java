@@ -11,6 +11,7 @@ import CIT260.crashInTheCaribbean.model.Location;
 import CIT260.crashInTheCaribbean.model.Map;
 import CIT260.crashInTheCaribbean.model.Player;
 import CIT260.crashInTheCaribbean.model.Scene;
+import CIT260.crashInTheCaribbean.model.SceneType;
 import CIT260.crashInTheCaribbean.model.Ship;
 import CIT260.crashInTheCaribbean.view.StartNewGameView;
 import crashinthecaribbean.CrashInTheCaribbean;
@@ -226,4 +227,30 @@ public GameControl(){
         public static void getSavedGame(String filepath){
         
         }
+         
+        // */*/*/*/*COMPARE TO CASE NOT WORKING */*/*/*/*
+//             public static SceneType[] getSortedSceneList() {
+        
+        // get inventory list for the current game
+//        SceneType[] originalSceneList = 
+//                CrashInTheCaribbean.getCurrentGame().getScene();
+//        
+//        // clone (make a copy) orignalList
+//        SceneType[] sceneList = originalSceneList.clone();
+//        
+//       // using a BubbleSort to sort the list of inventoryList by name
+//        SceneType tempInventoryItem;
+//        for (int i = 0; i < sceneList.length-1; i++) {
+//            for (int j = 0; j < sceneList.length-1-i; j++) {
+//                if (sceneList[j].getDescription().
+//                        compareToIgnoreCase(sceneList[j + 1].getDescription()) > 0) {
+//                    tempInventoryItem = sceneList[j];
+//                    sceneList[j] = sceneList[j+1];
+//                    sceneList[j+1] = tempInventoryItem;
+//                }
+//            }
+//        }
+//        
+//        return sceneList;
+//    }
 }

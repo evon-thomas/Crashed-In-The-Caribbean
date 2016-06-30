@@ -22,6 +22,7 @@ public class Game implements Serializable{
     private Player player;
     private Map map;
     private String characterLocation;
+    private SceneType[] Scene;
     
     public Game() {
         this.totalTime = 0;
@@ -81,6 +82,17 @@ public class Game implements Serializable{
     public String setCharactersLocation(Point[] charactersLocation) {
         return characterLocation;
     }
+
+    public SceneType[] getScene() {
+        return Scene;
+    }
+
+    public void setScene(SceneType[] Scene) {
+        this.Scene = Scene;
+    }
+
+   
+    
      
     
 

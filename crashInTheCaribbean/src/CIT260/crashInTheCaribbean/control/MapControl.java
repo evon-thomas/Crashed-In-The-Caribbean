@@ -157,4 +157,6 @@ public class MapControl {
     public static Location getLocation(Point coordinates){
         return CrashInTheCaribbean.getCurrentGame().getMap().getLocations()[coordinates.x-1][coordinates.y-1];
     }  
+    
+
 }
