@@ -11,15 +11,15 @@ import CIT260.crashInTheCaribbean.exceptions.DamageControlException;
  */
 
 public class DamageControl {
-    public double damage(double beastInt,double beastPow)
-                            throws DamageControlException {
+    
+    public double damage(double beastInt,double beastPow) throws DamageControlException {
         
         if (beastInt <0 || beastInt >5){//Int too high
-        throws new DamageControlException();
+        throw new DamageControlException("Enter a number between 1 and 5");
         
         }
         if (beastPow <0 || beastPow >5){//Pow too high
-        throws new DamageControlException();
+        throw new DamageControlException("only numbers between 1 and 5 are allowed");
         
         }
           double totalDam = Math.pow(beastInt, beastPow);
