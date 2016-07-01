@@ -78,7 +78,7 @@ public class MapControl {
         return scenes;
     }
 
-    private static void assignScenesToLocations(Map map, Scene[] scenes) {
+    private static int assignScenesToLocations(Map map, Scene[] scenes) {
         Location[][] locations = map.getLocations();
         
         locations[0][0].setScene(scenes[SceneType.overLook.ordinal()]);
@@ -137,6 +137,7 @@ public class MapControl {
         locations[1][8].setScene(scenes[SceneType.overLook.ordinal()]);
         locations[1][9].setScene(scenes[SceneType.overLook.ordinal()]);
         locations[2][8].setScene(scenes[SceneType.overLook.ordinal()]);
+        return 0;
    }
 
     public static void moveCharacterToStatingLocation(Map map, Character[] characters) {

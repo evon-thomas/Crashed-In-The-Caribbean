@@ -3,13 +3,16 @@
  */
 package CIT260.crashInTheCaribbean.control;
 
+import CIT260.crashInTheCaribbean.exceptions.DamageControlException;
+
 /**
  *
  * @author josecovarrubias
  */
 
 public class DamageControl {
-    public double damage(double beastInt,double beastPow){
+    public int damage(double beastInt,double beastPow)
+                            throws DamageControlException {
         
         if (beastInt <0 || beastInt >5){//Int too high
         return -1;
@@ -18,7 +21,8 @@ public class DamageControl {
         return -1;
         }
          double totalDam = Math.pow(beastInt, beastPow);
-         return totalDam;
+         throw new DamageControlException("whatever text you want");
     
     } 
+ 
 }
