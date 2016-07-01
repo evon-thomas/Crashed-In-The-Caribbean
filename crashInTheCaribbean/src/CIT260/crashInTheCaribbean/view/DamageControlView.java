@@ -34,55 +34,17 @@ public class DamageControlView {
            
            DamageControl damage = new DamageControl();
            double damageLevel = damage.damage(input1, input2);
-//           System.out.println("Your attack was "+ damageLevel +" strength.");
-//        boolean done = false;
-//           
-//       while(!valid){
-//           System.out.println("You need to attack again, beast is not dead yet.");
-//           if(damageLevel <1500){
-//           System.out.println("Keep fighting");
-//           }
-//       }
 
-//         do {
           
-            if (damageLevel <1500) // user wants to quit
-//             this.displayDamageControlView(); /// exit this menu
-//            System.out.println
+            if (damageLevel <1500)
+
            throw new DamageControlException("You need to attack again,"
                                             + "\nYour attack was " + damageLevel + " strength."
                                             + " Beast is not dead yet.");
             
             else if(damageLevel >1500){
             System.out.println("!!!!!! You have defeated the beast !!!!!!");
-            }
-//            return;  
-           // do the requested action and display the next view
-                         
-//        } while (!done);
-         
-           
+            }       
     }
-//    public void getDamageValues(){
-////           System.out.println("get values function");
-//           Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-//       double value = 0; //value to be return
-//       boolean valid = false; //initialize to not valid
-//       
-//       while (!valid){ //loop while an invalid value is enter
-//           System.out.println("\n" + this.message);
-//           
-//           double value = keyboard.nextLine(); //get next line typed on keyboard
-//           
-//           if (value <1 || >5){// value is blank
-//               System.out.println("\nStay within the range of 1-5");
-//               continue;
-//           }
-//       
-//       }
-//       return ; // return the value entered
-//    }
-//    public void doAction(){
-//            System.out.println("do action function");
-//    }
+
 }
