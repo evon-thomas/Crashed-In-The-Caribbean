@@ -132,7 +132,7 @@ public class GameMenuView extends View{
 //         
 //        sceneType.display();
 //    }
-        SceneType sceneType[] = SceneType.values();
+       // SceneType sceneType[] = SceneType.values();
                 
   
         SceneType[] scenesAval = SceneType.values();
@@ -141,13 +141,13 @@ public class GameMenuView extends View{
         
         for(SceneType sceneName : scenesAval){
             
-            System.out.println( sceneName + ":     \t" + sceneName.getClass());
+            System.out.println( sceneName + ":     \t" + sceneName.getDescription());
         }
        }
     
      private void SceneTypeSort() {
    //get sorted list of scenetype */*/*/THIS ONE IS WORKING/*/*
-        //SceneType[] type = GameControl.getSortedSceneList();
+     //   SceneType[] type = GameControl.getSortedSceneList();
         
     }
 

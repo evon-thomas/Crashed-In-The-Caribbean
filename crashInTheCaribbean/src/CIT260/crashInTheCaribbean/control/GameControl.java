@@ -228,10 +228,10 @@ public GameControl(){
         
         }
          
-        // */*/*/*/*COMPARE TO CASE NOT WORKING */*/*/*/*
-//             public static SceneType[] getSortedSceneList() {
-        
-        // get inventory list for the current game
+        // */*/*/*/*COMPARE TO CASE NOT WORKING */*/*/*/
+//      public static SceneType[] getSortedSceneList() {
+//        
+//         get inventory list for the current game
 //        SceneType[] originalSceneList = 
 //                CrashInTheCaribbean.getCurrentGame().getScene();
 //        
@@ -252,5 +252,5 @@ public GameControl(){
 //        }
 //        
 //        return sceneList;
-//    }
+ //   }
 }

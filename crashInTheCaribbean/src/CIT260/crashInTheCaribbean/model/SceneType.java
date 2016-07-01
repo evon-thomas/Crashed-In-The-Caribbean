@@ -25,13 +25,20 @@ import java.io.Serializable;
 //     String findTool = sceneType[3];
 //     String findWeapon = sceneType[4];
 // 
-    overLook , //("This is the starting scene for any location."),
-    faceTrap , // ("This scene shows the trap to the user."),
-    faceBeast , //("This scene shows the beast to the user."),
-    findTool , // ("This scene is used when a new tool is found."),
-    findWeapon ; // ("This scene is used when a new weapon is found."); 
+    overLook (" This is the starting scene for any location."),
+    faceTrap (" This scene shows the trap to the user."),
+    faceBeast (" This scene shows the beast to the user."),
+    findTool  (" This scene is used when a new tool is found."),
+    findWeapon (" This scene is used when a new weapon is found."); 
 
-
+private String description;
+    
+    SceneType(String description){
+        this.description = description;
+    }
+    public String getDescription(){
+        return this.description;
+    }  
 //    @Override
 //    public boolean doAction(String value) {
 //       System.out.println("scene type do action function called");

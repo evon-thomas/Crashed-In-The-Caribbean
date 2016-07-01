@@ -6,6 +6,7 @@
 package CIT260.crashInTheCaribbean.view;
 
 import CIT260.crashInTheCaribbean.control.DamageControl;
+import CIT260.crashInTheCaribbean.exceptions.DamageControlException;
 import java.util.Scanner;
 
 /**
@@ -22,7 +23,7 @@ public class DamageControlView {
                 + "\ncan only enter numbers from 1 through 5 in different"
                 + "\ncombinations to reach the beast resistanse number. ";
     }
-    public void displayDamageControlView() {
+    public void displayDamageControlView() throws DamageControlException {
            System.out.println(message);
            System.out.println("\nEnter a value for the level of attack power");
            Scanner inFile = new Scanner(System.in);

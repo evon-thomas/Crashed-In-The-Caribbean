@@ -15,17 +15,17 @@ import CIT260.crashInTheCaribbean.model.SceneType;
 public class SceneControl {
     // */*/*/*/*COMPARE TO IGNORE CASE NOT WORKING*/*/*/
   public static void SceneTypeSort (SceneType[] scene){
-//            
-//    SceneType sceneType;
-//        for (int i = 0; i < scene.length-1; i++) {
-//            for (int j = 0; j < scene.length-1-i; j++) {
-//                if (scene[j].getDescription().compareToIgnoreCase(scene[j + 1].getDescription()) > 0) {
-//                    sceneType = scene[j];
-//                    scene[j] = scene[j+1];
-//                    scene[j+1] = sceneType;
-//}
-//            }
-//        }
+            
+    SceneType sceneType;
+        for (int i = 0; i < scene.length-1; i++) {
+            for (int j = 0; j < scene.length-1-i; j++) {
+                if (scene[j].getDescription().compareToIgnoreCase(scene[j + 1].getDescription()) > 0) {
+                    sceneType = scene[j];
+                    scene[j] = scene[j+1];
+                    scene[j+1] = sceneType;
+}
+            }
+        }
     }
 
 //    public static SceneType[] SceneTypeSort() {
