@@ -146,8 +146,8 @@ public class GameMenuView extends View{
        }
     
      private void SceneTypeSort() {
-   //get sorted list of scenetype */*/*/THIS ONE IS WORKING/*/*
-     //   SceneType[] type = GameControl.getSortedSceneList();
+   //get sorted list of scenetype */*/*/THIS ONE IS WORKING/*/* or at least no error
+        SceneType[] type = GameControl.getSortedSceneList();
         
     }
 

@@ -8,6 +8,7 @@ package CIT260.crashInTheCaribbean.view;
 
 
 import CIT260.crashInTheCaribbean.control.GameControl;
+import CIT260.crashInTheCaribbean.exceptions.DamageControlException;
 import CIT260.crashInTheCaribbean.view.GameMenuView;
 import crashinthecaribbean.CrashInTheCaribbean;
 import java.util.Scanner;
@@ -29,7 +30,7 @@ public class MainMenuView extends View {
     private void startExistingGame(){
         System.out.println("*** existingGame fun. called ***");
     }      
-    private void displayDamageControlView(){
+    private void displayDamageControlView() throws DamageControlException{
         //this function calls the class where the power of attack is calculated. Jose.
         DamageControlView damageView = new DamageControlView();
         damageView.displayDamageControlView();
