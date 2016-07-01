@@ -15,11 +15,11 @@ public class DamageControl {
     public double damage(double beastInt,double beastPow) throws DamageControlException {
         
         if (beastInt <0 || beastInt >5){//Int too high
-        throw new DamageControlException("Enter a number between 1 and 5");
+        throw new DamageControlException("PRACTICE AGAIN, YOUR 1ST VALUE MUST BE BETWEEN 1-5");
         
         }
         if (beastPow <0 || beastPow >5){//Pow too high
-        throw new DamageControlException("only numbers between 1 and 5 are allowed");
+        throw new DamageControlException("YOUR 2ND VALUE MUST BE BETWEEN 1-5");
         
         }
           double totalDam = Math.pow(beastInt, beastPow);

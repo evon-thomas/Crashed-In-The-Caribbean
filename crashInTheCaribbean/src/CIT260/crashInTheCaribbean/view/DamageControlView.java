@@ -56,7 +56,7 @@ public class DamageControlView {
             else if(damageLevel >1500){
             System.out.println("!!!!!! You have defeated the beast !!!!!!");
             }
-            return;  
+//            return;  
            // do the requested action and display the next view
                          
 //        } while (!done);

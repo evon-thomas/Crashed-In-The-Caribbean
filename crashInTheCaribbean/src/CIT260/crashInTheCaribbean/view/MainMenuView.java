@@ -46,11 +46,9 @@ public class MainMenuView extends View {
             damageView.displayDamageControlView();
         } catch (DamageControlException de) {
             System.out.println(de.getMessage());
-            return;
         }catch (Throwable te){
             System.out.println(te.getMessage());
             te.printStackTrace();
-            return;
         }
     }
 ////////////////////////////////////////////////////////////////////////////////
