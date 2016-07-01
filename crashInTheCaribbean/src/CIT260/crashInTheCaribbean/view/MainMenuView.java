@@ -12,6 +12,8 @@ import CIT260.crashInTheCaribbean.exceptions.DamageControlException;
 import CIT260.crashInTheCaribbean.view.GameMenuView;
 import crashinthecaribbean.CrashInTheCaribbean;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -29,12 +31,32 @@ public class MainMenuView extends View {
     }
     private void startExistingGame(){
         System.out.println("*** existingGame fun. called ***");
-    }      
-    private void displayDamageControlView() throws DamageControlException{
+    } 
+    
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////    
+    private void displayDamageControlView() {
+        
+       
         //this function calls the class where the power of attack is calculated. Jose.
         DamageControlView damageView = new DamageControlView();
-        damageView.displayDamageControlView();
+       
+        try {
+            damageView.displayDamageControlView();
+        } catch (DamageControlException de) {
+            System.out.println(de.getMessage());
+            return;
+        }catch (Throwable te){
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            return;
+        }
     }
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+    
     private void saveGame(){
         System.out.println("*** saveGame fun. called ***");
     }
