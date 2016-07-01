@@ -27,13 +27,13 @@ public enum Character implements Serializable{
     // class instance variable
 //    private String name;
     private final String description;
-    private final Location coordinates;
+//    private final Location coordinates;
 //    private final Location row;
 //    private final Location column;
     
     Character(String description) {
         this.description = description;
-      coordinates = new Location();
+//      coordinates = new Location();
 //      this.row =  row;
 //      this.column = column;
     }
@@ -55,9 +55,9 @@ public enum Character implements Serializable{
 //        this.description = description;
 //    }
 
-    public Location getCoordinates() {
-        return coordinates;
-    }
+//    public Location getCoordinates() {
+//        return coordinates;
+//    }
 
 //    public void setCoordinates(double coordinates) {
 //        this.coordinates = coordinates;
