@@ -11,18 +11,22 @@ import CIT260.crashInTheCaribbean.exceptions.DamageControlException;
  */
 
 public class DamageControl {
-    public int damage(double beastInt,double beastPow)
+    public double damage(double beastInt,double beastPow)
                             throws DamageControlException {
         
         if (beastInt <0 || beastInt >5){//Int too high
-        return -1;
+        throws new DamageControlException();
+        
         }
         if (beastPow <0 || beastPow >5){//Pow too high
-        return -1;
+        throws new DamageControlException();
+        
         }
-         double totalDam = Math.pow(beastInt, beastPow);
-         throw new DamageControlException("whatever text you want");
+          double totalDam = Math.pow(beastInt, beastPow);
+         return  totalDam;
     
     } 
- 
+
+
+
 }
