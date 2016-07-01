@@ -48,9 +48,10 @@ public class DamageControlView {
           
             if (damageLevel <1500) // user wants to quit
 //             this.displayDamageControlView(); /// exit this menu
-            System.out.println("You need to attack again,"
-                    + "\nYour attack was " + damageLevel + " strength."
-                    + " Beast is not dead yet.");
+//            System.out.println
+           throw new DamageControlException("You need to attack again,"
+                                            + "\nYour attack was " + damageLevel + " strength."
+                                            + " Beast is not dead yet.");
             
             else if(damageLevel >1500){
             System.out.println("!!!!!! You have defeated the beast !!!!!!");
