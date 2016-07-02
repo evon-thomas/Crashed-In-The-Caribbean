@@ -106,10 +106,10 @@ public class GameMenuView extends View{
     private void buildShip(){
 //            BuildShipView newBoat = new BuildShipView();
 //            newBoat.display();
-            
 //            newBoat.doAction(displayMessage);
         
         int buildNewShip = 0;
+        while(buildNewShip ==0){
         System.out.println("How LONG do you want the ship to be? enter a number");
         Scanner longship = new Scanner(System.in);
         int longShip = longship.nextInt();
@@ -131,6 +131,8 @@ public class GameMenuView extends View{
         }catch(Throwable bst){
             System.out.println(bst.getMessage());
             bst.printStackTrace();
+        }
+        
         }
         
         System.out.println("YOUR BOAT IS >" + buildNewShip + "< CUBIC FEET.");
