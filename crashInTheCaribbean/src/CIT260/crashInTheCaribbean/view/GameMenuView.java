@@ -5,8 +5,10 @@
  */
 package CIT260.crashInTheCaribbean.view;
 
+import CIT260.crashInTheCaribbean.control.BuildControl;
 import CIT260.crashInTheCaribbean.control.GameControl;
 import CIT260.crashInTheCaribbean.control.SceneControl;
+import CIT260.crashInTheCaribbean.exceptions.BuildShipException;
 
 import CIT260.crashInTheCaribbean.model.Game;
 import CIT260.crashInTheCaribbean.model.InventoryType;
@@ -19,6 +21,7 @@ import enums.WeaponPower;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 /**
  *
@@ -28,6 +31,12 @@ public class GameMenuView extends View{
     
 //        public void displayMenu() {
 //        System.out.println("\n*** game menu view from view layer called ***");
+    
+    
+//     private int howLong;
+//     private int howWide;
+//     private int howTall;
+     
         
     public GameMenuView(){
     
@@ -43,6 +52,7 @@ public class GameMenuView extends View{
                     + "\n C - View player characters."
                     + "\n T - View Scene Type"
                     + "\n S - Sort Scene Type"
+                    + "\n B - build ship."
                     + "\n Q - Quit"
                     + "\n-----------------------------------------------------");
     }
@@ -78,6 +88,10 @@ public class GameMenuView extends View{
             case "S": //
                this.SceneTypeSort();
                break;
+               
+             case "B": //
+               this.buildShip();
+               break;
        
            default:
                System.out.println("\nInvalid selection *** Try again");
@@ -88,7 +102,38 @@ public class GameMenuView extends View{
  ///////////////////////////////////////////////////////////////////////////////
  ////////////////////////////////////////////////////////////////////////////////  
  ////////////////////////////////////////////////////////////////////////////////  
-        // ************Indiviual assignment Lesson 9. Jose.***********************
+        // ************INDIVIDUAL ASSIGNMENT LESSON 10. JOSE.***********************
+    private void buildShip(){
+        int buildNewShip = 0;
+        System.out.println("How LONG do you want the ship to be? enter a number");
+        Scanner longship = new Scanner(System.in);
+        int longShip = longship.nextInt();
+        
+        System.out.println("How WIDE do you want the ship to be? enter a number");
+        Scanner wideShip = new Scanner(System.in);
+        int shipWide = wideShip.nextInt();
+        
+        System.out.println("How TALL do you want the ship to be? enter a number");
+        Scanner tallShip = new Scanner(System.in);
+        int shipTall = tallShip.nextInt();
+        
+        BuildControl newShip = new BuildControl();
+        
+        try{
+        buildNewShip = (int) newShip.build(longShip, shipWide, shipTall);
+        }catch(BuildShipException bse){
+            System.out.println(bse.getMessage());
+        }catch(Throwable bst){
+            System.out.println(bst.getMessage());
+            bst.printStackTrace();
+        }
+        
+        System.out.println("YOUR BOAT IS >" + buildNewShip + "< CUBIC FEET.");
+    }
+ ///////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////  
+ ////////////////////////////////////////////////////////////////////////////////  
+        // ************INDIVIDUAL ASSIGNMENT LESSON 9. JOSE.***********************
     
         // private function to display the weapons
         public void viewWeapons(){
