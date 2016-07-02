@@ -141,13 +141,13 @@ public class MapControl {
    }
 
     public static void moveCharacterToStatingLocation(Map map, Character[] characters) {
-      System.out.println("one more step, find me on the mapControl");
+//      System.out.println("one more step, find me on the mapControl");
 //        Game game = CrashInTheCaribbean.getCurrentGame();
 //        for (Character character : characters){
 //            Point position = new Point(0, 2);
 //            game.getCharactersLocation()[character.ordinal()]= new Point();
 //            MapControl.moveCharacterToLocation(game, character, position);
-        }
+//        }
 
 //    }
 
@@ -155,9 +155,13 @@ public class MapControl {
 //        System.out.println("Hoping to make this game work, find me on MapControl");
 //    }
     
-    public static Location getLocation(Point coordinates){
-        return CrashInTheCaribbean.getCurrentGame().getMap().getLocations()[coordinates.x-1][coordinates.y-1];
+//    public static Location getLocation(Point coordinates){
+//        return CrashInTheCaribbean.getCurrentGame().getMap().getLocations()[coordinates.x-1][coordinates.y-1];
     }  
+
+    private static void moveCharacterToLocation(Game game, Character character, Point position) {
+        System.out.println("move character to location funct");
+    }
     
 
 }
