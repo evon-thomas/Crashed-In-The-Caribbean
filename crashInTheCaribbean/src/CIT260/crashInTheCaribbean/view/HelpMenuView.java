@@ -118,7 +118,6 @@ public class HelpMenuView extends View {
     }
 
     private void avoidTnB(String you_should_enter_something) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+      }
 
 }
