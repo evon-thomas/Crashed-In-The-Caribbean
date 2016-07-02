@@ -5,6 +5,8 @@
  */
 package CIT260.crashInTheCaribbean.view;
 
+import CIT260.crashInTheCaribbean.exceptions.HowToMoveException;
+
 /**
  *
  * @author josecovarrubias
@@ -16,5 +18,5 @@ public interface ViewInterface {
     
     public void display();
     public String getInput();
-    public boolean doAction(String value);
+    public boolean doAction(String value)throws HowToMoveException;
 }

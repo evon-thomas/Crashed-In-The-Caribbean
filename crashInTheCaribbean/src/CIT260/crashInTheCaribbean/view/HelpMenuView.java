@@ -5,6 +5,7 @@
  */
 package CIT260.crashInTheCaribbean.view;
 
+import CIT260.crashInTheCaribbean.exceptions.HowToMoveException;
 import java.util.Scanner;
 
 /**
@@ -18,11 +19,19 @@ public class HelpMenuView extends View {
      private void goalOfGame(){
         System.out.println("*** goalOfGmae fun. called ***");
     }
-    private void howToMove(){
+    private void howToMove() {
 //        System.out.println("*** howToMove fun. called ***");
 
           HowToMove move = new HowToMove();
+          try{
           move.display();
+          }
+          catch(HowToMoveException mve){
+              System.out.println(mve.getMessage());
+          }
+          catch (Throwable how){
+            System.out.println(move.howMessage());  
+          }
     }
     private void toolsAvailable(){
         System.out.println("*** toolsAvailable fun. called ***");

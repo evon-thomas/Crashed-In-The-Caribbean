@@ -6,6 +6,8 @@
 package CIT260.crashInTheCaribbean.view;
 
 import CIT260.crashInTheCaribbean.control.MoveControl;
+import CIT260.crashInTheCaribbean.exceptions.DamageControlException;
+import CIT260.crashInTheCaribbean.exceptions.HowToMoveException;
 
 /**
  *
@@ -27,21 +29,21 @@ public class HowToMove extends View{
     int L=moves[0];
     int R=moves[0];
     int J=moves[0];
-    private void jump(){
+    private void jump() throws HowToMoveException {
  
             MoveControl controlMove = new MoveControl();
             int movPlayer = controlMove.controlMove(J, boost);
-       System.out.println("You jumped was level " + movPlayer);
+      throw new HowToMoveException("You just jumped");
     } 
-    private void left(){
+    private void left()throws HowToMoveException{
                 MoveControl controlMove = new MoveControl();
             int movPlayer = controlMove.controlMove(L, boost);
-            System.out.println("You moved to the left " + movPlayer + " places");
+            throw new HowToMoveException ("You moved to the left " + movPlayer + " places");
     }
-    private void right(){
+    private void right() throws HowToMoveException {
                 MoveControl controlMove = new MoveControl();
             int movPlayer = controlMove.controlMove(R, boost);
-            System.out.println("You moved to the right " + movPlayer + " places");
+          throw new HowToMoveException ("You moved to the right " + movPlayer + " places");
     }
 
     
@@ -58,7 +60,7 @@ public class HowToMove extends View{
     }
 
     @Override
-    public boolean doAction(String selection) {
+    public boolean doAction(String selection) throws HowToMoveException {
         
         selection = selection.toUpperCase(); 
         
@@ -76,8 +78,9 @@ public class HowToMove extends View{
 //                this.boost();
 //                break;
             default:
-                System.out.println("\n??? Select one of the letters. ???");
+                System.out.println("enter a valid value");
                 break;
+               
         }
         return false;
     }
