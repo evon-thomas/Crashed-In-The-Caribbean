@@ -33,18 +33,26 @@ public class HowToMove extends View{
     
     
     
-    private void jump() throws HowToMoveException{ 
+    private void jump(){// throws HowToMoveException{ 
  
             MoveControl controlMove = new MoveControl();
-            int movPlayer = controlMove.controlMove(J, boost);
-            System.out.println("You just jumped");
+            try {
+                int movPlayer = controlMove.controlMove(J, boost);
+            }
+            catch(HowToMoveException jmp) {
+                System.out.println(jmp.getMessage());
+                    //System.out.println("You just jumped"); 
+            }
     } 
-    private void left()throws HowToMoveException{
+    private void left(){//throws HowToMoveException{
+        
                 MoveControl controlMove = new MoveControl();
+          try{
             int movPlayer = controlMove.controlMove(L, boost);
+          }
             System.out.println("You moved to the left " + movPlayer + " places");
-    }
-    private void right()throws HowToMoveException {
+    
+    private void right(){//throws HowToMoveException {
                 MoveControl controlMove = new MoveControl();
             int movPlayer = controlMove.controlMove(R, boost);
           System.out.println("You moved to the right " + movPlayer + " places");
