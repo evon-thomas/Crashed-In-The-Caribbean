@@ -24,15 +24,15 @@ public class HelpMenuView extends View {
 //        System.out.println("*** howToMove fun. called ***");
 
           HowToMove move = new HowToMove();
-          try{
+//          try{
           move.display();
-          }
-          catch (HowToMoveException mve){
-              System.out.println(mve.getMessage());
-          }
-          catch (Throwable how){
-            System.out.println(how.getMessage());  
-          }
+//          }
+//          catch (HowToMoveException mve){
+//              System.out.println(mve.getMessage());
+//          }
+//          catch (Throwable how){
+//            System.out.println(how.getMessage());  
+//          }
     }
     private void toolsAvailable(){
         System.out.println("*** toolsAvailable fun. called ***");

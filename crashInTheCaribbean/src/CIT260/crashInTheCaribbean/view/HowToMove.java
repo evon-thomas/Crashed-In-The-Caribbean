@@ -31,7 +31,13 @@ public class HowToMove extends View{
     int R=moves[0];
     int J=moves[0];
     
-    
+    public int letsMove(){
+        System.out.println("\n Enter the spaces you want to move");
+        Scanner moveSpaces =   new Scanner(System.in);
+        int spaceMoved = moveSpaces.nextInt();
+        System.out.println(spaceMoved);
+        return spaceMoved;
+    }
     
     private void jump(){// throws HowToMoveException{ 
  
@@ -78,11 +84,11 @@ public class HowToMove extends View{
                         + "\n--------------------------------------------------");
         
                    
-        System.out.println("\n Enter the spaces you want to move");
-        Scanner moveSpaces =   new Scanner(System.in);
-        int spaceMoved = moveSpaces.nextInt();
-        System.out.println(spaceMoved);
-        
+//        System.out.println("\n Enter the spaces you want to move");
+//        Scanner moveSpaces =   new Scanner(System.in);
+//        int spaceMoved = moveSpaces.nextInt();
+//        System.out.println(spaceMoved);
+//        
         
         
     }
