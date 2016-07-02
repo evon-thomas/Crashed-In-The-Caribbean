@@ -5,6 +5,7 @@
  */
 package CIT260.crashInTheCaribbean.view;
 
+import CIT260.crashInTheCaribbean.exceptions.AvoidTnBException;
 import java.util.Scanner;
 
 /**
@@ -27,10 +28,11 @@ public class HelpMenuView extends View {
     private void toolsAvailable(){
         System.out.println("*** toolsAvailable fun. called ***");
     }
-    private void avoidTnB(){
+    private void avoidTnB() throws AvoidTnBException{
 //        System.out.println("*** avoidTnB fun. called ***");
 
         AvoidTnBMenuView avoidTnBMenu = new AvoidTnBMenuView();
+        throw new AvoidTnBException("dude enter something");
         avoidTnBMenu.display(); 
     }
     
@@ -105,7 +107,7 @@ public class HelpMenuView extends View {
             this.toolsAvailable();
             break;
         case "A":
-            this.avoidTnB();
+            this.avoidTnB("you should enter something");
             break;
         default:
           System.out.println("\n*** Hey bro, not that letter! Try one more time");
@@ -113,6 +115,10 @@ public class HelpMenuView extends View {
     
     }
     return false; 
+    }
+
+    private void avoidTnB(String you_should_enter_something) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
