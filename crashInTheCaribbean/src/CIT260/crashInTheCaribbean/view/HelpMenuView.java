@@ -32,8 +32,8 @@ public class HelpMenuView extends View {
 //        System.out.println("*** avoidTnB fun. called ***");
 
         AvoidTnBMenuView avoidTnBMenu = new AvoidTnBMenuView();
-        throw new AvoidTnBException("dude enter something");
         avoidTnBMenu.display(); 
+        throw new AvoidTnBException("dude enter something");
     }
     
     
