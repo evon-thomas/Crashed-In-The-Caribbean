@@ -20,19 +20,19 @@ public class HelpMenuView extends View {
      private void goalOfGame(){
         System.out.println("*** goalOfGmae fun. called ***");
     }
-    private void howToMove() {
-////        System.out.println("*** howToMove fun. called ***");
-//
-//          HowToMove move = new HowToMove();
-//          try{
-//          move.display();
-//          }
-//          catch(HowToMoveException mve){
-//              System.out.println(mve.getMessage());
-//          }
-//          catch (Throwable how){
-//            System.out.println(how.getMessage());  
-//          }
+    private void howToMove()  {
+//        System.out.println("*** howToMove fun. called ***");
+
+          HowToMove move = new HowToMove();
+          try{
+          move.display();
+          }
+          catch (HowToMoveException mve){
+              System.out.println(mve.getMessage());
+          }
+          catch (Throwable how){
+            System.out.println(how.getMessage());  
+          }
     }
     private void toolsAvailable(){
         System.out.println("*** toolsAvailable fun. called ***");

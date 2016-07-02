@@ -8,6 +8,7 @@ package CIT260.crashInTheCaribbean.view;
 import CIT260.crashInTheCaribbean.control.MoveControl;
 import CIT260.crashInTheCaribbean.exceptions.DamageControlException;
 import CIT260.crashInTheCaribbean.exceptions.HowToMoveException;
+import java.util.Scanner;
 
 /**
  *
@@ -29,21 +30,24 @@ public class HowToMove extends View{
     int L=moves[0];
     int R=moves[0];
     int J=moves[0];
-    private void jump() throws HowToMoveException {
+    
+    
+    
+    private void jump() throws HowToMoveException{ 
  
             MoveControl controlMove = new MoveControl();
             int movPlayer = controlMove.controlMove(J, boost);
-      throw new HowToMoveException("You just jumped");
+            System.out.println("You just jumped");
     } 
     private void left()throws HowToMoveException{
                 MoveControl controlMove = new MoveControl();
             int movPlayer = controlMove.controlMove(L, boost);
-            throw new HowToMoveException ("You moved to the left " + movPlayer + " places");
+            System.out.println("You moved to the left " + movPlayer + " places");
     }
-    private void right() throws HowToMoveException {
+    private void right()throws HowToMoveException {
                 MoveControl controlMove = new MoveControl();
             int movPlayer = controlMove.controlMove(R, boost);
-          throw new HowToMoveException ("You moved to the right " + movPlayer + " places");
+          System.out.println("You moved to the right " + movPlayer + " places");
     }
 
     
@@ -57,10 +61,17 @@ public class HowToMove extends View{
 //                        + "\n B - Boost."     
                         + "\n Q - Quit."
                         + "\n--------------------------------------------------");
+        
+                   
+        System.out.println("\n Enter the spaces you want to move");
+        Scanner moveSpaces =   new Scanner(System.in);
+        System.out.println(moveSpaces);
+        
+        
     }
 
-    @Override
-    public boolean doAction(String selection) throws HowToMoveException {
+   @Override
+    public boolean doAction(String selection){// throws HowToMoveException {
         
         selection = selection.toUpperCase(); 
         

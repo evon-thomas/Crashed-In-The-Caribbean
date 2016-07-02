@@ -5,6 +5,8 @@
  */
 package CIT260.crashInTheCaribbean.control;
 
+import CIT260.crashInTheCaribbean.exceptions.HowToMoveException;
+
 /**
  *
  * @author josecovarrubias
@@ -12,9 +14,12 @@ package CIT260.crashInTheCaribbean.control;
 public class MoveControl {
  
      
-    public int controlMove(int letter, int Boost){
+    public int controlMove(int letter, int Boost)throws HowToMoveException{
 
     double calMove = Math.pow(letter, Boost);
-    return (int) calMove;
+        if (calMove > 6 ){  
+  throw new HowToMoveException("You can't move more 6 spaces");
     }  
+        return (int) calMove;
+}
 }
