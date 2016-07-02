@@ -46,16 +46,23 @@ public class HowToMove extends View{
     } 
     private void left(){//throws HowToMoveException{
         
-                MoveControl controlMove = new MoveControl();
+                 MoveControl controlMove = new MoveControl();
           try{
             int movPlayer = controlMove.controlMove(L, boost);
           }
-            System.out.println("You moved to the left " + movPlayer + " places");
-    
+          catch(HowToMoveException mov){
+            System.out.println(mov.getMessage());
+          }
+    }
     private void right(){//throws HowToMoveException {
                 MoveControl controlMove = new MoveControl();
+                try {
             int movPlayer = controlMove.controlMove(R, boost);
-          System.out.println("You moved to the right " + movPlayer + " places");
+                }
+                catch(HowToMoveException rite){
+         // System.out.println("You moved to the right " + movPlayer + " places");
+         System.out.println(rite.getMessage());
+                }
     }
 
     
@@ -73,7 +80,9 @@ public class HowToMove extends View{
                    
         System.out.println("\n Enter the spaces you want to move");
         Scanner moveSpaces =   new Scanner(System.in);
-        System.out.println(moveSpaces);
+        int spaceMoved = moveSpaces.nextInt();
+        System.out.println(spaceMoved);
+        
         
         
     }
