@@ -17,7 +17,7 @@ public class BuildControl {
       
       if (length <0 || length >15){
 //      return -1;
-        throw new BuildShipException("*******TRY AGAIN, ENTER A # BELOW 15 FOR TEH 1ST VALUE.*******");
+        throw new BuildShipException("*******TRY AGAIN, ENTER A # BELOW 15 FOR THE 1ST VALUE.*******");
       }
       if (width <0 || width >15){
 //      return -1;
@@ -25,7 +25,7 @@ public class BuildControl {
       }
       if(height <0 || height >5){
 //      return -1;
-      throw new BuildShipException("*******TRY AGAIN, ENTER A # BELOW 5 FOR TEH 3RD VALUE.*******");
+      throw new BuildShipException("*******TRY AGAIN, ENTER A # BELOW 5 FOR THE 3RD VALUE.*******");
       }
       double volumeOfBoat = length * width * height;
       return volumeOfBoat;

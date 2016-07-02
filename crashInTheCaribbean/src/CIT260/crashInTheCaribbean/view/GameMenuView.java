@@ -104,6 +104,11 @@ public class GameMenuView extends View{
  ////////////////////////////////////////////////////////////////////////////////  
         // ************INDIVIDUAL ASSIGNMENT LESSON 10. JOSE.***********************
     private void buildShip(){
+//            BuildShipView newBoat = new BuildShipView();
+//            newBoat.display();
+            
+//            newBoat.doAction(displayMessage);
+        
         int buildNewShip = 0;
         System.out.println("How LONG do you want the ship to be? enter a number");
         Scanner longship = new Scanner(System.in);

@@ -6,6 +6,8 @@
 package CIT260.crashInTheCaribbean.view;
 
 import CIT260.crashInTheCaribbean.control.BuildControl;
+import CIT260.crashInTheCaribbean.exceptions.BuildShipException;
+import CIT260.crashInTheCaribbean.exceptions.HowToMoveException;
 import CIT260.crashInTheCaribbean.model.Ship;
 import java.util.Scanner;
 
@@ -13,43 +15,81 @@ import java.util.Scanner;
  *
  * @author thomas
  */
-public class BuildShipView {
+public class BuildShipView extends View{
     
     
     private String message;
     
      public BuildShipView(){
-        this.message ="You must reach 300 cubic feet in order to build your "
-                + "ship successfully. Don't make this too hard. Just try to"
-                + "imagine how to calculate the volume of a prism. You have "
-                + "to multiply a few numbers together. The numbers must be "
-                + "between 0 and 10";
+            super("\n You must reach 300 cubic feet in order to build your "
+                + "\n ship successfully. Don't make this too hard. Just try to"
+                + "\n imagine how to calculate the volume of a prism. You have "
+                + "\n to multiply a few numbers together. The numbers must be "
+                + "\n between 0 and 10"
+                + "\n PRESS ENTER TO BEGIN BUILDING YOUR SHIP");
 }
-
-public void displayBuildShipView() {
-           System.out.println("the display funtion");
-    }
-
-public void getShipMeasurements(){
-          //System.out.println("get values function");
-          Scanner keyboard = new Scanner(System.in);
-        double value = 0.0;
-        
-        boolean valid = false;
-        
-        while (!valid) { 
-            System.out.println("\n" + this.message);
-             
-            value = Double.parseDouble(keyboard.nextLine());
-            
-            if (value < 1 || value > 11) {
-                System.out.println("\n Choose a number between 1-10");
-                continue;
-            }
-            return;
-        }
-    
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+    @Override
+    public boolean doAction(String value) {
+////        boolean getMyShip = false;
+//        int buildNewShip = 0;
+//        System.out.println("How LONG do you want the ship to be? enter a number");
+//        Scanner longship = new Scanner(System.in);
+//        int longShip = longship.nextInt();
+//        
+//        System.out.println("How WIDE do you want the ship to be? enter a number");
+//        Scanner wideShip = new Scanner(System.in);
+//        int shipWide = wideShip.nextInt();
+//        
+//        System.out.println("How TALL do you want the ship to be? enter a number");
+//        Scanner tallShip = new Scanner(System.in);
+//        int shipTall = tallShip.nextInt();
+//        
+//        BuildControl newShip = new BuildControl();
+//        
+//        try{
+//        buildNewShip = (int) newShip.build(longShip, shipWide, shipTall);
+//        }catch(BuildShipException bse){
+//            System.out.println(bse.getMessage());
+//        }catch(Throwable bst){
+//            System.out.println(bst.getMessage());
+//            bst.printStackTrace();
+//          
+//        }
+//        
+//        System.out.println("YOUR BOAT IS >" + buildNewShip + "< CUBIC FEET.");
+        return true;
+    }  
 }
+////////////////////////////////////////////////////////////////////////////////
+/////////////////I COMMENTED ALL FROM HERE DOWN...JOSE//////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//public void displayBuildShipView() {
+//           System.out.println("the display funtion");
+//    }
+
+//public void getShipMeasurements(){
+//          //System.out.println("get values function");
+//          Scanner keyboard = new Scanner(System.in);
+//        double value = 0.0;
+//        
+//        boolean valid = false;
+//        
+//        while (!valid) { 
+//            System.out.println("\n" + this.message);
+//             
+//            value = Double.parseDouble(keyboard.nextLine());
+//            
+//            if (value < 1 || value > 11) {
+//                System.out.println("\n Choose a number between 1-10");
+//                continue;
+//            }
+//            return;
+//        }
+//    
+//}
 
 //public boolean doAction(double length, double height, double width){
 //            System.out.println("DOACTION FUNCTION ON THE BUILDSHIPVIEW");
@@ -129,4 +169,4 @@ public void getShipMeasurements(){
 //            done = this.doAction(length, height, width); // do action based on decision        
 //        } while (!done);
 //    }
-}
+//}
