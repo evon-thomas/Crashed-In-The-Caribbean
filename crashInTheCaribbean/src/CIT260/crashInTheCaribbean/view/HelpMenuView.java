@@ -31,7 +31,7 @@ public class HelpMenuView extends View {
               System.out.println(mve.getMessage());
           }
           catch (Throwable how){
-            System.out.println(move.howMessage());  
+            System.out.println(how.getMessage());  
           }
     }
     private void toolsAvailable(){
