@@ -12,7 +12,7 @@ import CIT260.crashInTheCaribbean.exceptions.AvoidTnBException;
  * @author thomas
  */
 public class AvoidTnBControl {
-    public double build(double radius, double height, double pi) throws AvoidTnBException{
+    public double buildTrap(double radius, double height, double pi) throws AvoidTnBException{
         if (radius < 0 || radius > 5) {
             // return -1;
             throw new AvoidTnBException("****Enter a value between 0 and 5****");
@@ -27,12 +27,9 @@ public class AvoidTnBControl {
                     }
         double trapVolume = pi * (radius * radius) * height;
         return trapVolume;
-        
-        
-        
-        
-        
-     
+
+    
+}
 }
 
-}
+
