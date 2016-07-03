@@ -5,7 +5,7 @@
  */
 package CIT260.crashInTheCaribbean.view;
 
-import CIT260.crashInTheCaribbean.exceptions.AvoidTnBException;
+import CIT260.crashInTheCaribbean.exceptions.AvoidTrapException;
 import CIT260.crashInTheCaribbean.exceptions.HowToMoveException;
 import java.util.Scanner;
 
@@ -37,12 +37,12 @@ public class HelpMenuView extends View {
     private void toolsAvailable(){
         System.out.println("*** toolsAvailable fun. called ***");
     }
-    private void avoidTnB() throws AvoidTnBException{
+    private void avoidTnB() throws AvoidTrapException{
 //        System.out.println("*** avoidTnB fun. called ***");
 
-        AvoidTnBMenuView avoidTnBMenu = new AvoidTnBMenuView();
+        AvoidTrapMenuView avoidTnBMenu = new AvoidTrapMenuView();
         avoidTnBMenu.display(); 
-        throw new AvoidTnBException("dude enter something");
+        throw new AvoidTrapException("dude enter something");
     }
     
     

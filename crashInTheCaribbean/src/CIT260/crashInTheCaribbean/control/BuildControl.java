@@ -17,15 +17,15 @@ public class BuildControl {
       
       if (length <0 || length >15){
 //      return -1;
-        throw new BuildShipException("*******TRY AGAIN, ENTER A # BELOW 15 FOR THE 1ST VALUE.*******");
+        throw new BuildShipException("*******TRY AGAIN, ENTER A # BETWEEN 0 AND 15*******");
       }
       if (width <0 || width >15){
 //      return -1;
-        throw new BuildShipException("*******YOUR SHIP WILL BE TOO BIG, ENTER A # BELOW 15 FOR THE 2ND VALUE.*******");
+        throw new BuildShipException("*******YOUR SHIP WILL BE TOO BIG, TRY AGAIN, ENTER A # BETWEEN 0 AND 15*******");
       }
       if(height <0 || height >5){
 //      return -1;
-      throw new BuildShipException("*******TRY AGAIN, ENTER A # BELOW 5 FOR THE 3RD VALUE.*******");
+      throw new BuildShipException("*******TRY AGAIN, TRY AGAIN, ENTER A # BETWEEN 0 AND 5.*******");
       }
       double volumeOfBoat = length * width * height;
       return volumeOfBoat;

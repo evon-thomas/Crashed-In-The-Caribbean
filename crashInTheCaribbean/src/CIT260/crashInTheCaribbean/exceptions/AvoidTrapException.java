@@ -9,24 +9,24 @@ package CIT260.crashInTheCaribbean.exceptions;
  *
  * @author thomas
  */
-public class AvoidTnBException extends Exception{
+public class AvoidTrapException extends Exception{
 
-    public AvoidTnBException() {
+    public AvoidTrapException() {
     }
 
-    public AvoidTnBException(String string) {
+    public AvoidTrapException(String string) {
         super(string);
     }
 
-    public AvoidTnBException(String string, Throwable thrwbl) {
+    public AvoidTrapException(String string, Throwable thrwbl) {
         super(string, thrwbl);
     }
 
-    public AvoidTnBException(Throwable thrwbl) {
+    public AvoidTrapException(Throwable thrwbl) {
         super(thrwbl);
     }
 
-    public AvoidTnBException(String string, Throwable thrwbl, boolean bln, boolean bln1) {
+    public AvoidTrapException(String string, Throwable thrwbl, boolean bln, boolean bln1) {
         super(string, thrwbl, bln, bln1);
     }
 

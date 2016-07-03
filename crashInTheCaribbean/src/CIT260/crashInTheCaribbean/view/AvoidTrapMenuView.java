@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author josecovarrubias 
  */
-public class AvoidTnBMenuView extends View {
+public class AvoidTrapMenuView extends View {
     
         private String avoidMenu;
         private void dodge(){
@@ -28,7 +28,7 @@ public class AvoidTnBMenuView extends View {
                          + "\n a beast by pressing the letter A.");
         }
 
-    public AvoidTnBMenuView(){
+    public AvoidTrapMenuView(){
 //            this.menu = "\n"
                    super ("\n"
                         + "\n=================================================="
