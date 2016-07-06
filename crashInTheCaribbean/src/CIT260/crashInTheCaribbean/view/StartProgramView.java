@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author thomas
  */
-public class StartProgramView {
+public class StartProgramView extends View{
     
     private String promptMessage;
     
@@ -26,7 +26,7 @@ public class StartProgramView {
 
     private void displayBanner() {
        
-        System.out.println(
+       this.console.println(
                 "\n********************************************"
                + "\n Welcome to the jungle. We've got fun and games. *"     
                + "\n We'eve got everything you want, the only thing  *"         
@@ -87,14 +87,14 @@ public class StartProgramView {
             ENDWHILE
             RETURN name
         */
-       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+//       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
        String value = ""; //value to be return
        boolean valid = false; //initialize to not valid
-       
+       try{
        while (!valid){ //loop while an invalid value is enter
            System.out.println("\n" + this.promptMessage);
            
-           value = keyboard.nextLine(); //get next line typed on keyboard
+           value = this.keyboard.readLine(); //get next line typed on keyboard
            value = value.trim(); //trim off leading and trailing blanks
            
            if (value.length() <1){// value is blank
@@ -103,10 +103,14 @@ public class StartProgramView {
            }
            break; //end the loop
        }
+       }catch (Exception e){
+           System.out.println("Error reading input:" + e.getMessage());
+       }
        return value; // return the value entered
     }
 
-    private boolean doAction(String playersName) {
+    @Override
+    public boolean doAction(String playersName) {
         if (playersName.length() <2){
             System.out.println("\nAre you sure bro?"
                     + " Come on, is that your name?");
@@ -126,7 +130,7 @@ public class StartProgramView {
     private void displayNextView(Player player) {
         
         // customized message
-        System.out.println("\n======================================================="
+        this.console.println("\n======================================================="
                + "\n Welcome to the Jungle " + player.getName()
                + "\n We hope that you can survive, if not, "
                + "\n well, we told you it was going to be rough."

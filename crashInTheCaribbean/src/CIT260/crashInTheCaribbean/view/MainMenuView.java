@@ -30,7 +30,7 @@ public class MainMenuView extends View {
         gameMenu.display();
     }
     private void startExistingGame(){
-        System.out.println("*** existingGame fun. called ***");
+       this.console.println("*** existingGame fun. called ***");
     } 
     
 ////////////////////////////////////////////////////////////////////////////////
@@ -56,7 +56,7 @@ public class MainMenuView extends View {
 ////////////////////////////////////////////////////////////////////////////////
     
     private void saveGame(){
-        System.out.println("*** saveGame fun. called ***");
+        this.console.println("*** saveGame fun. called ***");
     }
     private void displayHelpMenu(){
         // System.out.println("*** displayHelpMenu fun. called ***");
@@ -122,7 +122,7 @@ public class MainMenuView extends View {
 //       while (!valid){ //loop while an invalid value is enter
 //           System.out.println("\n" + this.menu);
 //           
-//           value = keyboard.nextLine(); //get next line typed on keyboard
+//           value = this.keyboard.nextLine(); //get next line typed on keyboard
 //           value = value.trim(); //trim off leading and trailing blanks
 //           
 //           if (value.length() <1){// value is blank

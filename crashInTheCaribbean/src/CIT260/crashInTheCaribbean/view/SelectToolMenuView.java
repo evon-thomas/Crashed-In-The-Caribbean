@@ -20,13 +20,13 @@ public class SelectToolMenuView extends View{
      private String selectToolMenuView;
      
      private void usePunch(){
-        System.out.println("*** usePunch fun. called ***");
+        this.console.println("*** usePunch fun. called ***");
     }
     private void useSword(){
-        System.out.println("*** useSword fun. called ***");
+       this.console.println("*** useSword fun. called ***");
     }
     private void useAxe(){
-        System.out.println("*** useAxe fun. called ***");
+        this.console.println("*** useAxe fun. called ***");
     }
     private void useBarrel(){
         //System.out.println("*** useBarrel fun. called ***");
@@ -82,7 +82,7 @@ public class SelectToolMenuView extends View{
 //       while (!valid){ //loop while an invalid value is enter
 //           System.out.println("\n" + this.selectToolMenuView);
 //           
-//           value = keyboard.nextLine(); //get next line typed on keyboard
+//           value = this.keyboard.nextLine(); //get next line typed on keyboard
 //           value = value.trim(); //trim off leading and trailing blanks
 //           
 //           if (value.length() <1){// value is blank

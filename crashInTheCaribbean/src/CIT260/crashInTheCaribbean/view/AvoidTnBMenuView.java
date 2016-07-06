@@ -15,16 +15,16 @@ public class AvoidTnBMenuView extends View {
     
         private String avoidMenu;
         private void dodge(){
-        System.out.println(" When facing a trap that sends projectiles you can Press"
+        this.console.println(" When facing a trap that sends projectiles you can Press"
                          + "\n the lettler D to dodge the spears or arrows coming at you.");
         }
         private void cover(){
-        System.out.println(" If you are attacked you can press the letter C to cover"
+        this.console.println(" If you are attacked you can press the letter C to cover"
                          + "\n from any beast attack, as long as you already have "
                          + "\n earned the shield.");
         }
         private void attack(){
-        System.out.println(" You will have the option to attack when you encounter"
+        this.console.println(" You will have the option to attack when you encounter"
                          + "\n a beast by pressing the letter A.");
         }
 
@@ -66,7 +66,7 @@ public class AvoidTnBMenuView extends View {
 //       while (!valid){ //loop while an invalid value is enter
 //           System.out.println("\n" + this.avoidmenu);
 //           
-//           value = keyboard.nextLine(); //get next line typed on keyboard
+//           value = this.keyboard.nextLine(); //get next line typed on keyboard
 //           value = value.trim(); //trim off leading and trailing blanks
 //           
 //           if (value.length() <1){// value is blank

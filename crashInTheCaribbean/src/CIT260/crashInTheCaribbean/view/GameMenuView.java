@@ -110,15 +110,15 @@ public class GameMenuView extends View{
         
         int buildNewShip = 0;
         while(buildNewShip ==0){
-        System.out.println("How LONG do you want the ship to be? enter a number");
+        this.console.println("How LONG do you want the ship to be? enter a number");
         Scanner longship = new Scanner(System.in);
         int longShip = longship.nextInt();
         
-        System.out.println("How WIDE do you want the ship to be? enter a number");
+        this.console.println("How WIDE do you want the ship to be? enter a number");
         Scanner wideShip = new Scanner(System.in);
         int shipWide = wideShip.nextInt();
         
-        System.out.println("How TALL do you want the ship to be? enter a number");
+        this.console.println("How TALL do you want the ship to be? enter a number");
         Scanner tallShip = new Scanner(System.in);
         int shipTall = tallShip.nextInt();
         
@@ -135,7 +135,7 @@ public class GameMenuView extends View{
         
         }
         
-        System.out.println("YOUR BOAT IS >" + buildNewShip + "< CUBIC FEET.");
+        this.console.println("YOUR BOAT IS >" + buildNewShip + "< CUBIC FEET.");
     }
  ///////////////////////////////////////////////////////////////////////////////
  ////////////////////////////////////////////////////////////////////////////////  
@@ -154,11 +154,11 @@ public class GameMenuView extends View{
             // this is a for-each loop to show all of the items, the 1st word is the
             // array, 2nd word can be anything you want, it becomes a new variable
             // the 3rd word is the array variable declared avobe. the \t adds a tab space. 
-            System.out.println("WEAPON"+"\t       POWER");
+            this.console.println("WEAPON"+"\t       POWER");
             for(WeaponPower crazyNameHere : weaponAval){
                 
             //this is to get the value of the items, see WeaponPower class
-                System.out.println(crazyNameHere + ":      \t" + crazyNameHere.getWpower());
+                this.console.println(crazyNameHere + ":      \t" + crazyNameHere.getWpower());
                 
             }
            
@@ -197,7 +197,7 @@ public class GameMenuView extends View{
         
         for(SceneType sceneName : scenesAval){
             
-            System.out.println( sceneName + ":     \t" + sceneName.getDescription());
+            this.console.println( sceneName + ":     \t" + sceneName.getDescription());
         }
        }
     
@@ -221,7 +221,7 @@ public class GameMenuView extends View{
     }
     
     public void ViewMap(PrintWriter out){
-        System.out.println("map func");
+        this.console.println("map func");
 
 ////////////////////////////////////////////////////////////////////////////////
 //                 THIS WAS OUR ATTEMP TO GET THE MAP TO DISPLAY
@@ -278,12 +278,12 @@ public class GameMenuView extends View{
             Game game = CrashInTheCaribbean.getCurrentGame();
             InventoryType[] inventory = game.getInventory();
             
-            System.out.println("\n=========== LIST OF INVENTORY ITEMS ========== ");
+            this.console.println("\n=========== LIST OF INVENTORY ITEMS ========== ");
             line = new StringBuilder("                                         ");
             line.insert(0, "DESCRIPTION");
             line.insert(20, "REQUIRED");
             line.insert(30, "YOU HAVE");
-            System.out.println(line.toString());
+            this.console.println(line.toString());
             
             
             for (InventoryType item : inventory){
@@ -292,16 +292,16 @@ public class GameMenuView extends View{
                  line.insert(23, item.getAmountAvailable());
                  line.insert(33, item.getInventoryType());
                  
-                 System.out.println(line.toString());
+                this.console.println(line.toString());
                  
             }
             
     }
     private void moveLocation(){
-        System.out.println("locat func");
+        this.console.println("locat func");
     }
     private void playerCharacters(){
-        System.out.println("charc func");
+        this.console.println("charc func");
     }
 //    private void createNewGame(){
 //        GameControl.createNewGame(CrashInTheCaribbean.getPlayer());

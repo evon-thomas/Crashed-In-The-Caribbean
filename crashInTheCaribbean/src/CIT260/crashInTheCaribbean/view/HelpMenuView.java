@@ -18,7 +18,7 @@ public class HelpMenuView extends View {
     private String helpMenu;
     
      private void goalOfGame(){
-        System.out.println("*** goalOfGmae fun. called ***");
+        this.console.println("*** goalOfGmae fun. called ***");
     }
     private void howToMove()  {
 //        System.out.println("*** howToMove fun. called ***");
@@ -35,7 +35,7 @@ public class HelpMenuView extends View {
 //          }
     }
     private void toolsAvailable(){
-        System.out.println("*** toolsAvailable fun. called ***");
+        this.console.println("*** toolsAvailable fun. called ***");
     }
     private void avoidTnB() throws AvoidTnBException{
 //        System.out.println("*** avoidTnB fun. called ***");
@@ -87,7 +87,7 @@ public class HelpMenuView extends View {
 //       while (!valid){ //loop while an invalid value is enter
 //           System.out.println("\n" + this.helpMenu);
 //           
-//           value = keyboard.nextLine(); //get next line typed on keyboard
+//           value = this.keyboard.nextLine(); //get next line typed on keyboard
 //           value = value.trim(); //trim off leading and trailing blanks
 //           
 //           if (value.length() <1){// value is blank
