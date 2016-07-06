@@ -32,10 +32,10 @@ public class HowToMove extends View{
     int J=moves[0];
     
     public int letsMove(){
-        System.out.println("\n Enter the spaces you want to move");
+       this.console.println("\n Enter the spaces you want to move");
         Scanner moveSpaces =   new Scanner(System.in);
         int spaceMoved = moveSpaces.nextInt();
-        System.out.println(spaceMoved);
+        this.console.println(spaceMoved);
         return spaceMoved;
     }
     

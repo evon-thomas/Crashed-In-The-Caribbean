@@ -72,7 +72,7 @@ public class DesignBarrelsView  {
 //        while (!valid) { 
 //            System.out.println("\n" + this.message);
 //             
-//            value = Double.parseDouble(keyboard.nextLine());
+//            value = Double.parseDouble(this.keyboard.nextLine());
 //            
 //            if (value < 1 || value > 13) {
 //                System.out.println("\n Choose a number between 1-13");

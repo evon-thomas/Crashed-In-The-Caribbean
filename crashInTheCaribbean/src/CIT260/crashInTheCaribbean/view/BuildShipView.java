@@ -80,7 +80,7 @@ public class BuildShipView extends View{
 //        while (!valid) { 
 //            System.out.println("\n" + this.message);
 //             
-//            value = Double.parseDouble(keyboard.nextLine());
+//            value = Double.parseDouble(this.keyboard.nextLine());
 //            
 //            if (value < 1 || value > 11) {
 //                System.out.println("\n Choose a number between 1-10");
@@ -132,7 +132,7 @@ public class BuildShipView extends View{
 //        while (!valid) {
 //
 //            // get the value entered from the keyboard
-//            selection = keyboard.nextLine();
+//            selection = this.keyboard.nextLine();
 //            selection = selection.trim();
 //
 //            if (selection.length() < 1) { // blank value entered

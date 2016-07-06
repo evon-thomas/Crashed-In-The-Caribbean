@@ -5,6 +5,9 @@
  */
 package CIT260.crashInTheCaribbean.view;
 
+import crashinthecaribbean.CrashInTheCaribbean;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
@@ -12,8 +15,13 @@ import java.util.Scanner;
  * @author josecovarrubias
  */
 public abstract class View implements ViewInterface {
-    protected String displayMessage;
-    
+    private String displayMessage;
+ //////////////////////////////////////////////////////////////////////////////// 
+///////////////////////////Lesson 11////////////////////////////////////   
+    protected final BufferedReader keyboard = CrashInTheCaribbean.getInFile();
+    protected final PrintWriter console = CrashInTheCaribbean.getOutFile();
+ //////////////////////////////////////////////////////////////////////////////// 
+////////////////////////////////////////////////////////////////////////////////   
     public View(){
     }
     public View(String message){
@@ -37,14 +45,14 @@ public abstract class View implements ViewInterface {
         @Override
         public String getInput() {
 
-          Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+//          Scanner keyboard = new Scanner(System.in); // get infile for keyboard
           boolean valid = false;
           String value = null;
-       
+       try{
        while (!valid){ //loop while an invalid value is enter
-           System.out.println("\n" + this.displayMessage);
+           this.console.println("\n" + this.displayMessage);
            
-           value = keyboard.nextLine(); //get next line typed on keyboard
+           value = this.keyboard.readLine(); //get next line typed on keyboard
            value = value.trim(); //trim off leading and trailing blanks
            
            if (value.length() <1){// value is blank
@@ -52,6 +60,9 @@ public abstract class View implements ViewInterface {
                continue;
            }
            break; //end the loop
+       }
+       } catch (Exception e){
+            System.out.println("Error reading input:" + e.getMessage());
        }
        return value; // return the value entered
     }

@@ -21,13 +21,13 @@ public class UseBarrelView extends View{
        
     } 
     private void fill(){
-        System.out.println("*** fill the bucket function called***");
+        this.console.println("*** fill the bucket function called***");
     }
     private void empty(){
-    System.out.println("*** empty the bucket function called***");
+    this.console.println("*** empty the bucket function called***");
     }
     private void drink(){
-    System.out.println("***drink the bucket function called***");
+    this.console.println("***drink the bucket function called***");
     }
 
     

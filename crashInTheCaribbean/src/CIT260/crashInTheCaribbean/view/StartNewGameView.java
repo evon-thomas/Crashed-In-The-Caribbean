@@ -19,16 +19,16 @@ public class StartNewGameView extends View{
      private String menu;
     
     private void confused(){
-        System.out.println("*** confused fun. called ***");
+        this.console.println("*** confused fun. called ***");
     }
     private void angry(){
-         System.out.println("*** angry fun. called ***");
+        this.console.println("*** angry fun. called ***");
     }
     private void worried(){
-        System.out.println("*** worried fun. called ***"); 
+       this.console.println("*** worried fun. called ***"); 
     }
     private void happy(){
-         System.out.println("*** happy fun. called ***");  
+         this.console.println("*** happy fun. called ***");  
     }
     
     
