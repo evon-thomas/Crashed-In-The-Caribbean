@@ -19,10 +19,15 @@ import CIT260.crashInTheCaribbean.model.AvoidBeasts;
 import CIT260.crashInTheCaribbean.model.Character;
 import CIT260.crashInTheCaribbean.model.AvoidTraps;
 import CIT260.crashInTheCaribbean.view.StartProgramView;
-import java.io.BufferedReader;
+
 import java.io.IOException;
 import java.io.InputStreamReader;
+
+////////////////////////////////////////////////////////////////////////////////
+// lesson 11.1
 import java.io.PrintWriter;
+import java.io.BufferedReader;
+////////////////////////////////////////////////////////////////////////////////
 
 /**
  *
@@ -89,11 +94,50 @@ public class CrashInTheCaribbean {
                 return;
             }   
         }
-        
-        
-        
-        
-/*        Player playerOne = new Player();
+
+    }
+
+        public static Game getCurrentGame() {
+            return currentGame;
+        }
+
+        public static void setCurrentGame(Game currentGame) {
+            CrashInTheCaribbean.currentGame = currentGame;
+        }
+
+        public static Player getPlayer() {
+            return player;
+        }
+
+        public static void setPlayer(Player player) {
+            CrashInTheCaribbean.player = player;
+        }
+////////////////////////////////////////////////////////////////////////////////
+        // Lesson 11.2
+////////////////////////////////////////////////////////////////////////////////
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+    public static void setOutFile(PrintWriter outFile){
+    CrashInTheCaribbean.outFile = outFile;
+    }
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        CrashInTheCaribbean.inFile = inFile;
+    }
+//////////////////////////////////////////////////////////////////////////////// 
+////////////////////////////////////////////////////////////////////////////////
+        public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        CrashInTheCaribbean.logFile = logFile;
+    }
+     /*        Player playerOne = new Player();
         playerOne.setName("Jason Born");
         playerOne.setBestTime(7.00);
         String playerInfo = playerOne.toString();
@@ -193,47 +237,5 @@ public class CrashInTheCaribbean {
         String characterInfo = character1.toString();
         System.out.println(characterInfo);      
 */ 
-
-
-    }
-
-        public static Game getCurrentGame() {
-            return currentGame;
-        }
-
-        public static void setCurrentGame(Game currentGame) {
-            CrashInTheCaribbean.currentGame = currentGame;
-        }
-
-        public static Player getPlayer() {
-            return player;
-        }
-
-        public static void setPlayer(Player player) {
-            CrashInTheCaribbean.player = player;
-        }
-
-    public static PrintWriter getOutFile() {
-        return outFile;
-    }
-    public static void setOutFile(PrintWriter outFile){
-    CrashInTheCaribbean.outFile = outFile;
-    }
-
-    public static PrintWriter getLogFile() {
-        return logFile;
-    }
-
-    public static void setLogFile(PrintWriter logFile) {
-        CrashInTheCaribbean.logFile = logFile;
-    }
-
-    public static BufferedReader getInFile() {
-        return inFile;
-    }
-
-    public static void setInFile(BufferedReader inFile) {
-        CrashInTheCaribbean.inFile = inFile;
-    }
-        
+   
 }
