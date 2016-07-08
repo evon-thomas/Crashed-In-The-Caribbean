@@ -32,17 +32,17 @@ public class DesignBarrelsView  {
 
         double volume = barrelControl.calVolumeOfBarrel(height, radius, pi);
         if (volume == -1) {
-           System.out.println("\nThe height must be between 0 and 24 and the diameter " +
+           ErrorView.display("DesignBarrel","\nThe height must be between 0 and 24 and the diameter " +
                              "must be between 0 and 36. Please try again."); 
         }
         else {
             double barrelWeight = barrelControl.calcMaxWeight(volume);
             if (barrelWeight > 20) {
-                System.out.println("\nThe barrel is too heavy! The weight must be less than 20." +
+                 ErrorView.display("DesignBarrel","\nThe barrel is too heavy! The weight must be less than 20." +
                                    "\nPlease try again.");
             }
             else {
-                System.out.println("\nBarrel created successfully!" +
+                ErrorView.display("DesignBarrel","\nBarrel created successfully!" +
                                    "\nThe volume of your barrel is " + volume);
                 Barrel designedBarrel = new Barrel();
                 designedBarrel.setHeight(height);

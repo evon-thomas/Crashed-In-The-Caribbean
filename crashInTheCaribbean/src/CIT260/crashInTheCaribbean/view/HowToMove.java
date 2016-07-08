@@ -112,7 +112,7 @@ public class HowToMove extends View{
 //                this.boost();
 //                break;
             default:
-                System.out.println("enter a valid value");
+               ErrorView.display("HowToMove","again, not that letter bro!");
                 break;
                
         }

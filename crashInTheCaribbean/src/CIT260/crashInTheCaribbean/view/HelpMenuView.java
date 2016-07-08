@@ -119,7 +119,7 @@ public class HelpMenuView extends View {
             this.avoidTnB("you should enter something");
             break;
         default:
-          System.out.println("\n*** Hey bro, not that letter! Try one more time");
+          ErrorView.display("HelpMenu","\n*** Hey bro, not that letter! Try one more time");
           break;
     
     }

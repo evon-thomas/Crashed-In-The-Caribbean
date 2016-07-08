@@ -95,7 +95,7 @@ public class AvoidTnBMenuView extends View {
             this.dodge();
             break;
         default:
-          System.out.println("\n*** Not that letter! Try one more time");
+           ErrorView.display("AvoidTnB","\n*** Not that letter! Try one more time");
           break;
     
     }

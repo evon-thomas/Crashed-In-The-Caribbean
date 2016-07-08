@@ -114,7 +114,7 @@ public class SelectToolMenuView extends View{
         case "T":
             this.useTool();
         default:
-          System.out.println("\n*** Hey bro, not that letter! Try P, A, B, or S");
+          ErrorView.display("SelecToolMenu","Hey bro, not that letter! Try P, A, B, or S");
           break;
     
     }
