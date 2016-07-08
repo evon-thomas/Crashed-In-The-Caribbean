@@ -5,6 +5,7 @@
  */
 package CIT260.crashInTheCaribbean.control;
 
+import CIT260.crashInTheCaribbean.exceptions.GameControlException;
 import CIT260.crashInTheCaribbean.model.Game;
 import CIT260.crashInTheCaribbean.model.InventoryType;
 import CIT260.crashInTheCaribbean.model.Location;
@@ -16,6 +17,12 @@ import CIT260.crashInTheCaribbean.model.Ship;
 import CIT260.crashInTheCaribbean.view.StartNewGameView;
 import crashinthecaribbean.CrashInTheCaribbean;
 import enums.CaribbeanItem;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 
 /**
  *
@@ -221,11 +228,25 @@ public GameControl(){
         public static InventoryType[] getInventory(){
             return CrashInTheCaribbean.getCurrentGame().getInventory();
         }
-        public static void saveGame(Game game, String filepath){
-        
+        public static void saveGame(Game game, String filepath) throws GameControlException, IOException{
+                 try ( FileOutputStream fops = new FileOutputStream(filepath)) {
+                    ObjectOutputStream output = new ObjectOutputStream(fops);
+                    
+                    output.writeObject(game);
+                }catch(Exception e){
+                        throw new GameControlException(e.getMessage());
+                }
         }
-        public static void getSavedGame(String filepath){
-        
+        public static void getSavedGame(String filepath) throws GameControlException, IOException {
+                Game game = null;
+                try(FileInputStream fips = new FileInputStream(filepath)){
+                       ObjectInputStream input = new ObjectInputStream(fips);
+                       
+                       game = (Game) input.readObject();
+                }catch(Exception e){
+                    throw new GameControlException(e.getMessage());
+                }
+                CrashInTheCaribbean.setCurrentGame(game);
         }
          
         // */*/*/*/*COMPARE TO CASE NOT WORKING */*/*/*/

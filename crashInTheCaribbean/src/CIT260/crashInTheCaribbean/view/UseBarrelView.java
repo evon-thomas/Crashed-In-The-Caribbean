@@ -58,7 +58,7 @@ public class UseBarrelView extends View{
                 this.drink();
                 break;
             default:
-                System.out.println("\n??? Select one of the letters please");
+                 ErrorView.display("UseBarrel","\n??? Select one of the letters please");
                 break;
         }
         return false;

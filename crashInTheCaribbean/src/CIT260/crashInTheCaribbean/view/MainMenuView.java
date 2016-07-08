@@ -30,7 +30,17 @@ public class MainMenuView extends View {
         gameMenu.display();
     }
     private void startExistingGame(){
-       this.console.println("*** existingGame fun. called ***");
+       this.console.println("\n\n Enter the file path for file where the game"
+                                + "is to be saved");
+       
+       String filePath = this.getInput();
+       try{
+           GameControl.getSavedGame(filePath);
+       }catch(Exception ex){
+            ErrorView.display("MainMenuView", ex.getMessage());
+       }
+       GameMenuView gameMenu = new GameMenuView();
+       gameMenu.display();
     } 
     
 ////////////////////////////////////////////////////////////////////////////////
@@ -56,7 +66,17 @@ public class MainMenuView extends View {
 ////////////////////////////////////////////////////////////////////////////////
     
     private void saveGame(){
-        this.console.println("*** saveGame fun. called ***");
+        this.console.println("\n\n Enter the file path for file where the game"
+                                + "is to be saved");
+        
+        String filePath = this.getInput();
+        
+        try {
+            GameControl.saveGame(CrashInTheCaribbean.getCurrentGame(), filePath);
+        }catch(Exception ex){
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
     }
     private void displayHelpMenu(){
         // System.out.println("*** displayHelpMenu fun. called ***");
@@ -163,7 +183,8 @@ public class MainMenuView extends View {
             this.displayDesignBarrelsView();
             break;    
         default:
-         ErrorView.display("\n*** Hey bro, not that letter! Try one more time");
+         ErrorView.display("MainMenuView",
+                 "Hey bro, not that letter! Try one more time");
          break;
     }
     return false; 

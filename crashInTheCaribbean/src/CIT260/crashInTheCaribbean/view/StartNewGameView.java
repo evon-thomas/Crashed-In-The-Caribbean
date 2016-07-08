@@ -69,7 +69,7 @@ public class StartNewGameView extends View{
                break;
               
            default:
-               System.out.println("\nInvalid selection *** Try again");
+               ErrorView.display("StartNewGame","\nInvalid selection *** Try again");
                break;     
        }
        return false;
