@@ -5,8 +5,6 @@
  */
 package CIT260.crashInTheCaribbean.view;
 
-import CIT260.crashInTheCaribbean.exceptions.HowToMoveException;
-
 /**
  *
  * @author josecovarrubias

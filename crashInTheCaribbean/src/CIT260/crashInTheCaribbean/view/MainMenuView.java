@@ -163,7 +163,8 @@ public class MainMenuView extends View {
             this.displayDesignBarrelsView();
             break;    
         default:
-          System.out.println("\n*** Hey bro, not that letter! Try one more time");
+         ErrorView.display("\n*** Hey bro, not that letter! Try one more time");
+         break;
     }
     return false; 
     }
