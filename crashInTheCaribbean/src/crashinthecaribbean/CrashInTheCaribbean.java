@@ -61,7 +61,7 @@ public class CrashInTheCaribbean {
             CrashInTheCaribbean.outFile = new PrintWriter(System.out, true);
         
             // open log file
-            String filePath = "log.txt";
+            String filePath = "LogFile.txt";
             CrashInTheCaribbean.logFile = new PrintWriter(filePath);
 
 

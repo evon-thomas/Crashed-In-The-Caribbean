@@ -92,19 +92,19 @@ public class StartProgramView extends View{
        boolean valid = false; //initialize to not valid
        try{
        while (!valid){ //loop while an invalid value is enter
-           System.out.println("\n" + this.promptMessage);
+           this.console.println("\n" + this.promptMessage);
            
            value = this.keyboard.readLine(); //get next line typed on keyboard
            value = value.trim(); //trim off leading and trailing blanks
            
            if (value.length() <1){// value is blank
-               System.out.println("\nYour name can not be nothing");
+               ErrorView.display("\nYour name can not be nothing");
                continue;
            }
            break; //end the loop
        }
        }catch (Exception e){
-           System.out.println("Error reading input:" + e.getMessage());
+           ErrorView.display("Error reading input:" + e.getMessage());
        }
        return value; // return the value entered
     }
@@ -112,13 +112,13 @@ public class StartProgramView extends View{
     @Override
     public boolean doAction(String playersName) {
         if (playersName.length() <2){
-            System.out.println("\nAre you sure bro?"
+            ErrorView.display("\nAre you sure bro?"
                     + " Come on, is that your name?");
             return false;
         }
         Player player = GameControl.createPlayer(playersName);
         if (player == null){ //if unsuccessful
-        System.out.println("\nError creating the player");
+        ErrorView.display("\nError creating the player");
         return false;
         }
         
