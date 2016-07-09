@@ -368,13 +368,20 @@ public class GameMenuView extends View{
         try (PrintWriter reportFile = new PrintWriter(filePath)) {           
             LocalDateTime currentTime = LocalDateTime.now();
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-            String dateTime = formatter.format(currentTime);           
-            reportFile.println("Report printed: " + dateTime);           
-            this.viewMap(reportFile);           
+            String dateTime = formatter.format(currentTime); 
+            
+            reportFile.println("Report printed: " + dateTime);  
+            this.viewMap(reportFile); 
+            
             reportFile.println();
             this.viewInventory(reportFile);
+            
             reportFile.println();
-            this.viewCharacter(reportFile);            
+            this.viewCharacter(reportFile); 
+            
+            reportFile.println();
+            this.weaponReport(reportFile);
+            
             CrashInTheCaribbean.getOutFile().println(
                     "\n*** Report printed to file: " + filePath + " ***");           
         } catch (Exception ex) {
@@ -415,5 +422,23 @@ public class GameMenuView extends View{
     private void viewInventory(PrintWriter reportFile) {
        //***************NEEDS TO BE DEVELOPED*****************************
     }
+   
     
+    private void weaponReport(PrintWriter out){
+         Game game = CrashInTheCaribbean.getCurrentGame();
+            out.println("\n   WEAPONS");
+            StringBuilder line = new StringBuilder("                         ");
+            line.insert(0, "NAME");
+            line.insert(20, "WEAPON POWER");
+            out.println(line.toString());
+            WeaponPower[] chaNM = WeaponPower.values();
+            
+            for(WeaponPower plyrNM : chaNM){
+                line = new StringBuilder("                         ");
+                line.insert(0, plyrNM.name());
+                line.insert(20, plyrNM.getWpower());
+                out.println(line.toString());          
+        }
+    
+    }
 }
