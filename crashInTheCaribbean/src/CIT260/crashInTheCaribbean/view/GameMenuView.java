@@ -310,6 +310,12 @@ public class GameMenuView extends View{
 //##############################################################################
 //#########LESSON 11 INDIVIDUAL ASSIGNMENT...JOSE###############################
     private void playerCharacters(){
+//                Characters[] character = Characters.values();
+//                this.console.println("CHARACTER'S NAME"+"\t    DETAILS");
+//                this.console.println("----------------"+"\t   ------------------");
+//                for (Characters chaNM : character){
+//                this.console.println(chaNM + ":-------- \t" + chaNM.getDescription());
+//                }
         this.viewCharacter(CrashInTheCaribbean.getOutFile());
     }
 //##############################################################################
@@ -351,63 +357,49 @@ public class GameMenuView extends View{
     }
 //##############################################################################
 //############################################################################## 
-    
-    
      public void printReport() {
         // get the filepath and name of the file
-        this.console.println("\nEnter the file path where the report is to be saved");
-        
+        this.console.println("\nEnter the file path where the report is to be saved");        
         String filePath = this.getInput();
         if (filePath == null) {
             return;
-        }
-        
+        }        
         // Create a new printwriter
-        try (PrintWriter reportFile = new PrintWriter(filePath)) {
-            
-            
+        try (PrintWriter reportFile = new PrintWriter(filePath)) {           
             LocalDateTime currentTime = LocalDateTime.now();
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-            String dateTime = formatter.format(currentTime);
-            
-            reportFile.println("Report printed: " + dateTime);
-            
-            this.viewMap(reportFile);
-            
+            String dateTime = formatter.format(currentTime);           
+            reportFile.println("Report printed: " + dateTime);           
+            this.viewMap(reportFile);           
             reportFile.println();
             this.viewInventory(reportFile);
-
             reportFile.println();
-//            this.viewCharacter(reportFile); 
-            
+            this.viewCharacter(reportFile);            
             CrashInTheCaribbean.getOutFile().println(
-                    "\n*** Report printed to file: " + filePath + " ***");
-            
+                    "\n*** Report printed to file: " + filePath + " ***");           
         } catch (Exception ex) {
             ErrorView.display("GameMenuView", "Error writing to game report file. "
                     + "\n\t" + ex.getMessage());
         }
-
     }
 //##############################################################################
 //#########LESSON 11 INDIVIDUAL ASSIGNMENT...JOSE###############################
     public void viewCharacter(PrintWriter out) {
             
-//            Game game = CrashInTheCaribbean.getCurrentGame();
-//            out.println("\n   NAME OF CHARACTERS");
-//            StringBuilder line = new StringBuilder("                         ");
-//            line.insert(0, "NAME");
-//            line.insert(10, "DESCRIPTION");
-//            out.println(line.toString());
-//            Characters[] chaNM = Characters.values();
-//            for(Characters plyrNM : ){
-//            
-//            }
-                Characters[] character = Characters.values();
-                this.console.println("CHARACTER'S NAME"+"\t    DETAILS");
-                for (Characters chaNM : character){
-                this.console.println(chaNM + ":-------- \t" + chaNM.getDescription());
-                }            
+            Game game = CrashInTheCaribbean.getCurrentGame();
+            out.println("\n   NAME OF CHARACTERS");
+            StringBuilder line = new StringBuilder("                         ");
+            line.insert(0, "NAME");
+            line.insert(17, "DESCRIPTION");
+            out.println(line.toString());
+            Characters[] chaNM = Characters.values();
+            
+            for(Characters plyrNM : chaNM){
+                line = new StringBuilder("                         ");
+                line.insert(0, plyrNM.name());
+                line.insert(17, plyrNM.getDescription());
+                out.println(line.toString());           
+            }          
     }
     
     private void reportCharacter(PrintWriter reportFile){
