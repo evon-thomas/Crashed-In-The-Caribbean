@@ -17,6 +17,7 @@ import CIT260.crashInTheCaribbean.model.Scene;
 import CIT260.crashInTheCaribbean.model.SceneType;
 import CIT260.crashInTheCaribbean.model.Weapons;
 import crashinthecaribbean.CrashInTheCaribbean;
+import enums.Characters;
 import enums.WeaponPower;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
@@ -99,7 +100,7 @@ public class GameMenuView extends View{
                break;
        
            default:
-               System.out.println("\nInvalid selection *** Try again");
+               ErrorView.display("GameMenuView","Invalid selection *** Try again");
                break;     
        }
        return false;
@@ -149,7 +150,7 @@ public class GameMenuView extends View{
     
         // private function to display the weapons
         public void viewWeapons(){
-            WeaponPower[] weapons = WeaponPower.values();
+//            WeaponPower[] weapons = WeaponPower.values();
 //              System.out.println(GameMenuView.fixOrder(weapons));
 
             // trhis line calls the WeaponPower enum array, and stores the value
@@ -226,7 +227,7 @@ public class GameMenuView extends View{
     }
     
     public void ViewMap(PrintWriter out){
-        this.console.println("map func");
+//        this.console.println("map func");
 
 ////////////////////////////////////////////////////////////////////////////////
 //                 THIS WAS OUR ATTEMP TO GET THE MAP TO DISPLAY
@@ -305,13 +306,20 @@ public class GameMenuView extends View{
     private void moveLocation(){
         this.console.println("locat func");
     }
+    
+//##############################################################################
+//#########LESSON 11 INDIVIDUAL ASSIGNMENT...JOSE###############################
     private void playerCharacters(){
-        this.console.println("charc func");
+        this.viewCharacter(CrashInTheCaribbean.getOutFile());
     }
+//##############################################################################
+//##############################################################################    
 //    private void createNewGame(){
 //        GameControl.createNewGame(CrashInTheCaribbean.getPlayer());
 //    }
-    
+   
+//##############################################################################
+//###THE 3 FUNCTIONS BELOW ARE FOR THE MAP TO BUILD THE ROW AND COLUMN DIVIDER##
     private void printColumnHeaders(PrintWriter out, int columnCount) {
         for (int i = 1; i < columnCount+1; i++) {
             if (i < 10) {
@@ -322,7 +330,6 @@ public class GameMenuView extends View{
             }
         }
     }
-
     private void printRowDivider(PrintWriter out, int noColumns) {
         out.println();
         out.print("  ");
@@ -331,9 +338,7 @@ public class GameMenuView extends View{
         }
         out.print("-");
     }
-
-    private void printTitle(PrintWriter out, int columnCount, String title) {
-        
+    private void printTitle(PrintWriter out, int columnCount, String title) {        
         int titleLength = title.length();
         int lineLength = columnCount * 5 + 3;
         int startPosition = (lineLength / 2) - (titleLength / 2);
@@ -342,10 +347,10 @@ public class GameMenuView extends View{
             out.print(" ");  
         }
         out.print(title);
-        out.println("\n");
-        
+        out.println("\n");  
     }
-    
+//##############################################################################
+//############################################################################## 
     
     
      public void printReport() {
@@ -373,7 +378,7 @@ public class GameMenuView extends View{
             this.viewInventory(reportFile);
 
             reportFile.println();
-            this.viewCharacter(reportFile); 
+//            this.viewCharacter(reportFile); 
             
             CrashInTheCaribbean.getOutFile().println(
                     "\n*** Report printed to file: " + filePath + " ***");
@@ -384,12 +389,32 @@ public class GameMenuView extends View{
         }
 
     }
-
-    private void viewCharacter(PrintWriter reportFile) {
-        this.viewCharacter(reportFile);
-//***************NEEDS TO BE DEVELOPED*****************************
+//##############################################################################
+//#########LESSON 11 INDIVIDUAL ASSIGNMENT...JOSE###############################
+    public void viewCharacter(PrintWriter out) {
+            
+//            Game game = CrashInTheCaribbean.getCurrentGame();
+//            out.println("\n   NAME OF CHARACTERS");
+//            StringBuilder line = new StringBuilder("                         ");
+//            line.insert(0, "NAME");
+//            line.insert(10, "DESCRIPTION");
+//            out.println(line.toString());
+//            Characters[] chaNM = Characters.values();
+//            for(Characters plyrNM : ){
+//            
+//            }
+                Characters[] character = Characters.values();
+                this.console.println("CHARACTER'S NAME"+"\t    DETAILS");
+                for (Characters chaNM : character){
+                this.console.println(chaNM + ":-------- \t" + chaNM.getDescription());
+                }            
     }
-
+    
+    private void reportCharacter(PrintWriter reportFile){
+//            this.viewCharacter(reportFile);
+    }
+//##############################################################################
+//##############################################################################
     private void viewMap(PrintWriter reportFile) {
         this.ViewMap(reportFile);
         

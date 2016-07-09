@@ -14,42 +14,40 @@ import java.util.Objects;
  */
 public enum Character implements Serializable{
         
-    // our enum array 
-    Rambo("This player is the most tough of all the players, but has one weakness, he moves slow."),
-    Neo("This player can visualize dimentional enviroments, but is soley imaginable."),
-    KungFuPanda("the most fun player to play with");
-    
-    
-    
-    
-    
-    
-    // class instance variable
-//    private String name;
-    private final String description;
-//    private final Location coordinates;
-//    private final Location row;
-//    private final Location column;
-    
-    Character(String description) {
-        this.description = description;
-//      coordinates = new Location();
-//      this.row =  row;
-//      this.column = column;
-    }
-
-    
-    
-//    public String getName() {
-//        return name;
+//    // our enum array 
+//    Rambo("This player is the most tough of all the players, but has one weakness, he moves slow."),
+//    Neo("This player can visualize dimentional enviroments, but is soley imaginable."),
+//    KungFuPanda("the most fun player to play with");
+//    
+//    
+//    
+//    
+//    
+//    
+//    // class instance variable
+////    private String name;
+//    private final String description;
+////    private final Location coordinates;
+////    private final Location row;
+////    private final Location column;
+//    
+//    Character(String description) {
+//        this.description = description;
+//        
 //    }
-//    public void setName(String name) {
-//        this.name = name;
+//
+//    
+//    
+////    public String getName() {
+////        return name;
+////    }
+////    public void setName(String name) {
+////        this.name = name;
+////    }
+//
+//    public String getDescription() {
+//        return description;
 //    }
-
-    public String getDescription() {
-        return description;
-    }
 
 //    public void setDescription(String description) {
 //        this.description = description;

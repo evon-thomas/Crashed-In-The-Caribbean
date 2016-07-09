@@ -23,9 +23,18 @@ public class Game implements Serializable{
     private Map map;
     private String characterLocation;
     private SceneType[] Scene;
+    private Character characters;
     
     public Game() {
         this.totalTime = 0;
+    }
+
+    public Character getCharacters() {
+        return characters;
+    }
+
+    public void setCharacters(Character characters) {
+        this.characters = characters;
     }
 
     
