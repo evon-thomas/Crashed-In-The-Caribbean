@@ -53,6 +53,7 @@ public class GameMenuView extends View{
                     + "\n T - View Scene Type"
                     + "\n S - Sort Scene Type"
                     + "\n B - build ship."
+                    + "\n R - Build report."
                     + "\n Q - Quit"
                     + "\n-----------------------------------------------------");
     }
@@ -89,8 +90,12 @@ public class GameMenuView extends View{
                this.SceneTypeSort();
                break;
                
-             case "B": //
+            case "B": //
                this.buildShip();
+               break;
+               
+            case "R": // to build the report
+               this.printReport();
                break;
        
            default:
@@ -227,45 +232,45 @@ public class GameMenuView extends View{
 //                 THIS WAS OUR ATTEMP TO GET THE MAP TO DISPLAY
 //          you can umcomment it out to see the code color references
 ////////////////////////////////////////////////////////////////////////////////
-//        int lineLength = 0;
-//        
-//        // get the map for the game
-//        Location[][] locations = GameControl.getMapLocations();
-//        int noColumns = locations[0].length; // get number columns in row
-//        
-//        this.printTitle(out, noColumns, "CRASH IN THE CARRIBEAN ");
-//        this.printColumnHeaders(out, noColumns);
-//        
-//        for (int i = 0; i < locations.length; i++) {    
-//            Location[] rowLocations = locations[i];
-//            this.printRowDivider(out, noColumns);
-//            out.println(); // move down one i
-//            if (i < 9)
-//                out.print(" " + (i+1));
-//            else 
-//                out.print(i+1);
-//            
-//            // for every column in the row
-//            for (int column = 0; column < noColumns; column++) {
-//                out.print("|"); // print column divider
-//                Location location = rowLocations[column];
-//                if (location != null && location.isVisited()) { // if location is visited 
-//                    
-//                    Scene scene = location.getScene();
-//                    if (scene != null)
-//                        out.print(scene.getMapSymbol());
-//                    else
-//                        out.print("    ");
-//                }
-//                else {
-//                    out.print(" ?? ");
-//                }      
-//            }
-//            
-//            out.print("|"); // print column divider
-//        }
-//        
-//        this.printRowDivider(out, noColumns);
+        int lineLength = 0;
+        
+        // get the map for the game
+        Location[][] locations = GameControl.getMapLocations();
+        int noColumns = locations[0].length; // get number columns in row
+        
+        this.printTitle(out, noColumns, "CRASH IN THE CARIBBEAN ");
+        this.printColumnHeaders(out, noColumns);
+        
+        for (int i = 0; i < locations.length; i++) {    
+            Location[] rowLocations = locations[i];
+            this.printRowDivider(out, noColumns);
+            out.println(); // move down one i
+            if (i < 9)
+                out.print(" " + (i+1));
+            else 
+                out.print(i+1);
+            
+            // for every column in the row
+            for (int column = 0; column < noColumns; column++) {
+                out.print("|"); // print column divider
+                Location location = rowLocations[column];
+                if (location != null && location.isVisited()) { // if location is visited 
+                    
+                    Scene scene = location.getScene();
+                    if (scene != null)
+                        out.print(scene.getMapSymbol());
+                    else
+                        out.print("    ");
+                }
+                else {
+                    out.print(" ?? ");
+                }      
+            }
+            
+            out.print("|"); // print column divider
+        }
+        
+        this.printRowDivider(out, noColumns);
     }
     
 ////////////////////////////////////////////////////////////////////////////////
@@ -290,7 +295,7 @@ public class GameMenuView extends View{
                  line = new StringBuilder("                                   ");
                  line.insert(0, item.getDescription());
                  line.insert(23, item.getAmountAvailable());
-                 line.insert(33, item.getInventoryType());
+                 line.insert(33, item.getYouHave());
                  
                 this.console.println(line.toString());
                  
@@ -345,7 +350,7 @@ public class GameMenuView extends View{
     
      public void printReport() {
         // get the filepath and name of the file
-//        this.console.println("\nEnter the file path where the report is to be saved");
+        this.console.println("\nEnter the file path where the report is to be saved");
         
         String filePath = this.getInput();
         if (filePath == null) {
@@ -381,7 +386,7 @@ public class GameMenuView extends View{
     }
 
     private void viewCharacter(PrintWriter reportFile) {
-        this.viewCharacter(reportFile);
+//        this.viewCharacter(reportFile);
     }
 
     private void viewMap(PrintWriter reportFile) {
@@ -389,7 +394,7 @@ public class GameMenuView extends View{
     }
 
     private void viewInventory(PrintWriter reportFile) {
-       this.viewInventory(reportFile);
+       
     }
 
    
