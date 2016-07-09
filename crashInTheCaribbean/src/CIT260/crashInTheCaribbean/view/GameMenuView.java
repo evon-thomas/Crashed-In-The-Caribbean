@@ -386,28 +386,17 @@ public class GameMenuView extends View{
     }
 
     private void viewCharacter(PrintWriter reportFile) {
-//        this.viewCharacter(reportFile);
+        this.viewCharacter(reportFile);
+//***************NEEDS TO BE DEVELOPED*****************************
     }
 
     private void viewMap(PrintWriter reportFile) {
         this.ViewMap(reportFile);
+        
     }
 
     private void viewInventory(PrintWriter reportFile) {
-       
+       //***************NEEDS TO BE DEVELOPED*****************************
     }
-
-   
-    private static class ErrorView {
-
-        private static void display(String gameMenuView, String string) {
-            
-        }
-
-        public ErrorView() {
-        }
-    }
-}
     
-        
-       
+}
