@@ -303,6 +303,24 @@ public class GameMenuView extends View{
             }
             
     }
+        public void viewInventoryReport (PrintWriter out) {
+            out.println("/ List Of Inventory");
+            StringBuilder line = new StringBuilder("              ");
+            line.insert(0, "Item");
+            line.insert(20, "Description");
+            line.insert(30, "You have");
+            out.println(line.toString());
+            InventoryType[] invL = InventoryType.values();
+            
+            for(InventoryType invN : invL){
+                line = new StringBuilder("                       ");
+            line.insert(0, invN.list());
+            line.insert(20, invN.getDescription());
+            line.insert(30, invN.getAmountAvailable());
+            out.println(line.toString());
+        }
+        }
+        
     private void moveLocation(){
         this.console.println("locat func");
     }
@@ -371,10 +389,12 @@ public class GameMenuView extends View{
             String dateTime = formatter.format(currentTime);           
             reportFile.println("Report printed: " + dateTime);           
             this.viewMap(reportFile);           
+            //reportFile.println();
+            //this.viewInventory(reportFile);
             reportFile.println();
-            this.viewInventory(reportFile);
+            this.viewCharacter(reportFile);  
             reportFile.println();
-            this.viewCharacter(reportFile);            
+            this.viewInventoryReport(reportFile);
             CrashInTheCaribbean.getOutFile().println(
                     "\n*** Report printed to file: " + filePath + " ***");           
         } catch (Exception ex) {
@@ -412,8 +432,5 @@ public class GameMenuView extends View{
         
     }
 
-    private void viewInventory(PrintWriter reportFile) {
-       //***************NEEDS TO BE DEVELOPED*****************************
-    }
     
 }

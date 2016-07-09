@@ -13,6 +13,10 @@ import java.util.Objects;
  * @author thomas
  */
 public class InventoryType implements Serializable{
+
+    public static InventoryType[] values() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     // class instance variables
@@ -96,6 +100,10 @@ public class InventoryType implements Serializable{
             return false;
         }
         return true;
+    }
+
+    public Object list() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
