@@ -390,7 +390,6 @@ public class GameMenuView extends View{
             out.println("\n   NAME OF CHARACTERS");
             StringBuilder line = new StringBuilder("                         ");
             line.insert(0, "NAME");
-            line.insert(10, "YOU HAVE");
             line.insert(20, "DESCRIPTION");
             out.println(line.toString());
             Characters[] chaNM = Characters.values();
