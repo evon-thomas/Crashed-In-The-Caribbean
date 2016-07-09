@@ -310,13 +310,13 @@ public class GameMenuView extends View{
 //##############################################################################
 //#########LESSON 11 INDIVIDUAL ASSIGNMENT...JOSE###############################
     private void playerCharacters(){
-//                Characters[] character = Characters.values();
-//                this.console.println("CHARACTER'S NAME"+"\t    DETAILS");
-//                this.console.println("----------------"+"\t   ------------------");
-//                for (Characters chaNM : character){
-//                this.console.println(chaNM + ":-------- \t" + chaNM.getDescription());
-//                }
-        this.viewCharacter(CrashInTheCaribbean.getOutFile());
+                Characters[] character = Characters.values();
+                this.console.println("CHARACTER'S NAME"+"\t    DETAILS");
+                this.console.println("----------------"+"\t   ------------------");
+                for (Characters chaNM : character){
+                this.console.println(chaNM + ":-------- \t" + chaNM.getDescription());
+                }
+//        this.viewCharacter(CrashInTheCaribbean.getOutFile());
     }
 //##############################################################################
 //##############################################################################    
@@ -390,14 +390,15 @@ public class GameMenuView extends View{
             out.println("\n   NAME OF CHARACTERS");
             StringBuilder line = new StringBuilder("                         ");
             line.insert(0, "NAME");
-            line.insert(17, "DESCRIPTION");
+            line.insert(10, "YOU HAVE");
+            line.insert(20, "DESCRIPTION");
             out.println(line.toString());
             Characters[] chaNM = Characters.values();
             
             for(Characters plyrNM : chaNM){
                 line = new StringBuilder("                         ");
                 line.insert(0, plyrNM.name());
-                line.insert(17, plyrNM.getDescription());
+                line.insert(20, plyrNM.getDescription());
                 out.println(line.toString());           
             }          
     }
