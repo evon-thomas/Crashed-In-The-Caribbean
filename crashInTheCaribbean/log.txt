@@ -1,6 +1,4 @@
-CIT260.crashInTheCaribbean.view.MainMenuView - 
-*** You must enter a value ***
-CIT260.crashInTheCaribbean.view.MainMenuView - 
-*** You must enter a value ***
-CIT260.crashInTheCaribbean.view.MainMenuView - 
-*** You must enter a value ***
+StartProgramView - Your name can not be nothing
+StartProgramView - 
+Are you sure bro? Come on, is that your name?
+MainMenuView - Hey bro, not that letter! Try one more time
