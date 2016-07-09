@@ -303,6 +303,24 @@ public class GameMenuView extends View{
             }
             
     }
+        public void viewInventoryReport (PrintWriter out) {
+            out.println("/ List Of Inventory");
+            StringBuilder line = new StringBuilder("              ");
+            line.insert(0, "Item");
+            line.insert(20, "Description");
+            line.insert(30, "You have");
+            out.println(line.toString());
+            InventoryType[] invL = InventoryType.values();
+            
+            for(InventoryType invN : invL){
+                line = new StringBuilder("                       ");
+            line.insert(0, invN.list());
+            line.insert(20, invN.getDescription());
+            line.insert(30, invN.getAmountAvailable());
+            out.println(line.toString());
+        }
+        }
+        
     private void moveLocation(){
         this.console.println("locat func");
     }
