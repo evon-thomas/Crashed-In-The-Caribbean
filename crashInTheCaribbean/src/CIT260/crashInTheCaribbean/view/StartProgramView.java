@@ -98,13 +98,13 @@ public class StartProgramView extends View{
            value = value.trim(); //trim off leading and trailing blanks
            
            if (value.length() <1){// value is blank
-               ErrorView.display("StartProgram", "Your name can not be nothing -GPName");
+               ErrorView.display("StartProgramView", "Your name can not be nothing");
                continue;
            }
            break; //end the loop
        }
        }catch (Exception e){
-           ErrorView.display("StartProgram","Error reading input: -GPName" + e.getMessage());
+           ErrorView.display("StartProgramView","Error reading input:" + e.getMessage());
        }
        return value; // return the value entered
     }
@@ -112,13 +112,13 @@ public class StartProgramView extends View{
     @Override
     public boolean doAction(String playersName) {
         if (playersName.length() <2){
-            ErrorView.display("StartNewGame","\nAre you sure bro? -GPName"
+            ErrorView.display("StartProgramView","\nAre you sure bro?"
                     + " Come on, is that your name?");
             return false;
         }
         Player player = GameControl.createPlayer(playersName);
         if (player == null){ //if unsuccessful
-        ErrorView.display("StartNewGame","\nError creating the player -GPName");
+        ErrorView.display("StartProgramView","\nError creating the player");
         return false;
         }
         

@@ -17,9 +17,9 @@ public class ErrorView {
     private static final PrintWriter logFile = CrashInTheCaribbean.getLogFile();
     
     public static void display(String className, String errorMessage){
-            errorFile.println("---------------"
-                            + "\n SNAP " + errorMessage
-                            + "\n ---------------------------");
+            errorFile.println("-------------------------------------------------"
+                            + "\n # SNAP # = " + errorMessage
+                            + "\n ----------------------------------------------");
             
             logFile.println(className + " - " + errorMessage);
     }
