@@ -18,6 +18,7 @@ import CIT260.crashInTheCaribbean.model.SceneType;
 import CIT260.crashInTheCaribbean.model.Weapons;
 import crashinthecaribbean.CrashInTheCaribbean;
 import enums.Characters;
+import enums.InventoryEnum;
 import enums.WeaponPower;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
@@ -310,9 +311,9 @@ public class GameMenuView extends View{
             line.insert(20, "Description");
             line.insert(30, "You have");
             out.println(line.toString());
-            InventoryType[] invL = InventoryType.values();
+            InventoryEnum[] invL = InventoryEnum.values();
             
-            for(InventoryType invN : invL){
+            for(InventoryEnum invN : invL){
                 line = new StringBuilder("                       ");
             line.insert(0, invN.list());
             line.insert(20, invN.getDescription());
