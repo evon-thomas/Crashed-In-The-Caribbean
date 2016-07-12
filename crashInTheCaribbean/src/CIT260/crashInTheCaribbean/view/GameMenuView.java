@@ -307,17 +307,17 @@ public class GameMenuView extends View{
         public void viewInventoryReport (PrintWriter out) {
             out.println("/ List Of Inventory");
             StringBuilder line = new StringBuilder("              ");
-            line.insert(0, "Item");
+            line.insert(0, "Name");
             line.insert(20, "Description");
-            line.insert(30, "You have");
+            //line.insert(30, "You have");
             out.println(line.toString());
             InventoryEnum[] invL = InventoryEnum.values();
             
             for(InventoryEnum invN : invL){
                 line = new StringBuilder("                       ");
-            line.insert(0, invN.list());
+            line.insert(0, invN.name());
             line.insert(20, invN.getDescription());
-            line.insert(30, invN.getAmountAvailable());
+            //line.insert(30, invN.getAmountAvailable());
             out.println(line.toString());
         }
         }
