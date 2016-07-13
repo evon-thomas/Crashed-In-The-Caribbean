@@ -7,18 +7,19 @@ package CIT260.crashInTheCaribbean.view;
 
 import CIT260.crashInTheCaribbean.control.BuildControl;
 import CIT260.crashInTheCaribbean.control.GameControl;
-import CIT260.crashInTheCaribbean.control.SceneControl;
+//import CIT260.crashInTheCaribbean.control.SceneControl;
 import CIT260.crashInTheCaribbean.exceptions.BuildShipException;
 
 import CIT260.crashInTheCaribbean.model.Game;
 import CIT260.crashInTheCaribbean.model.InventoryType;
 import CIT260.crashInTheCaribbean.model.Location;
 import CIT260.crashInTheCaribbean.model.Scene;
-import CIT260.crashInTheCaribbean.model.SceneType;
+
 import CIT260.crashInTheCaribbean.model.Weapons;
 import crashinthecaribbean.CrashInTheCaribbean;
 import enums.Characters;
 import enums.InventoryEnum;
+import enums.SceneEnum;
 import enums.WeaponPower;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
@@ -85,7 +86,7 @@ public class GameMenuView extends View{
                break;
             
             case "T": //
-               this.viewSceneType();
+               this.viewScene();
                break;
                
             case "S": //
@@ -189,28 +190,37 @@ public class GameMenuView extends View{
  //////////////////////////////////////////////////////////////////////////////// 
         
     // individual assigment lesson9 Karla
-    public void viewSceneType(){
+    public void viewScene(){
         
-//        SceneType sceneType = new SceneType () {
-//         
-//        sceneType.display();
-//    }
-       // SceneType sceneType[] = SceneType.values();
-                
-  
-        SceneType[] scenesAval = SceneType.values();
-        
-        System.out.println("Scene" );
-        
-        for(SceneType sceneName : scenesAval){
+         
             
-            this.console.println( sceneName + ":     \t" + sceneName.getDescription());
-        }
-       }
+              StringBuilder line;
+            
+            Game game = CrashInTheCaribbean.getCurrentGame();
+            Scene[] scenes = game.getScene();
+            
+            this.console.println("\n=========== LIST OF SCENES ========== ");
+            line = new StringBuilder("                                    ");
+            line.insert(0, "DESCRIPTION");
+//            line.insert(20, "REQUIRED");
+//            line.insert(30, "YOU HAVE");
+            this.console.println(line.toString());
+            
+            
+            for (Scene item : scenes){
+                 line = new StringBuilder("                                   ");
+                 line.insert(0, item.getDescription());
+//                 line.insert(23, item.getAmountAvailable());
+//                 line.insert(33, item.getYouHave());
+                 
+                this.console.println(line.toString());
+            }
+    }
+    
     
      private void SceneTypeSort() {
    //get sorted list of scenetype */*/*/THIS ONE IS WORKING/*/* or at least no error
-        SceneType[] type = GameControl.getSortedSceneList();
+       // SceneEnum[] type = GameControl.getSortedSceneList();
         
     }
 

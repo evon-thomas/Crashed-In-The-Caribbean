@@ -9,9 +9,10 @@ import CIT260.crashInTheCaribbean.model.Game;
 import CIT260.crashInTheCaribbean.model.Location;
 import CIT260.crashInTheCaribbean.model.Map;
 import CIT260.crashInTheCaribbean.model.Scene;
-import CIT260.crashInTheCaribbean.model.SceneType;
-import static CIT260.crashInTheCaribbean.model.SceneType.overLook;
+//import CIT260.crashInTheCaribbean.model.SceneType;
+//import static CIT260.crashInTheCaribbean.model.SceneType.overLook;
 import crashinthecaribbean.CrashInTheCaribbean;
+import enums.SceneEnum;
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,7 +38,7 @@ public class MapControl {
 
         Game game = CrashInTheCaribbean.getCurrentGame();
         
-        Scene[] scenes = new Scene[SceneType.values().length];
+        Scene[] scenes = new Scene[SceneEnum.values().length];
         
         
         Scene overLook = new Scene();
@@ -45,35 +46,35 @@ public class MapControl {
         overLook.setMapSymbol("OL");
         overLook.setTravelTime(20);
         overLook.setBlocked(false);
-        scenes[SceneType.overLook.ordinal()] = overLook;
+        scenes[SceneEnum.overLook.ordinal()] = overLook;
         
-         Scene findTool = new Scene();
+        Scene findTool = new Scene();
         findTool.setDescription("Pause for a moment and think on teh ourney you are about to start.");
         findTool.setMapSymbol("FT");
         findTool.setTravelTime(10);
         findTool.setBlocked(false);
-        scenes[SceneType.findTool.ordinal()] = findTool;
+        scenes[SceneEnum.findTool.ordinal()] = findTool;
         
          Scene findWeapon = new Scene();
         findWeapon.setDescription("Pause for a moment and think on teh ourney you are about to start.");
         findWeapon.setMapSymbol("FW");
         findWeapon.setTravelTime(20);
         findWeapon.setBlocked(true);
-        scenes[SceneType.findWeapon.ordinal()] = findWeapon;
+        scenes[SceneEnum.findWeapon.ordinal()] = findWeapon;
         
          Scene faceBeast = new Scene();
         faceBeast.setDescription("Pause for a moment and think on teh ourney you are about to start.");
         faceBeast.setMapSymbol("FB");
         faceBeast.setTravelTime(20);
         faceBeast.setBlocked(false);
-        scenes[SceneType.faceBeast.ordinal()] = faceBeast;
+        scenes[SceneEnum.faceBeast.ordinal()] = faceBeast;
         
          Scene faceTrap = new Scene();
         faceTrap.setDescription("Pause for a moment and think on teh ourney you are about to start.");
         faceTrap.setMapSymbol("FTP");
         faceTrap.setTravelTime(10);
         faceTrap.setBlocked(false);
-        scenes[SceneType.faceTrap.ordinal()] = faceTrap;
+        scenes[SceneEnum.faceTrap.ordinal()] = faceTrap;
         
         return scenes;
     }
@@ -81,11 +82,11 @@ public class MapControl {
     private static int assignScenesToLocations(Map map, Scene[] scenes) {
         Location[][] locations = map.getLocations();
         
-        locations[0][0].setScene(scenes[SceneType.overLook.ordinal()]);
-        locations[0][1].setScene(scenes[SceneType.findTool.ordinal()]);
-        locations[0][2].setScene(scenes[SceneType.findWeapon.ordinal()]);
-        locations[0][3].setScene(scenes[SceneType.faceBeast.ordinal()]);
-        locations[0][4].setScene(scenes[SceneType.faceTrap.ordinal()]);
+        locations[0][0].setScene(scenes[SceneEnum.overLook.ordinal()]);
+        locations[0][1].setScene(scenes[SceneEnum.findTool.ordinal()]);
+        locations[0][2].setScene(scenes[SceneEnum.findWeapon.ordinal()]);
+        locations[0][3].setScene(scenes[SceneEnum.faceBeast.ordinal()]);
+        locations[0][4].setScene(scenes[SceneEnum.faceTrap.ordinal()]);
         
         HashMap<String, ArrayList<Point>> sceneLocations =  
                new HashMap<String, ArrayList<Point>>();
@@ -134,9 +135,9 @@ public class MapControl {
        for (Point point : findWeaponCoordinates) {
            locations[point.x][point.y].setScene(scenes[Constants.startingPoint]);   
        }
-        locations[1][8].setScene(scenes[SceneType.overLook.ordinal()]);
-        locations[1][9].setScene(scenes[SceneType.overLook.ordinal()]);
-        locations[2][8].setScene(scenes[SceneType.overLook.ordinal()]);
+        locations[1][8].setScene(scenes[SceneEnum.overLook.ordinal()]);
+        locations[1][9].setScene(scenes[SceneEnum.overLook.ordinal()]);
+        locations[2][8].setScene(scenes[SceneEnum.overLook.ordinal()]);
         return 0;
    }
 

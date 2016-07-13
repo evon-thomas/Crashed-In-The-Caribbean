@@ -5,6 +5,7 @@
  */
 package CIT260.crashInTheCaribbean.model;
 
+import enums.SceneEnum;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public class Scene implements Serializable{
 //    findTool("This scene is used when a new tool is found."),
 //    findWeapon("This scene is used when a new weapon is found.");
     
-    private  SceneType scenes;
+    private  SceneEnum scenes;
     private  String description;
     private  double travelTime;
     private  Location viewScene;
@@ -33,7 +34,7 @@ public class Scene implements Serializable{
     public Scene(){
     }
     
-    public Scene(String description, Location ViewScene, double traveltime, double healthLeft, SceneType scenes){
+    public Scene(String description, Location ViewScene, double traveltime, double healthLeft, SceneEnum scenes){
         this.description = description;
         this.scenes = scenes;
         this.travelTime = travelTime;
@@ -58,15 +59,7 @@ public class Scene implements Serializable{
         this.mapSymbol = mapSymbol;
     }
 
-    public SceneType getScene() {
-        return scenes;
-    }
-
-    public void setScene(SceneType scene) {
-        this.scenes = scene;
-    }
-
-    public Location getLocation() {
+       public Location getLocation() {
         return location;
     }
 
@@ -96,6 +89,15 @@ public class Scene implements Serializable{
         this.travelTime = travelTime;
     }
 
+    public SceneEnum getScenes() {
+        return scenes;
+    }
+
+    public void setScenes(SceneEnum scenes) {
+        this.scenes = scenes;
+    }
+
+    
 //    public boolean isBlockedLocation() {
 //        return blockedLocation;
 //    }
@@ -136,10 +138,10 @@ public class Scene implements Serializable{
 //        return hash;
 //    }
 //
-//    @Override
+//  @Override
 //    public String toString() {
 //        return "Scene{" + "description=" + description + ", travelTime=" + travelTime + ", blockedLocation=" + blockedLocation + ", healthLeft=" + healthLeft + '}';
-//    }
+//    }  
 //    
 //    
 //
