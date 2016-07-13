@@ -23,7 +23,9 @@ public class SelectToolMenuView extends View{
         this.console.println("*** usePunch fun. called ***");
     }
     private void useSword(){
-       this.console.println("*** useSword fun. called ***");
+      // this.console.println("*** useSword fun. called ***");
+      UseSwordView useSwordView = new UseSwordView();
+      useSwordView.display();
     }
     private void useAxe(){
         this.console.println("*** useAxe fun. called ***");
