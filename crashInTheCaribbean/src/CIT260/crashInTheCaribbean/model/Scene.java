@@ -34,94 +34,15 @@ public class Scene implements Serializable{
     public Scene(){
     }
     
-    public Scene(String description, Location ViewScene, double traveltime, double healthLeft, SceneEnum scenes){
+    public Scene(String description, Location viewScene, double travelTime, double healthLeft, SceneEnum scenes){
         this.description = description;
         this.scenes = scenes;
         this.travelTime = travelTime;
-        this.viewScene = ViewScene;
+        this.viewScene = viewScene;
         this.healthLeft = healthLeft;
         
     }
 
-    public boolean isBlocked() {
-        return blocked;
-    }
-
-    public void setBlocked(boolean blocked) {
-        this.blocked = blocked;
-    }
-
-    public String getMapSymbol() {
-        return mapSymbol;
-    }
-
-    public void setMapSymbol(String mapSymbol) {
-        this.mapSymbol = mapSymbol;
-    }
-
-       public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
-    }
-
-    Scene(String description){
-        this.description = description;
-        viewScene = new Location();
-    }
-    
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public double getTravelTime() {
-        return travelTime;
-    }
-
-    public void setTravelTime(double travelTime) {
-        this.travelTime = travelTime;
-    }
-
-    public SceneEnum getScenes() {
-        return scenes;
-    }
-
-    public void setScenes(SceneEnum scenes) {
-        this.scenes = scenes;
-    }
-
-    
-//    public boolean isBlockedLocation() {
-//        return blockedLocation;
-//    }
-//
-//    public void setBlockedLocation(boolean blockedLocation) {
-//        this.blockedLocation = blockedLocation;
-//    }
-
-      public Location getViewScene() {
-        return viewScene;
-    }
-
-    public void setViewScene(Location viewScene) {
-        this.viewScene = viewScene;
-    }
-
-    public void setHealthLeft(double healthLeft) {
-        this.healthLeft = healthLeft;
-    }
-      
-        public double getHealthLeft() {
-        return healthLeft;
-    }
-   
 //    
 //
 //    public void setHealthLeft(double healthLeft) {
@@ -172,5 +93,69 @@ public class Scene implements Serializable{
 //        return true;
 //    }
 //    
+
+    public SceneEnum getScenes() {
+        return scenes;
+    }
+
+    public void setScenes(SceneEnum scenes) {
+        this.scenes = scenes;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getTravelTime() {
+        return travelTime;
+    }
+
+    public void setTravelTime(double travelTime) {
+        this.travelTime = travelTime;
+    }
+
+    public Location getViewScene() {
+        return viewScene;
+    }
+
+    public void setViewScene(Location viewScene) {
+        this.viewScene = viewScene;
+    }
+
+    public double getHealthLeft() {
+        return healthLeft;
+    }
+
+    public void setHealthLeft(double healthLeft) {
+        this.healthLeft = healthLeft;
+    }
+
+    public String getMapSymbol() {
+        return mapSymbol;
+    }
+
+    public void setMapSymbol(String mapSymbol) {
+        this.mapSymbol = mapSymbol;
+    }
+
+    public boolean isBlocked() {
+        return blocked;
+    }
+
+    public void setBlocked(boolean blocked) {
+        this.blocked = blocked;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
 
 }

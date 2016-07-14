@@ -17,12 +17,12 @@ public enum SceneEnum{
     findTool  (" This scene is used when a new tool is found."),
     findWeapon (" This scene is used when a new weapon is found."); 
 
-private String description;
+private String details;
     
     SceneEnum(String description){
-        this.description = description;
+        this.details = description;
     }
     public String getDescription(){
-        return this.description;
+        return this.details;
     }  
 }
