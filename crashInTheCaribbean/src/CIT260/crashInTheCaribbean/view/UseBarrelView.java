@@ -12,14 +12,37 @@ import CIT260.crashInTheCaribbean.control.MoveControl;
  */
 
 
-public class UseBarrelView extends View{
+public class UseBarrelView {
 
+    private String message;
     
-    private void FillBucket(){
+    private FillBucket(){
+        this.message ="\nBy entering two numbers, you fill the bucket."
+                +"\nYou need to enter numbers between 1 -  12.74 for the height"
+                +"\n of the bucket. The radius must be between 1 - 5. Pi is "
+                +"\n 3.14. You need to fill the bucket all the way up to fill the hole.";
+    }
+    public void dislpayUseBarrelView() throws DesignBarrelException {
+        System.out.println(message);
+        System.out.println("\nEnter a value for the height of the bucket");
+        Scanner inFile = new Scanner(System.in);
+        int input1 = inFile.nextInt();
+        System.out.println("\n Now enter a number for the radius");
+        int input2 = inFile.nextInt();
+        
            BarrelControl controlBarrel = new BarrelControl();
-            controlBarrel.display();
+            double bucketAmount = controlBarrel.controlBarrel(input1, input2);
        
+            if (bucketAmount < 1000)
+                throw new DesignBarrelException("\nYou need to fill it up again,"
+                                        +"\n Your amount of water was " + bucketAmount + " cubic feet. "
+                                        +"\n The hole isn't filled yet.");
+            
+            else if (bucketAmount > 1000)
+                throw new DesignBarrelException("\nYou Filled the hole!!!!!")
     } 
+    
+    
     private void fill(){
         this.console.println("*** fill the bucket function called***");
     }
@@ -63,5 +86,9 @@ public class UseBarrelView extends View{
         }
         return false;
     }
+
+    void display() {
+    }
+   
     
 }
