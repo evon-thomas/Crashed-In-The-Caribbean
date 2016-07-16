@@ -6,6 +6,8 @@
 package CIT260.crashInTheCaribbean.view;
 import CIT260.crashInTheCaribbean.control.BarrelControl;
 import CIT260.crashInTheCaribbean.control.MoveControl;
+import CIT260.crashInTheCaribbean.exceptions.DesignBarrelException;
+import java.util.Scanner;
 /**
  *
  * @author thomas
