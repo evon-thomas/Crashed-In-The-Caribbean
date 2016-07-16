@@ -26,6 +26,5 @@ public enum CaribbeanItem {
     bow,
     startingPoint,
     buildShipShore,
-    traparea,
-    sword;
+    traparea;
 }
