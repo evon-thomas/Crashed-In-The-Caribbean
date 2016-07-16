@@ -14,16 +14,18 @@ import java.util.Scanner;
  */
 
 
-public class UseBarrelView {
+public class UseBarrelView extends View{
 
     private String message;
     
-    private FillBucket(){
+    private String UseBarrelView(){
         this.message ="\nBy entering two numbers, you fill the bucket."
                 +"\nYou need to enter numbers between 1 -  12.74 for the height"
                 +"\n of the bucket. The radius must be between 1 - 5. Pi is "
                 +"\n 3.14. You need to fill the bucket all the way up to fill the hole.";
+        return message;
     }
+    
     public void dislpayUseBarrelView() throws DesignBarrelException {
         System.out.println(message);
         System.out.println("\nEnter a value for the height of the bucket");
