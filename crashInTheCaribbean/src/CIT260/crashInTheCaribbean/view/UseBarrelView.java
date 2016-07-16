@@ -45,24 +45,24 @@ public class UseBarrelView {
     } 
     
     
-    private void fill(){
-        this.console.println("*** fill the bucket function called***");
-    }
-    private void empty(){
-    this.console.println("*** empty the bucket function called***");
-    }
-    private void drink(){
-    this.console.println("***drink the bucket function called***");
-    }
-
-    
+//    private void fill(){
+//        this.console.println("*** fill the bucket function called***");
+//    }
+//    private void empty(){
+//    this.console.println("*** empty the bucket function called***");
+//    }
+//    private void drink(){
+//    this.console.println("***drink the bucket function called***");
+//    }
+//
+//    
     
     public UseBarrelView(){
                     super ("\n"
                         + "\n=================================================="
                         + "\n F - Fill hole with bucket."
-                        + "\n E - Empty bucket on accident."
-                        + "\n D - Drink bucket."      
+//                        + "\n E - Empty bucket on accident."
+//                        + "\n D - Drink bucket."      
                         + "\n Q - Quit."
                         + "\n--------------------------------------------------");
     }
@@ -76,12 +76,12 @@ public class UseBarrelView {
             case "F":
                 this.fill();
                 break;
-            case "E":
-                this.empty();
-                break;
-            case "D":
-                this.drink();
-                break;
+//            case "E":
+//                this.empty();
+//                break;
+//            case "D":
+//                this.drink();
+//                break;
             default:
                  ErrorView.display("UseBarrel","\n??? Select one of the letters please");
                 break;
