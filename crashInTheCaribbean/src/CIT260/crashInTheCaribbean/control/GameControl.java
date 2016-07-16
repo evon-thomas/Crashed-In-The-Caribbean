@@ -254,8 +254,7 @@ public GameControl(){
       public static SceneEnum[] getSortedSceneList() {
         
        
-        SceneEnum[] originalSceneList = 
-                CrashInTheCaribbean.getCurrentGame().getScene();
+SceneEnum[] originalSceneList = CrashInTheCaribbean.getCurrentGame().getScene();
         
         // clone (make a copy) orignalList
         SceneEnum[] sceneList = originalSceneList.clone();

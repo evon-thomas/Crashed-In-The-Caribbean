@@ -5,6 +5,9 @@
  */
 package CIT260.crashInTheCaribbean.view;
 
+import CIT260.crashInTheCaribbean.control.InventoryControl;
+import static enums.InventoryEnum.String;
+
 /**
  *
  * @author Karla
@@ -12,6 +15,21 @@ package CIT260.crashInTheCaribbean.view;
 public class UseSwordView extends View{
     
     
+    private void FightBeast() {
+        this.console.println("***Figh function called***");
+    }
+
+    private void CutTrees() {
+       this.console.println("***cut trees function called***");
+    }
+
+    private void saveToInventory() {
+         //this.console.println("***addItemToInventory function called***");
+        // */*/*/*NEED TO CALL FUNCTION FROM INVENTORY CONTROL 
+//        InventoryControl inventoryControl = new InventoryControl();
+//        
+//        inventoryControl.addItemToInventory();
+    }
     
      public UseSwordView(){
               super ("\n"
@@ -36,7 +54,7 @@ public class UseSwordView extends View{
                 break;
                 
             case "S":
-                this.SaveToInventory();
+                this.saveToInventory();
                 break;
            
             default:
@@ -46,19 +64,5 @@ public class UseSwordView extends View{
         return false;
     }
 
-    private void FightBeast() {
-        this.console.println("***Figh function called***");
-    }
-
-    private void CutTrees() {
-       this.console.println("***cut trees function called***");
-    }
-
-    private void SaveToInventory() {
-        this.console.println("** Save sword function called***");
-    }
-    
-    
-    
-    
+ 
 }

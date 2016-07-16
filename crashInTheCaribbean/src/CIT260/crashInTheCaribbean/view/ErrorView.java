@@ -24,8 +24,6 @@ public class ErrorView {
             logFile.println(className + " - " + errorMessage);
     }
 
-//    static void display(String _Hey_bro_not_that_letter_Try_one_more_tim) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
+
     
 }

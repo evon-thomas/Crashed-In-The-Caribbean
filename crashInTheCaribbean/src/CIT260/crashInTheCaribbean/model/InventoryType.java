@@ -24,7 +24,7 @@ public class InventoryType implements Serializable{
     // class instance variables
     private double amountAvailable;
     private String inventoryType;
-    private String description;
+    public String description;
     private double youHave;
 
     public InventoryType(){
@@ -103,6 +103,10 @@ public class InventoryType implements Serializable{
         }
         return true;
     }
+
+//    public void getDescription(String sword) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
     }
     
