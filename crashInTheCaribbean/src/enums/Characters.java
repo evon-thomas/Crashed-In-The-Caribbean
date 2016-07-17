@@ -5,12 +5,14 @@
  */
 package enums;
 
+import java.io.Serializable;
+
 
 /**
  *
  * @author josecovarrubias
  */
-public enum Characters {
+public enum Characters implements Serializable {
     Rambo("        This player is the most tough of all the players, but has one weakness, he moves slow."),
     Neo("        This player can visualize dimensional environments, but is solely imaginable"),
     KungFuPanda("The most fun player to play with.");

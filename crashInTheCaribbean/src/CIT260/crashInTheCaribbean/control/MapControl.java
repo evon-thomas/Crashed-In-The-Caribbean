@@ -5,6 +5,7 @@
  */
 package CIT260.crashInTheCaribbean.control;
 
+import CIT260.crashInTheCaribbean.exceptions.MapControlException;
 import CIT260.crashInTheCaribbean.model.Game;
 import CIT260.crashInTheCaribbean.model.Location;
 import CIT260.crashInTheCaribbean.model.Map;
@@ -12,8 +13,11 @@ import CIT260.crashInTheCaribbean.model.Scene;
 //import CIT260.crashInTheCaribbean.model.SceneType;
 //import static CIT260.crashInTheCaribbean.model.SceneType.overLook;
 import crashinthecaribbean.CrashInTheCaribbean;
+import enums.Characters;
 import enums.SceneEnum;
+import enums.WhereTo;
 import java.awt.Point;
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -141,28 +145,122 @@ public class MapControl {
         return 0;
    }
 
-    public static void moveCharacterToStatingLocation(Map map, Character[] characters) {
+    public static void moveCharacterToStatingLocation(Map map, Characters[] characters) throws MapControlException{
 //      System.out.println("one more step, find me on the mapControl");
-//        Game game = CrashInTheCaribbean.getCurrentGame();
-//        for (Character character : characters){
-//            Point position = new Point(0, 2);
-//            game.getCharactersLocation()[character.ordinal()]= new Point();
-//            MapControl.moveCharacterToLocation(game, character, position);
-//        }
+        Game game = CrashInTheCaribbean.getCurrentGame();
+        for (Characters character : characters){
+            Point position = new Point(0, 2);
+            game.getCharactersLocation()[character.ordinal()] = new Point();
+            MapControl.moveCharacterToLocation(game, character, position);
+        }
 
-//    }
-
-//    static void moveCharacterToStatingLocation(Map map) {
-//        System.out.println("Hoping to make this game work, find me on MapControl");
-//    }
-    
-//    public static Location getLocation(Point coordinates){
-//        return CrashInTheCaribbean.getCurrentGame().getMap().getLocations()[coordinates.x-1][coordinates.y-1];
-    }  
-
-    private static void moveCharacterToLocation(Game game, Character character, Point position) {
-        System.out.println("move character to location funct");
     }
-    
+      
+    public static Point moveCharacter(Characters character, WhereTo direction, int distance) 
+                            throws MapControlException {
+        
+        Point blockedLocation = null;
+        
+        if (character == null  || direction == null  || distance < 1) {
+            throw new InvalidParameterException("Character, direction or distance is invalid");
+        }
+        
+        Game game = CrashInTheCaribbean.getCurrentGame();    
+        Map map = CrashInTheCaribbean.getCurrentGame().getMap();
+        Point currentPosition = game.getCharactersLocation()[character.ordinal()];
+        Point newPosition = null;
+        
+        if (currentPosition == null) {
+            throw new MapControlException("Character is currently is not assigned "
+                                          + "to a location");
+        }
+        
+        int currentRow = currentPosition.x;
+        int currentColumn = currentPosition.y;
 
+        if (currentRow < 0  || currentRow >= map.getRowCount() ||
+            currentColumn < 0  || currentColumn >= map.getColumnCount()) {
+            throw new MapControlException("Character is currently in an invalid "
+                                          + "location");
+        }
+        
+        // get new position
+        int newRow = currentPosition.x + (direction.getxIncrement() * distance);
+        int newColumn = currentPosition.y + (direction.getyIncrement() * distance);
+        
+                   
+        if (newRow < 0  || newRow >= map.getRowCount() ||
+            newColumn < 0  || newColumn >= map.getColumnCount()) {
+            throw new MapControlException("Trying to move Character to a location "
+                                          + "outside bounds of the map");
+        }  
+        
+        
+        // Check to see if the path is blocked
+        boolean blocked = false;
+        Location[][] locations = map.getLocations();
+        
+        int noOfRows = (newRow - currentRow) * direction.getxIncrement();
+        int row = currentRow + direction.getxIncrement();      
+        for (int i = 0; i < noOfRows; i++ ) {
+            locations[row][currentColumn].setVisited(true);
+            
+            if (locations[row][currentColumn].getScene().isBlocked()){   
+                blocked = true;
+                newRow = row - direction.getxIncrement();
+                blockedLocation = new Point(row+1, currentColumn+1);
+                break;
+            }
+            
+            row += direction.getxIncrement();
+        }
+        
+        
+        int noOfColumns = (newColumn - currentColumn) * direction.getyIncrement();
+        int column = currentColumn + direction.getyIncrement();       
+        for (int i = 0; i < noOfColumns; i++ ) {
+            locations[currentRow][column].setVisited(true);
+
+            if (locations[currentRow][column].getScene().isBlocked()){ 
+                blocked = true;
+                newColumn = column - direction.getyIncrement();
+                blockedLocation = new Point(currentRow+1, column+1);
+                break;
+            }  
+            column += direction.getyIncrement();
+        } 
+        
+        
+        if (currentRow != newRow || currentColumn != newColumn) {
+            Location currentLocation = map.getLocations()[currentRow][currentColumn];
+            currentLocation.removeCharacter(character); // remove actor from old location
+
+            // set actor to new location
+            newPosition = new Point(newRow, newColumn);
+            MapControl.moveCharacterToLocation(game, character, newPosition);
+        }
+
+        
+        return blockedLocation;
+    }
+        public static void moveCharacterToLocation(Game game, Characters character, Point position) 
+            throws MapControlException {
+//        System.out.println("move character to location funct");
+        Map map = game.getMap();
+        
+        Location location = game.getMap().getLocations()[position.x][position.y];
+        
+        if(position.x < 0 || position.x >= map.getRowCount() ||
+                position.y < 0 || position.y >= map.getColumnCount()){
+                throw new MapControlException("Your command is trying to move you"
+                                             + "outside the map limits");
+        }
+        location.addCharacter(character);
+        
+        game.getCharactersLocation()[character.ordinal()].setLocation(position);
+        location.setVisited(true);
+    }
+    public static Location getLocation(Point coordinates){
+        return CrashInTheCaribbean.getCurrentGame().getMap().getLocations()[coordinates.x-1][coordinates.y-1];
+    }  
 }

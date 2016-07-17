@@ -5,6 +5,7 @@
  */
 package CIT260.crashInTheCaribbean.model;
 
+import enums.Characters;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -14,29 +15,23 @@ import java.util.ArrayList;
  */
 public class Location implements Serializable{
     
-    
-//    startingPoint(),
-//    buildShipShore(),
-//    trapArea();
-    // class instnace variables
-    
      private LocationType type;
       private int row;
       private int column;
       private boolean visited;
       private Scene scene;
-      private ArrayList<Character> character;
+      private ArrayList<Characters> characters;
       private double amountRemaning;
 //
-      public Location(int row, int column, Scene scene, ArrayList<Character> character) { 
+      public Location(int row, int column, Scene scene, ArrayList<Characters> character) { 
           this.row = row;
           this.column = column;
           this.visited = false;
           this.scene = scene;
-          this.character = character;
+          this.characters = character;
       }  
       public Location(){
-          this.character = new ArrayList<Character>();
+          this.characters = new ArrayList<Characters>();
       }
       
       public Location(int row, int column){
@@ -91,28 +86,39 @@ public class Location implements Serializable{
         this.scene = scene;
     }
 
-    public ArrayList<Character> getCharacter() {
-        return character;
+    public ArrayList<Characters> getCharacter() {
+        return characters;
     }
 
-    public void setCharacter(ArrayList<Character> character) {
-        this.character = character;
+    public void setCharacter(ArrayList<Characters> character) {
+        this.characters = character;
+    }
+    public void removeCharacter(Characters character){
+        if (character == null){
+            return;
+        }
+        this.characters.remove(character);
+    }
+    public void addCharacter(Characters character){
+        if(character == null || this.characters.contains(character)){
+            return;
+    }
+     this.characters.add(character);
     }
   
 
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 67 * hash + (int) (Double.doubleToLongBits(this.row) ^ (Double.doubleToLongBits(this.row) >>> 32));
-        hash = 67 * hash + (int) (Double.doubleToLongBits(this.column) ^ (Double.doubleToLongBits(this.column) >>> 32));
-        hash = 67 * hash + (this.visited ? 1 : 0);
-        hash = 67 * hash + (int) (Double.doubleToLongBits(this.amountRemaning) ^ (Double.doubleToLongBits(this.amountRemaning) >>> 32));
+        hash = 67 * hash + this.row;
+        hash = 67 * hash + this.column;
+     
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + ", amountRemaning=" + amountRemaning + '}';
+        return "Location{" + "row=" + row + ", column=" + column + '}';
     }
 
     

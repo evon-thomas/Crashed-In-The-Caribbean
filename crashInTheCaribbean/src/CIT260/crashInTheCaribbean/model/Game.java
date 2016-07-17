@@ -5,6 +5,7 @@
  */
 package CIT260.crashInTheCaribbean.model;
 
+import enums.Characters;
 import enums.SceneEnum;
 import java.awt.Point;
 import java.io.Serializable;
@@ -22,7 +23,7 @@ public class Game implements Serializable{
     private InventoryType[] inventory;
     private Player player;
     private Map map;
-    private String characterLocation;
+    private Point[] charactersLocation = new Point[Characters.values().length];
     private SceneEnum[] Scene;
     private Character characters;
     
@@ -87,11 +88,11 @@ public class Game implements Serializable{
     public void setMap(Map map) {
         this.map = map;
     }
-     public String getCharactersLocation() {
-        return characterLocation;
+     public Point[] getCharactersLocation() {
+        return charactersLocation;
     }
-    public String setCharactersLocation(Point[] charactersLocation) {
-        return characterLocation;
+    public void setCharactersLocation(Point[] charactersLocation) {
+        this.charactersLocation = charactersLocation;
     }
 
     public SceneEnum[] getScene() {

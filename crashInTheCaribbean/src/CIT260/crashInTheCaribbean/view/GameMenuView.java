@@ -335,9 +335,14 @@ public class GameMenuView extends View{
             out.println(line.toString());
         }
         }
+//##############################################################################
+//##############################################################################
+                    // WEEK 12 ASSIGNMENT...JOSE
         
     private void moveLocation(){
-        this.console.println("locat func");
+//        this.console.println("locat func");
+            MoveCharacterView moveCharacterView = new MoveCharacterView();
+            moveCharacterView.display();
     }
     
 //##############################################################################
