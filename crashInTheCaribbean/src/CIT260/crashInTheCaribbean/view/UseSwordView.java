@@ -26,9 +26,9 @@ public class UseSwordView extends View{
     private void saveToInventory() {
          //this.console.println("***addItemToInventory function called***");
         // */*/*/*NEED TO CALL FUNCTION FROM INVENTORY CONTROL 
-//        InventoryControl inventoryControl = new InventoryControl();
-//        
-//        inventoryControl.addItemToInventory();
+        InventoryControl inventoryControl = new InventoryControl();
+        
+        inventoryControl.addItemToInventory();
     }
     
      public UseSwordView(){
