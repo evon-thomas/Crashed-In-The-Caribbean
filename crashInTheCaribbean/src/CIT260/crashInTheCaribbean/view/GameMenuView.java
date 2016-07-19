@@ -54,6 +54,7 @@ public class GameMenuView extends View{
                     + "\n L - Move location."
                     + "\n C - View player characters."
                     + "\n T - View Scene Type"
+                    + "\n U - Tools, info about tools"
                     + "\n S - Sort Scene Type"
                     + "\n B - build ship."
                     + "\n R - Build report."
@@ -100,6 +101,9 @@ public class GameMenuView extends View{
             case "R": // to build the report
                this.printReport();
                break;
+            case "U":
+            this.displaySelectToolMenuView();
+            break;
        
            default:
                ErrorView.display("GameMenuView","Invalid selection *** Try again");
@@ -107,10 +111,20 @@ public class GameMenuView extends View{
        }
        return false;
   }
+    
+    
+    
+    private void displaySelectToolMenuView() {
+        SelectToolMenuView selectToolMenuView = new SelectToolMenuView();
+        selectToolMenuView.display();
+    
+    }
  ///////////////////////////////////////////////////////////////////////////////
  ////////////////////////////////////////////////////////////////////////////////  
  ////////////////////////////////////////////////////////////////////////////////  
         // ************INDIVIDUAL ASSIGNMENT LESSON 10. JOSE.***********************
+    
+    
     private void buildShip(){
 //            BuildShipView newBoat = new BuildShipView();
 //            newBoat.display();

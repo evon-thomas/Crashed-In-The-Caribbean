@@ -84,11 +84,7 @@ public class MainMenuView extends View {
         helpMenuView.display();
 
     }
-    private void displaySelectToolMenuView() {
-        SelectToolMenuView selectToolMenuView = new SelectToolMenuView();
-        selectToolMenuView.display();
     
-    }
     private void displayDesignBarrelsView(){
 //         System.out.println("*** displayHelpMenu fun. called ***");
 //        DesignBarrelsView designBarrelsView = new DesignBarrelsView();
@@ -106,8 +102,7 @@ public class MainMenuView extends View {
                     + "\nN - Start new game"
                     + "\nG - Get and start saved game"
                     + "\nP - Practice your attacks"
-                    + "\nH - Help, how to play game"
-                    + "\nT - Tools, info about tools"
+                    + "\nH - Help, how to play game"                    
                     + "\nS - Save game"
                     + "\nB - Bucket, use bucket for trap"
                     + "\nQ - quit"
@@ -175,10 +170,7 @@ public class MainMenuView extends View {
             break;
         case "P":
             this.displayDamageControlView();
-            break;
-         case "T":
-            this.displaySelectToolMenuView();
-            break;
+            break;         
          case "B":
             this.displayDesignBarrelsView();
             break;    

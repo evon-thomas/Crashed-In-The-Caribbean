@@ -6,6 +6,8 @@
 package CIT260.crashInTheCaribbean.control;
 
 import CIT260.crashInTheCaribbean.model.InventoryType;
+import CIT260.crashInTheCaribbean.model.Game;
+import crashinthecaribbean.CrashInTheCaribbean;
 import enums.CaribbeanItem;
 
 /**
@@ -13,19 +15,30 @@ import enums.CaribbeanItem;
  * @author Karla
  */
 public class InventoryControl {
- 
+    
     private InventoryType[] inventory;
+    private Game game;
+    
+    public void InventoryControl () {
+        
+    }
+ 
+    
 
 
     public void addItemToInventory(String  description, int amountAvailable, int youHave) {
         
-            InventoryType Sword = new InventoryType();
+            game = CrashInTheCaribbean.getCurrentGame();
+    
+            inventory = game.getInventory();
+            InventoryType item = new InventoryType();
             
-            Sword.setDescription("Sword");
-            Sword.setAmountAvailable(1);
-            Sword.setYouHave(0);
+            item.setDescription(description);
+            item.setAmountAvailable(amountAvailable);
+            item.setYouHave(youHave);
      
-           inventory[CaribbeanItem.Sword.ordinal()] = Sword;
+            
+            inventory[CaribbeanItem.Sword.ordinal() -1] = item;
            
     }
 

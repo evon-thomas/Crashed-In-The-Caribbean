@@ -28,7 +28,7 @@ public class UseSwordView extends View{
         // */*/*/*NEED TO CALL FUNCTION FROM INVENTORY CONTROL 
         InventoryControl inventoryControl = new InventoryControl();
         
-        inventoryControl.addItemToInventory();
+        inventoryControl.addItemToInventory("Sword", 1, 1);
     }
     
      public UseSwordView(){
