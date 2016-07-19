@@ -6,6 +6,7 @@
 package CIT260.crashInTheCaribbean.control;
 
 import CIT260.crashInTheCaribbean.model.Barrel;
+import CIT260.crashInTheCaribbean.exceptions.DesignBarrelException;
 
 /**
  *
@@ -15,16 +16,16 @@ public class BarrelControl {
     
 
 
-    public double barrel(double radiusAmt,double heightAmt, double pi){
+    public double barrel(double radiusAmt,double heightAmt, double pi) throws DesignBarrelException {
         
         if (radiusAmt <0 || radiusAmt >5){//Int too high
-        return -1;
+            throw new DesignBarrelException("The radius is too high");
         }
         if (heightAmt <0 || heightAmt >12.75){//Pow too high
-        return -1;
+            throw new DesignBarrelException("The height is too high");
         }
         if (pi <0 || heightAmt >3.15){//Pow too high
-        return -1;
+            throw new DesignBarrelException("The power is too high");
         }
          double volume = Math.pow(radiusAmt, 2) * heightAmt * pi;
          return volume;

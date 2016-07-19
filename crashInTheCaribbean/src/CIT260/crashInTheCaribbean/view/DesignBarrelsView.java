@@ -8,54 +8,44 @@ package CIT260.crashInTheCaribbean.view;
 import CIT260.crashInTheCaribbean.model.InventoryType;
 import CIT260.crashInTheCaribbean.control.BarrelControl;
 import CIT260.crashInTheCaribbean.model.Barrel;
+import CIT260.crashInTheCaribbean.view.ErrorView;
+import CIT260.crashInTheCaribbean.exceptions.DesignBarrelException;
+import CIT260.crashInTheCaribbean.exceptions.ViewException;
 import java.util.Scanner;
 
 /**
  *
  * @Thomas Evon. 
  */
-public class DesignBarrelsView  {
+public class DesignBarrelsView extends View {
    
     private String message;
     public DesignBarrelsView() {
-        this.message = ("\n"
+        super("\n"
             + "\n---------------------------------------------------------------"
             + "\n| Design Your Barrel"
-            + "\n---------------------------------------------------------------");
+            + "\n---------------------------------------------------------------"
+            + "\n Please provide the height of your barrel");
     }
-
-    public double doAction(double height, double radius, double pi) {
+    @Override
+    public boolean doAction(String height){
         
+        double pi =  3.14;
+        double volume = 0.0;
+        this.setMessage("Please provide the radius of the barrel");
+        String radius = this.getInput();
+           
         //prompt for the dimensions for the barrel
-
         BarrelControl barrelControl = new BarrelControl();
 
-        double volume = barrelControl.calVolumeOfBarrel(height, radius, pi);
-        if (volume == -1) {
-           ErrorView.display("DesignBarrel","\nThe height must be between 0 and 24 and the diameter " +
-                             "must be between 0 and 36. Please try again."); 
+        try{
+            volume = barrelControl.barrel(Double.parseDouble(radius), Double.parseDouble(height), pi);
+        } catch (DesignBarrelException | NumberFormatException e) {
+            ErrorView.display("DesignBarrelsView", e.getMessage());
+            
         }
-        else {
-            double barrelWeight = barrelControl.calcMaxWeight(volume);
-            if (barrelWeight > 20) {
-                 ErrorView.display("DesignBarrel","\nThe barrel is too heavy! The weight must be less than 20." +
-                                   "\nPlease try again.");
-            }
-            else {
-                ErrorView.display("DesignBarrel","\nBarrel created successfully!" +
-                                   "\nThe volume of your barrel is " + volume);
-                Barrel designedBarrel = new Barrel();
-                designedBarrel.setHeight(height);
-                designedBarrel.setDiameter(radius);
-                designedBarrel.setVolume(pi);                
-
-                barrelControl.saveBarrelDesign(designedBarrel);
-    /////////////////  /////////////////  /////////////////  /////////////////  ///////////////// 
-    /////////I added these to make the class free of erros            
-            }
-            return -1;
-        }
-        return -1;
+        
+        return true;
     }
 }
  //////////////////////////////////    /////////////////  /////////////////  ///////////////// 

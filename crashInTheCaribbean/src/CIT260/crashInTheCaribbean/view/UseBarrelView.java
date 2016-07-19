@@ -35,15 +35,15 @@ public class UseBarrelView extends View{
         int input2 = inFile.nextInt();
         
            BarrelControl controlBarrel = new BarrelControl();
-            double bucketAmount = controlBarrel.controlBarrel(input1, input2);
-       
-            if (bucketAmount < 1000)
-                throw new DesignBarrelException("\nYou need to fill it up again,"
-                                        +"\n Your amount of water was " + bucketAmount + " cubic feet. "
-                                        +"\n The hole isn't filled yet.");
-            
-            else if (bucketAmount > 1000)
-                throw new DesignBarrelException("\nYou Filled the hole!!!!!")
+//            double bucketAmount = controlBarrel.controlBarrel(input1, input2);
+//       
+//            if (bucketAmount < 1000)
+//                throw new DesignBarrelException("\nYou need to fill it up again,"
+//                                        +"\n Your amount of water was " + bucketAmount + " cubic feet. "
+//                                        +"\n The hole isn't filled yet.");
+//            
+//            else if (bucketAmount > 1000)
+//                throw new DesignBarrelException("\nYou Filled the hole!!!!!")
     } 
     
     
@@ -76,7 +76,7 @@ public class UseBarrelView extends View{
         
         switch (selection){
             case "F":
-                this.fill();
+//                this.fill();
                 break;
 //            case "E":
 //                this.empty();
