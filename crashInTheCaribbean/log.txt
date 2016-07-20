@@ -1,2 +1,0 @@
-DesignBarrelsView - The height is too high
-DesignBarrelsView - The radius is too high

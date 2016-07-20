@@ -55,7 +55,6 @@ public class GameMenuView extends View{
                     + "\n C - View player characters."
                     + "\n T - View Scene Type"
                     + "\n U - Tools, info about tools"
-                    + "\n S - Sort Scene Type"
                     + "\n B - build ship."
                     + "\n R - Build report."
                     + "\n Q - Quit"
@@ -90,10 +89,7 @@ public class GameMenuView extends View{
                this.viewScene();
                break;
                
-            case "S": //
-               this.SceneTypeSort();
-               break;
-               
+              
             case "B": //
                this.buildShip();
                break;
@@ -214,42 +210,11 @@ public class GameMenuView extends View{
                 this.console.println(crazyNameHere + ":      \t" + crazyNameHere.getDescription());                 
               StringBuilder line;
             }
-//            Game game = CrashInTheCaribbean.getCurrentGame();
-//            SceneEnum[] scenes = game.getScene();
-//            
-//            this.console.println("\n=========== LIST OF SCENES ========== ");
-//            line = new StringBuilder("                                    ");
-//            line.insert(0, "DESCRIPTION");
-////            line.insert(20, "REQUIRED");
-////            line.insert(30, "YOU HAVE");
-//            this.console.println(line.toString());
-//            
-//            
-//            for (SceneEnum item : scenes){
-//                 line = new StringBuilder(" ....                             ");
-//                 line.insert(0, item.getDescription());
-////                 line.insert(23, item.getAmountAvailable());
-////                 line.insert(33, item.getYouHave());
-//                 
-//                this.console.println(line.toString());
-//            }
+
     }
     
     
-     private void SceneTypeSort() {
-   //get sorted list of scenetype */*/*/THIS ONE IS WORKING/*/* or at least no error
-        //SceneEnum[] type = GameControl.getSortedSceneList();
-        SceneEnum[] sort = GameControl.getSortedSceneList();
-    }
-
-// */*/this display function was suppoed to call the sort function
-    
-//            SceneTypeSortControl quickSort = SceneTypeSortContro();
-//            quickSort.display();
-
-  
-////////////////////////////////////////////////////////////////////////////////   
-////////////////////////////////////////////////////////////////////////////////  
+ 
  ////////////////////////////////////////////////////////////////////////////////  
     public void displayMap(){
         this.ViewMap(CrashInTheCaribbean.getOutFile());

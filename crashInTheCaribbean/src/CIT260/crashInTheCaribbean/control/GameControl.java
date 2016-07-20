@@ -251,27 +251,27 @@ public GameControl(){
         }
          
         // */*/*/*/*COMPARE TO CASE NOT WORKING */*/*/*/
-      public static SceneEnum[] getSortedSceneList() {
-        
-       
-SceneEnum[] originalSceneList = CrashInTheCaribbean.getCurrentGame().getScene();
-        
-        // clone (make a copy) orignalList
-        SceneEnum[] sceneList = originalSceneList.clone();
-        
-       // using a BubbleSort to sort the list of inventoryList by name
-        SceneEnum tempSceneItem;
-        for (int i = 0; i < sceneList.length-1; i++) {
-            for (int j = 0; j < sceneList.length-1-i; j++) {
-                if (sceneList[j].getDescription().
-                        compareToIgnoreCase(sceneList[j + 1].getDescription()) > 0) {
-                    tempSceneItem = sceneList[j];
-                    sceneList[j] = sceneList[j+1];
-                    sceneList[j+1] = tempSceneItem;
-                }
-            }
-        }
-        
-        return sceneList;
-    }
+//      public static SceneEnum[] getSortedSceneList() {
+//        
+//       
+//SceneEnum[] originalSceneList = CrashInTheCaribbean.getCurrentGame().getScene();
+//        
+//        // clone (make a copy) orignalList
+//        SceneEnum[] sceneList = originalSceneList.clone();
+//        
+//       // using a BubbleSort to sort the list of inventoryList by name
+//        SceneEnum tempSceneItem;
+//        for (int i = 0; i < sceneList.length-1; i++) {
+//            for (int j = 0; j < sceneList.length-1-i; j++) {
+//                if (sceneList[j].getDescription().
+//                        compareToIgnoreCase(sceneList[j + 1].getDescription()) > 0) {
+//                    tempSceneItem = sceneList[j];
+//                    sceneList[j] = sceneList[j+1];
+//                    sceneList[j+1] = tempSceneItem;
+//                }
+//            }
+//        }
+//        
+//        return sceneList;
+//    }
 }
